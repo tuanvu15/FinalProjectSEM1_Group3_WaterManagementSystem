@@ -5,5 +5,8 @@ namespace Persistence
     public class Class1
     {
         //git add .
+        public void display(){
+            
+        }
     }
 }
