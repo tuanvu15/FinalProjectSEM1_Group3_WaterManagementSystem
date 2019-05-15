@@ -8,6 +8,7 @@ namespace Persistence
         public void display(){
             Console.Write("nhap");
             Console.Write("nhap:");
+            Console.WriteLine("123");
         }
     }
 }
