@@ -7,6 +7,7 @@ namespace Persistence
         //git add .
         public void display(){
             Console.Write("nhap");
+            Console.Write("nhap:");
         }
     }
 }
