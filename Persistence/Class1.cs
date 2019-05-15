@@ -9,6 +9,7 @@ namespace Persistence
             Console.Write("nhap");
             Console.Write("nhap:");
             Console.WriteLine("123");
+            Console.Write("000000000");
         }
     }
 }
