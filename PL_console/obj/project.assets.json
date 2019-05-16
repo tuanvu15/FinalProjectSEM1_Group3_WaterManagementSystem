@@ -783,7 +783,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetAppHost/2.2.0": {
-      "sha512": "qIrVLupwT2NYTrf7KM7Nh+mJr36V5MITVRjyGOByVVCwGmQgQmI/6bjZYQv+QdExi4Cm87eCKJX9FdT6nc00Xg==",
+      "sha512": "OK/H8p9Ig6mLMITjXJ4VOewrJg/TU+dAPHE4BdMWMv+8COzBehf7XF1+DofKkmqdHpO2cJoS5Sc9PEZ6PKCbsg==",
       "type": "package",
       "path": "microsoft.netcore.dotnetapphost/2.2.0",
       "files": [
@@ -1732,38 +1732,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\tuanv\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\Project\\project\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\PL_console.csproj",
+      "projectUniqueName": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\PL_console.csproj",
       "projectName": "PL_console",
-      "projectPath": "f:\\Project\\project\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\PL_console.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "f:\\Project\\project\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\obj\\",
+      "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\PL_console.csproj",
+      "packagesPath": "C:\\Users\\tuanv\\.nuget\\packages\\",
+      "outputPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\tuanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "f:\\Project\\project\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj": {
-              "projectPath": "f:\\Project\\project\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj"
+            "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj": {
+              "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj"
             },
-            "f:\\Project\\project\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
-              "projectPath": "f:\\Project\\project\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
+            "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
+              "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
             }
           }
         }

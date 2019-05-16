@@ -7,3 +7,12 @@ f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM
 f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfo.cs
 f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.dll
 f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.pdb
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\bin\Debug\netstandard2.0\Persistence.deps.json
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\bin\Debug\netstandard2.0\Persistence.dll
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\bin\Debug\netstandard2.0\Persistence.pdb
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.csprojAssemblyReference.cache
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.csproj.CoreCompileInputs.cache
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfoInputs.cache
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfo.cs
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.dll
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.pdb

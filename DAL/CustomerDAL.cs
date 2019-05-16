@@ -2,6 +2,7 @@ using System;
 using Persistence;
 using MySql.Data.MySqlClient;
 
+
 namespace DAL
 {
     public class CustomerDAL

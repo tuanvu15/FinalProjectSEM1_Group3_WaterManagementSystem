@@ -40,3 +40,17 @@ f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM
 f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
 f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.dll
 f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.pdb
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\BL.deps.json
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\BL.dll
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\BL.pdb
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\DAL.dll
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\Persistence.dll
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\DAL.pdb
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\Persistence.pdb
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.dll
+G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.pdb
