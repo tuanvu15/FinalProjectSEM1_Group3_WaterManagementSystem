@@ -18,7 +18,7 @@ namespace BL
         {
             return customerDAL.GetCustomer();
         }
-        public void InsertCustomer(int cusID, string cusName, string cusAddress, int Phone)
+        public void InsertCustomer(int cusID, string cusName, string cusAddress, string Phone)
         {
              customerDAL.InsertCustomer(cusID,cusName,cusAddress,Phone);
         }

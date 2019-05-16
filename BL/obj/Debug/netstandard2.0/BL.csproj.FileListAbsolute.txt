@@ -26,3 +26,17 @@ F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\BL\obj\Debu
 F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
 F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\BL\obj\Debug\netstandard2.0\BL.dll
 F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\BL\obj\Debug\netstandard2.0\BL.pdb
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\BL.deps.json
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\BL.dll
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\BL.pdb
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\DAL.dll
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\Persistence.dll
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\DAL.pdb
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\Persistence.pdb
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.dll
+f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.pdb
