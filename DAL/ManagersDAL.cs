@@ -10,7 +10,7 @@ namespace DAL
         private MySqlDataReader reader;
         public Managers Login(string email, string pass)
         {
-            if(email == null || pass == null)
+            if((email == null) || (pass == null))
             {
                 return null;
             }
@@ -30,7 +30,7 @@ namespace DAL
         private Managers GetManagers(MySqlDataReader reader)
         {
             Managers mag = new Managers();
-            mag.ManagersID = reader.GetInt16("managers_id");
+            mag.ManagersID = reader.GetInt32("managers_id");
             mag.Pass = reader.GetString("pass");
             mag.FullName =reader.GetString("full_name");
             mag.Email = reader.GetString("email");

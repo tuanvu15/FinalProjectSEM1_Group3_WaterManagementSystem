@@ -14,7 +14,7 @@ namespace BL
         }
         public Managers Login(string email, string pass)
         {
-            if(email == null || pass == null)
+            if((email == null) || (pass == null))
             {
                 return null;
             }
