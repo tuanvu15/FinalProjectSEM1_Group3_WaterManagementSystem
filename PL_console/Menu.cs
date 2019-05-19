@@ -29,7 +29,7 @@ namespace PL_console
                         MenuLogin();
                         break;
                     }
-                case 2:
+                case 0:
                     {
                         Environment.Exit(0);
                         break;
@@ -84,6 +84,43 @@ namespace PL_console
                                 continue;
                             }
                     }
+                    try
+                    {
+                        manager = magBL.Login(email, pass);
+                    }
+                    catch (System.NullReferenceException)
+                    {
+                        Console.Write("Mất kết nối, bạn có muốn đăng nhập lại không? (Y/N)");
+                        choice = Console.ReadLine().ToUpper();
+
+                        while (true)
+                        {
+                            if (choice != "C" && choice != "K")
+                            {
+                                Console.Write("Bạn chỉ được nhập (Y/N): ");
+                                choice = Console.ReadLine().ToUpper();
+                                continue;
+                            }
+                            break;
+                        }
+
+                        switch (choice)
+                        {
+                            case "C":
+                                continue;
+                            case "c":
+                                continue;
+                            case "K":
+                                MenuChoice(null);
+                                break;
+                            case "k":
+                                MenuChoice(null);
+                                break;
+                            default:
+                                continue;
+                        }
+                    }
+
                 }
                 break;
             }
@@ -148,17 +185,42 @@ namespace PL_console
                     }
                 case 1:
                     {
-                        cusCS.CreateCustomer();
+                        try
+                        {
+                            cusCS.CreateCustomer();
+                        }
+                        catch (System.NullReferenceException)
+                        {
+                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                        }
+                        catch (MySql.Data.MySqlClient.MySqlException)
+                        {
+                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                        }
                         break;
+
+
                     }
                 case 2:
                     {
-                        cusCS.DisplayCustomer();
+                        try
+                        {
+                            cusCS.DisplayCustomer();
+                        }
+                        catch (System.NullReferenceException)
+                        {
+                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                        }
+                        catch (MySql.Data.MySqlClient.MySqlException)
+                        {
+                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                        }
                         break;
+
                     }
                 case 3:
                     {
-
+                        cusCS.UpdateCustomer();
                         break;
                     }
                 default:
@@ -166,6 +228,10 @@ namespace PL_console
                         break;
                     }
             }
+        }
+        public void InvoiceManager()
+        {
+
         }
         public string Password()
         {
