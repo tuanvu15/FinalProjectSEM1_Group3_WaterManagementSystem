@@ -1,6 +1,8 @@
 using System;
 using DAL;
 using Persistence;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace BL
 {
@@ -18,7 +20,10 @@ namespace BL
             {
                 return null;
             }
+            
             return managersDAL.Login(email, pass);
         }
+    
     }
+    
 }

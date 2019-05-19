@@ -40,7 +40,7 @@ constraint fk_InvoiceDetail_Invoice foreign key (invoice_id) references Invoice(
 select * from Customer;
 
 
-insert into Managers value ('123456789', '123456','Đỗ Văn Hoàng','hoang123@gmail.com');
+insert into Managers value ('123456789', '12345678','Đỗ Văn Hoàng','hoang123@gmail.com');
 
  
 

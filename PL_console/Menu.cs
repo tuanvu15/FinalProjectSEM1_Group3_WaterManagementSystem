@@ -9,19 +9,33 @@ namespace PL_console
     {
         public void MenuChoice(string err)
         {
-            Console.Clear();
+            
+                   Console.Clear();
             if (err != null)
             {
                 Console.WriteLine(err);
             }
             int choice;
-            Console.WriteLine("================================");
-            Console.WriteLine("1.Đăng nhập");
-            Console.WriteLine("0.thoát");
-            Console.WriteLine("================================");
+            Console.WriteLine("╔══════════════════════════════╗");
+            Console.WriteLine("║1.Đăng nhập                   ║");
+            Console.WriteLine("║╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌║");
+            Console.WriteLine("║0.thoát                       ║");
+            Console.WriteLine("╚══════════════════════════════╝");
             Console.Write("Chọn: ");
-            choice = Convert.ToInt32(Console.ReadLine());
-
+            // choice = Convert.ToInt32(Console.ReadLine());
+              while(true)
+                {
+                    bool check = Int32.TryParse(Console.ReadLine(), out choice);
+                    if (!check)
+                    {
+                        Console.Write("Nhập lại: ");
+                        
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
             switch (choice)
             {
                 case 1:
@@ -34,7 +48,11 @@ namespace PL_console
                         Environment.Exit(0);
                         break;
                     }
-            }
+            }  
+            
+           
+            
+            
         }
         public void MenuLogin()
         {
@@ -44,19 +62,21 @@ namespace PL_console
                 Managers manager = null;
                 string email = null;
                 string pass = null;
-                Console.WriteLine("============ ĐĂNG NHẬP ===========");
-                Console.Write("EMAIL:");
+                Console.WriteLine("══════════════════════════════");
+                Console.WriteLine("┄┄┄┄┄┄┄┄┄┄┄ĐĂNG NHẬP┄┄┄┄┄┄┄┄┄┄");
+                    Console.Write("✉  EMAIL:");
                 email = Console.ReadLine();
-                Console.Write("PASSWORD:");
+                    Console.Write("✎  PASSWORD:");
                 pass = Password();
-                Console.WriteLine("==================================");
+                Console.WriteLine("══════════════════════════════");
                 string choice;
+                
                 manager = magBL.Login(email, pass);
 
                 //kiểm tra tài khoản nhập vào có đúng hay không
                 if (manager == null)
                 {
-                    Console.Write("Email hoặc mật khẩu không đúng, bạn có muốn tiếp tục(Y/N):");
+                    Console.Write("↺ Email hoặc mật khẩu không đúng, bạn có muốn tiếp tục(Y/N):");
                     choice = Console.ReadLine();
 
                     switch (choice)
@@ -90,7 +110,7 @@ namespace PL_console
                     }
                     catch (System.NullReferenceException)
                     {
-                        Console.Write("Mất kết nối, bạn có muốn đăng nhập lại không? (Y/N)");
+                        Console.Write("⚠ Mất kết nối, bạn có muốn đăng nhập lại không? (Y/N)");
                         choice = Console.ReadLine().ToUpper();
 
                         while (true)
@@ -128,16 +148,32 @@ namespace PL_console
         }
         public void MainMenu()
         {
-            Console.Clear();
-
-            Console.WriteLine("========== MENU QUẢN LÝ ==========");
-            Console.WriteLine("1.Quản lý khách hàng");
-            Console.WriteLine("2.Tạo hóa đơn");
-            Console.WriteLine("0.Đăng xuất");
-            Console.WriteLine("==================================");
-            Console.Write("Chọn:");
             int magChoice;
-            magChoice = Convert.ToInt32(Console.ReadLine());
+            do
+            {
+            Console.Clear();
+            Console.WriteLine("╔══════════════════════════════════╗");
+            Console.WriteLine("╠══════════ MENU QUẢN LÝ ══════════╣");
+            Console.WriteLine("║1.Quản lý khách hàng              ║");
+            Console.WriteLine("║2.Tạo hóa đơn                     ║");
+            Console.WriteLine("║0.Đăng xuất                       ║");
+            Console.WriteLine("╚══════════════════════════════════╝");
+            Console.Write("Chọn:");
+            
+            // magChoice = Convert.ToInt32(Console.ReadLine());
+            while(true)
+                {
+                    bool check = Int32.TryParse(Console.ReadLine(), out magChoice);
+                    if (!check)
+                    {
+                        Console.Write("Nhập lại: ");
+                        
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
 
             switch (magChoice)
             {
@@ -161,6 +197,8 @@ namespace PL_console
                     }
 
             }
+            } while (magChoice!=0);
+           
 
         }
         public void CustomerMenu()
@@ -168,14 +206,29 @@ namespace PL_console
 
             CustomerConsole cusCS = new CustomerConsole();
             Console.Clear();
-            Console.WriteLine("====== QUẢN LÝ KHÁCH HÀNG ======");
-            Console.WriteLine("1.Tạo mới khách hàng");
-            Console.WriteLine("2.Xem danh sách khách hàng");
-            Console.WriteLine("3.Cập nhật thông tin khách hàng");
-            Console.WriteLine("0.trở về menu chính");
+            Console.WriteLine("╔══════════════════════════════════╗");
+            Console.WriteLine("╠====== QUẢN LÝ KHÁCH HÀNG ======  ╣");
+            Console.WriteLine("║1.Tạo mới khách hàng              ║");
+            Console.WriteLine("║2.Xem danh sách khách hàng        ║");
+            Console.WriteLine("║3.Cập nhật thông tin khách hàng   ║");
+            Console.WriteLine("║0.trở về menu chính               ║");
+            Console.WriteLine("╚══════════════════════════════════╝");
             int choice;
-            choice = Convert.ToInt32(Console.ReadLine());
-
+            Console.Write("chọn:");
+            // choice = Convert.ToInt32(Console.ReadLine());
+            while(true)
+                {
+                    bool check = Int32.TryParse(Console.ReadLine(), out choice);
+                    if (!check)
+                    {
+                        Console.Write("Nhập lại: ");
+                        
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
             switch (choice)
             {
                 case 0:
@@ -191,11 +244,11 @@ namespace PL_console
                         }
                         catch (System.NullReferenceException)
                         {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                            MenuChoice("⚠ MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
                         }
                         catch (MySql.Data.MySqlClient.MySqlException)
                         {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                            MenuChoice("⚠ MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
                         }
                         break;
 
@@ -209,11 +262,11 @@ namespace PL_console
                         }
                         catch (System.NullReferenceException)
                         {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                            MenuChoice("⚠ MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
                         }
                         catch (MySql.Data.MySqlClient.MySqlException)
                         {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                            MenuChoice("⚠ MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
                         }
                         break;
 
@@ -262,5 +315,18 @@ namespace PL_console
             }
             return sb.ToString();
         }
+         public bool validate(string str)
+        {
+            Regex regex = new Regex("[a-zA-Z0-9_]");
+            MatchCollection matchCollectionstr = regex.Matches(str);
+            // Console.WriteLine(matchCollectionstr.Count);
+            if (matchCollectionstr.Count < str.Length)
+            {
+                return false;
+            }
+            return true;
+
+        }
+       
     }
 }
