@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using MySql.Data.MySqlClient;
 
 namespace DAL
@@ -43,3 +43,4 @@ namespace DAL
         }
     }
 }
+

@@ -7,15 +7,15 @@ namespace Persistence
         public int CustomerId {get; set;}
         public string CustomerName {get; set;}
         public string CustomerAddress {get; set;}
-        public string PhoneNumber{get; set;}
+        public int PhoneNumber{get; set;}
 
         public Customer(){}
-        public Customer(int cusId, string cusName, string cusAddress, string phoneNumber)
+        public Customer(int cusId, string cusName, string cusAddress, int phone)
         {
             cusId = CustomerId;
             cusName = CustomerName;
             cusAddress = CustomerAddress;
-            phoneNumber = PhoneNumber;
+            phone = PhoneNumber;
         }
     }
     

@@ -1,6 +1,8 @@
 ﻿using System;
 using Persistence;
 using DAL;
+using System.Collections.Generic;
+
 namespace BL
 {
     public class CustomerBL
@@ -14,14 +16,18 @@ namespace BL
         {
             return customerDAL.GetCustomerbyID(a);
         }
-        public Customer GetCustomer()
+        public List<Customer> GetCustomer()
         {
             return customerDAL.GetCustomer();
         }
-        public void InsertCustomer(int cusID, string cusName, string cusAddress, string Phone)
+        public void InsertCustomer(int cusID, string cusName, string cusAddress, int Phone)
         {
              customerDAL.InsertCustomer(cusID,cusName,cusAddress,Phone);
         }
-
+        public void UpdateCustomer(int id, string name, string address, int sdt)
+        {
+            customerDAL.UpdateCustomer(id, name, address, sdt);
+        }
+        
     }
 }
