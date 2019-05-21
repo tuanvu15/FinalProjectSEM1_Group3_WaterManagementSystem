@@ -12,6 +12,7 @@ namespace BL
 
         public ManagersBL()
         {
+            
             managersDAL = new ManagersDAL();
         }
         public Managers Login(string email, string pass)
