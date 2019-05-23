@@ -2,7 +2,7 @@ using System;
 using System.Text.RegularExpressions;
 using DAL;
 using Persistence;
-using System.Text.RegularExpressions;
+
 namespace BL
 {
     public class ManagersBL

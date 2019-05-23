@@ -180,7 +180,7 @@ namespace PL_console
             {
                 case 0:
                     {
-                        MenuLogin();
+                        MenuChoice();
                         break;
                     }
                 case 1:
