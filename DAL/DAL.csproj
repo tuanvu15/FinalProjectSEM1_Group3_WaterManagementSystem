@@ -5,10 +5,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="8.0.16" />
+    <PackageReference Include="MySql.data" Version="8.0.16" />
   </ItemGroup>
-
-
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>

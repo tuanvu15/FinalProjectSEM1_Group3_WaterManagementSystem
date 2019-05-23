@@ -1,90 +1,54 @@
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.deps.json
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.json
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.dev.json
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.dll
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.pdb
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.dll
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.dll
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.dll
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.pdb
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.pdb
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.pdb
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csprojAssemblyReference.cache
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CoreCompileInputs.cache
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfoInputs.cache
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfo.cs
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\PL_console.deps.json
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.json
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.dev.json
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\PL_console.dll
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\PL_console.pdb
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\BL.dll
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\DAL.dll
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\Persistence.dll
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\Persistence.pdb
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\BL.pdb
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\bin\Debug\netcoreapp2.2\DAL.pdb
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\obj\Debug\netcoreapp2.2\PL_console.csprojAssemblyReference.cache
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CoreCompileInputs.cache
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfoInputs.cache
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfo.cs
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csprojAssemblyReference.cache
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CoreCompileInputs.cache
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfoInputs.cache
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfo.cs
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.deps.json
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.json
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.dev.json
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.dll
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.pdb
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.dll
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.dll
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.dll
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.pdb
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.pdb
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.pdb
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.deps.json
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.json
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.dev.json
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csprojAssemblyReference.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CoreCompileInputs.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfoInputs.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfo.cs
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\PL_console.deps.json
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.json
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.dev.json
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\PL_console.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\PL_console.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\BL.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\DAL.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\Persistence.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\Persistence.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\BL.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\DAL.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.csprojAssemblyReference.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CoreCompileInputs.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfoInputs.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfo.cs
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.deps.json
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.json
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.dev.json
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.dll
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.pdb
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.dll
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.dll
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.dll
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.pdb
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.pdb
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.pdb
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csprojAssemblyReference.cache
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CoreCompileInputs.cache
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfoInputs.cache
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfo.cs
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.deps.json
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.json
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.dev.json
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csprojAssemblyReference.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CoreCompileInputs.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfoInputs.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfo.cs
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\PL_console.deps.json
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.json
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.dev.json
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\PL_console.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\PL_console.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\BL.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\DAL.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\Persistence.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\Persistence.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\BL.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\DAL.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.csprojAssemblyReference.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CoreCompileInputs.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfoInputs.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfo.cs
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb

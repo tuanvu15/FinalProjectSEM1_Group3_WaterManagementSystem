@@ -2,6 +2,7 @@
 using Persistence;
 using DAL;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace BL
 {
@@ -20,13 +21,38 @@ namespace BL
         {
             return customerDAL.GetCustomer();
         }
-        public void InsertCustomer(int cusID, string cusName, string cusAddress, int Phone)
+        public void InsertCustomer(int cusID, string cusName, string cusAddress, string Phone)
         {
              customerDAL.InsertCustomer(cusID,cusName,cusAddress,Phone);
         }
-        public void UpdateCustomer(int id, string name, string address, int sdt)
+        public void UpdateCustomer(int id, string name, string address, string sdt)
         {
             customerDAL.UpdateCustomer(id, name, address, sdt);
+        }
+        public string input(string str)
+        {
+            Regex regex = new Regex("[A-Za-z\\sỖÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸàáâãèéêìíòóôõùúăđĩũơưăạảấầẩẫậắằẳẵặẹẻẽềềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ]");
+            MatchCollection matchCollection = regex.Matches(str);
+            while ((matchCollection.Count < str.Length) || (str == ""))
+            {
+                Console.WriteLine(" Không được để trống, chứa số hoặc ký tự đặc biệt, Mời nhập lại: ");
+                str = Console.ReadLine();
+                matchCollection = regex.Matches(str);
+            }
+            return str;
+
+        }
+        public string Validate(string str)
+        {
+            Regex regex = new Regex("[0-9]");
+            MatchCollection matchCollection = regex.Matches(str);
+            while ((matchCollection.Count < str.Length) || (str == ""))
+            {
+                Console.WriteLine("Số điện thoại không được chứa chữ hoặc quá ngắn, mời nhập lại: ");
+                str = Console.ReadLine();
+                matchCollection = regex.Matches(str);
+            }
+            return str;
         }
         
     }

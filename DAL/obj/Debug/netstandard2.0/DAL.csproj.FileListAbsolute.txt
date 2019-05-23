@@ -1,60 +1,36 @@
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.deps.json
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.dll
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.pdb
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.dll
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.pdb
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.dll
-F:\Project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.pdb
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\bin\Debug\netstandard2.0\DAL.deps.json
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\bin\Debug\netstandard2.0\DAL.dll
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\bin\Debug\netstandard2.0\DAL.pdb
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\bin\Debug\netstandard2.0\Persistence.dll
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\bin\Debug\netstandard2.0\Persistence.pdb
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\obj\Debug\netstandard2.0\DAL.dll
-F:\Project\demo\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL\obj\Debug\netstandard2.0\DAL.pdb
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.deps.json
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.dll
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.pdb
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.dll
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.pdb
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.dll
-f:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.deps.json
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\DAL.deps.json
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\DAL.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\DAL.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\Persistence.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\Persistence.pdb
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.dll
-G:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.pdb
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.dll
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.pdb
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.dll
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.pdb
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.dll
+F:\Project\project\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\DAL.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\DAL.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\Persistence.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\Persistence.pdb
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.dll
+g:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.pdb

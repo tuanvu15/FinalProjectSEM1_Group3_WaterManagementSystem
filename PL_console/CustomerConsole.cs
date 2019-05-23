@@ -2,6 +2,8 @@ using System;
 using Persistence;
 using BL;
 using System.Collections.Generic;
+using ConsoleTables;
+using System.Linq;
 
 namespace PL_console
 {
@@ -42,25 +44,15 @@ namespace PL_console
                     cus.CustomerId = Convert.ToInt16(Console.ReadLine());
                 }
                 Console.Write("- Nhập họ và tên: ");
-                cus.CustomerName = Console.ReadLine();
+                cus.CustomerName = csBL.input(Console.ReadLine());
+                
                 Console.Write("- Nhập địa chỉ: ");
-                cus.CustomerAddress = Console.ReadLine();
+                cus.CustomerAddress = csBL.input(Console.ReadLine());
+               
+
                 Console.Write("- Nhập số điện thoại: ");
-                while (true)
-                {
-                    try
-                    {
-                        cus.PhoneNumber = Convert.ToInt32(Console.ReadLine());
-                    }
-                    catch (System.Exception)
-                    {
-
-                        Console.WriteLine("Số điện thoại chỉ chứa số , mời nhập lại: ");
-                        continue;
-                    }
-                    break;
-
-                }
+                cus.PhoneNumber = csBL.Validate(Console.ReadLine());
+                
                 Console.WriteLine("=============================");
 
                 Console.Write("Bạn có muốn thêm khách hàng này vào danh sách? (Y/N)");
@@ -78,10 +70,12 @@ namespace PL_console
                 {
                     case "Y":
                         {
+                            Console.Clear();
                             continue;
                         }
                     case "y":
                         {
+                            Console.Clear();
                             continue;
                         }
                     case "N":
@@ -106,14 +100,17 @@ namespace PL_console
         }
         public void DisplayCustomer()
         {
+            Console.Clear();
             CustomerBL DPcus = new CustomerBL();
-
             List<Customer> list = DPcus.GetCustomer();
-
+            var table = new ConsoleTable("ID", "Tên khách hàng", "Địa chỉ", "Số điện thoại");
             foreach (Customer cus in list)
             {
-                Console.WriteLine("{0}, {1}, {2}, {3}", cus.CustomerId, cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
+                table.AddRow(cus.CustomerId, cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
             }
+            table.Write();
+            Console.WriteLine();
+
             while (true)
             {
                 Console.Write("Nhấn Enter để tiếp tục");
@@ -148,7 +145,7 @@ namespace PL_console
                 Console.WriteLine("===== CẬP NHẬT THÔNG TIN KHÁCH HÀNG =====");
                 Console.Write("- Nhập ID: ");
                 cus.CustomerId = Convert.ToInt16(Console.ReadLine());
-
+                Console.Clear();
                 while (csBL.GetCustomerbyID(cus.CustomerId) == null)
                 {
                     Console.Write("Mã không tồn tại, mời bạn nhập lại:");
@@ -162,24 +159,16 @@ namespace PL_console
 
                 Console.WriteLine("==========Mời bạn cập nhật thông tin=============");
                 Console.Write("- Cập nhât họ và tên: ");
-                cus.CustomerName = Console.ReadLine();
-                Console.Write("- Cập Nhập địa chỉ: ");
-                cus.CustomerAddress = Console.ReadLine();
-                Console.Write("- Cập nhật số điện thoại: ");
-
-                while(true)
-                {
-                    try
-                    {
-                        cus.PhoneNumber = Convert.ToInt32(Console.ReadLine());
-                    }
-                    catch (System.Exception)
-                    {
-                        Console.WriteLine("Số điện thoại chỉ chứa số , mời nhập lại:");
-                    }
-                    break;
-                }
+                cus.CustomerName = csBL.input(Console.ReadLine());
                 
+
+
+                Console.Write("- Cập Nhập địa chỉ: ");
+                cus.CustomerAddress =csBL.input(Console.ReadLine());
+                
+                Console.Write("- Cập nhật số điện thoại: ");
+                cus.PhoneNumber = csBL.Validate(Console.ReadLine());
+
                 Console.WriteLine("=================================================");
 
                 Console.Write("Bạn có muốn cập nhật thông tin của khách hàng này? (Y/N)");
@@ -189,6 +178,10 @@ namespace PL_console
                 {
                     csBL.UpdateCustomer(cus.CustomerId, cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
                 }
+                else
+                {
+                    Console.WriteLine("thông tin chưa được cập nhật!");
+                }
                 Console.Write("Bạn có muốn tiếp tục? (Y/N)");
                 string choice1;
                 choice1 = Console.ReadLine();
@@ -196,10 +189,12 @@ namespace PL_console
                 {
                     case "Y":
                         {
+                            Console.Clear();
                             continue;
                         }
                     case "y":
                         {
+                            Console.Clear();
                             continue;
                         }
                     case "N":

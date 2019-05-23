@@ -31,7 +31,7 @@ namespace DAL
             cus.CustomerId = reader.GetInt16("customer_id");
             cus.CustomerName = reader.GetString("customer_name");
             cus.CustomerAddress = reader.GetString("customer_address");
-            cus.PhoneNumber = reader.GetInt32("phone_number");
+            cus.PhoneNumber = reader.GetString("phone_number");
             return cus;
         }
         public List<Customer> GetCustomer()
@@ -51,7 +51,7 @@ namespace DAL
             return customer;
             
         }
-        public void InsertCustomer(int cusID, string cusName, string cusAddress, int Phone)
+        public void InsertCustomer(int cusID, string cusName, string cusAddress, string Phone)
         {
             
             query =@"insert into Customer value('"+cusID+"','" +cusName+"','"+cusAddress+"','"+Phone+"');";
@@ -65,7 +65,7 @@ namespace DAL
             }
             DBHelper.CloseConnection(); 
         }
-        public void UpdateCustomer (int id, string name, string address, int sdt)
+        public void UpdateCustomer (int id, string name, string address, string sdt)
         {
             query = @"update customer set customer_name ='"+name+"', customer_address ='"+address+"',phone_number ='"+sdt+
             "'where customer_id = '"+id+"';";

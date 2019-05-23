@@ -1190,7 +1190,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "MySql.Data >= 8.0.16",
+      "MySql.data >= 8.0.16",
       "NETStandard.Library >= 2.0.3",
       "Persistence >= 1.0.0"
     ]
@@ -1202,11 +1202,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj",
+      "projectUniqueName": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj",
+      "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\tuanv\\.nuget\\packages\\",
-      "outputPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\obj\\",
+      "outputPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1225,8 +1225,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
-              "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
+            "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj": {
+              "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj"
             }
           }
         }
@@ -1240,7 +1240,7 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
-          "MySql.Data": {
+          "MySql.data": {
             "target": "Package",
             "version": "[8.0.16, )"
           },
