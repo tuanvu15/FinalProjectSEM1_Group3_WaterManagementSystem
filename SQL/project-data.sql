@@ -3,24 +3,24 @@ create database if not exists projectData;
 
 use projectData;
 create table Customer(
-customer_id int primary key,
-customer_name nvarchar(50),
-customer_address nvarchar(100),
-phone_number nvarchar(50)
+customer_id int primary key auto_increment,
+customer_name nvarchar(50) not null,
+customer_address nvarchar(100) not null,
+phone_number nvarchar(50) not null
 );
 
 create table Invoice(
-invoice_id int primary key,
+invoice_id int primary key auto_increment,
 date_create date,
-old_number int,
-new_number int
+old_number int not null,
+new_number int not null
 );
 
 create table Managers(
-managers_id int primary key,
-pass varchar(50),
-full_name varchar(100),
-email varchar(100)
+managers_id int primary key auto_increment,
+pass varchar(50) not null,
+full_name varchar(100) not null,
+email varchar(100)not null
 );
 create table Cus_managers(
 customer_id int,
@@ -40,7 +40,14 @@ constraint fk_InvoiceDetail_Invoice foreign key (invoice_id) references Invoice(
 select * from Customer;
 
 
-insert into Managers value ('123456789', '12345678','Đỗ Văn Hoàng','hoang123@gmail.com');
+insert into Managers(pass,full_name,email) value ('12345678','Đỗ Văn Hoàng','manager01@gmail.com');
+insert into Customer(customer_name,customer_address,phone_number) 
+values('Nguyễn văn A','Hà Nội','0123846579'),
+('Nguyễn văn B','Hà Nội','0123745245'),
+('Nguyễn văn C','Hà Nội','0123147852'),
+('Nguyễn văn D','Hà Nội','0123953682'),
+('Nguyễn văn E','Hà Nội','0123175248'),
+('Nguyễn văn F','Hà Nội','0123723210');
 
  
 

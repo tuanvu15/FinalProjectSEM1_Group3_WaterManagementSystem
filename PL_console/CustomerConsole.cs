@@ -18,31 +18,31 @@ namespace PL_console
             while (true)
             {
                 Console.WriteLine("===== TẠO MỚI KHÁCH HÀNG =====");
-                Console.Write("- Nhập ID: ");
-                while (true)
-                {
-                    //id chỉ đc nhập số 
-                    try
-                    {
-                        cus.CustomerId = Convert.ToInt16(Console.ReadLine());
-                    }
-                    catch (System.Exception)
-                    {
-                        Console.WriteLine("ID chỉ được nhập số, mời bạn nhập lại:");
+                // Console.Write("- Nhập ID: ");
+                // while (true)
+                // {
+                //     //id chỉ đc nhập số 
+                //     try
+                //     {
+                //         cus.CustomerId = Convert.ToInt16(Console.ReadLine());
+                //     }
+                //     catch (System.Exception)
+                //     {
+                //         Console.WriteLine("ID chỉ được nhập số, mời bạn nhập lại:");
 
-                        continue;
-                    }
-                    break;
-                }
+                //         continue;
+                //     }
+                //     break;
+                // }
 
 
                 //kiểm tra xem id nhập vào có bị trùng hay không
-                while (csBL.GetCustomerbyID(cus.CustomerId) != null)
-                {
+                // while (csBL.GetCustomerbyID(cus.CustomerId) != null)
+                // {
 
-                    Console.Write("Mã đã tồn tại, mời bạn nhập lại:");
-                    cus.CustomerId = Convert.ToInt16(Console.ReadLine());
-                }
+                //     Console.Write("Mã đã tồn tại, mời bạn nhập lại:");
+                //     cus.CustomerId = Convert.ToInt16(Console.ReadLine());
+                // }
                 Console.Write("- Nhập họ và tên: ");
                 cus.CustomerName = csBL.input(Console.ReadLine());
                 

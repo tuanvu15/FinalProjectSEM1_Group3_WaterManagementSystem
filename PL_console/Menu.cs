@@ -9,18 +9,34 @@ namespace PL_console
     {
         public void MenuChoice(string err)
         {
-            Console.Clear();
+            int choice;
+            do
+            {
+                Console.Clear();
             if (err != null)
             {
                 Console.WriteLine(err);
             }
-            int choice;
-            Console.WriteLine("==== HỆ THỐNG QUẢN LÝ HÓA ĐƠN TIỀN NƯỚC ====");
-            Console.WriteLine("1.Đăng nhập");
-            Console.WriteLine("0.thoát");
-            Console.WriteLine("============================================");
+            
+            Console.WriteLine("╔══════════════════════════════════════════╗");
+            Console.WriteLine("║┉┉┉ HỆ THỐNG QUẢN LÝ HÓA ĐƠN TIỀN NƯỚC ┉┉┉║");
+            Console.WriteLine("╠══════════════════════════════════════════╣");
+            Console.WriteLine("║ 1.Đăng nhập                              ║");
+            Console.WriteLine("║ 0.thoát                                  ║");
+            Console.WriteLine("╚══════════════════════════════════════════╝");
             Console.Write("Chọn: ");
-            choice = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                bool check =Int32.TryParse(Console.ReadLine(), out choice);
+                if (!check)
+                {
+                    Console.Write("nhập lại:");
+                }
+                else{
+                    break;
+                }
+            }
+            
 
             switch (choice)
             {
@@ -35,7 +51,11 @@ namespace PL_console
                         break;
                     }
             }
+            } while (choice !=0);
+            
         }
+        
+        
         public void MenuLogin()
         {
             Console.Clear();
@@ -129,7 +149,10 @@ namespace PL_console
         }
         public void MainMenu()
         {
-            Console.Clear();
+            int magChoice;
+            do
+            {
+                  Console.Clear();
 
             Console.WriteLine("========== MENU QUẢN LÝ ==========");
             Console.WriteLine("1.Quản lý khách hàng");
@@ -137,8 +160,21 @@ namespace PL_console
             Console.WriteLine("0.Đăng xuất");
             Console.WriteLine("==================================");
             Console.Write("Chọn:");
-            int magChoice;
-            magChoice = Convert.ToInt32(Console.ReadLine());
+            
+            
+               
+            while (true)
+            {
+                bool check =Int32.TryParse(Console.ReadLine(), out magChoice);
+                if (!check)
+                {
+                    Console.Write("nhập lại:");
+                }
+                else{
+                    break;
+                }
+            }
+            
 
             switch (magChoice)
             {
@@ -162,20 +198,37 @@ namespace PL_console
                     }
 
             }
+            } while (magChoice !=0);
+          
 
         }
         public void CustomerMenu()
         {
 
             CustomerConsole cusCS = new CustomerConsole();
+            int choice;
+            do
+            {
             Console.Clear();
             Console.WriteLine("====== QUẢN LÝ KHÁCH HÀNG ======");
             Console.WriteLine("1.Tạo mới khách hàng");
             Console.WriteLine("2.Xem danh sách khách hàng");
             Console.WriteLine("3.Cập nhật thông tin khách hàng");
             Console.WriteLine("0.trở về menu chính");
-            int choice;
-            choice = Convert.ToInt32(Console.ReadLine());
+            Console.Write("chọn:");
+            
+            while (true)
+            {
+                bool check = Int32.TryParse(Console.ReadLine(),out choice);
+                if (!check)
+                {
+                    Console.Write("nhập lại:");
+                }
+                else
+                {
+                    break;
+                }
+            }
 
             switch (choice)
             {
@@ -241,6 +294,8 @@ namespace PL_console
                         break;
                     }
             }
+            } while (choice !=0);
+           
         }
         public void InvoiceManager()
         {
@@ -276,4 +331,5 @@ namespace PL_console
             return sb.ToString();
         }
     }
+    
 }
