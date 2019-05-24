@@ -8,7 +8,7 @@ namespace BL
     public class ManagersBL
     {
         private ManagersDAL managersDAL;
-       
+
         public ManagersBL()
         {
             managersDAL = new ManagersDAL();
@@ -19,7 +19,7 @@ namespace BL
             {
                 return null;
             }
-            if (!isEmail(userName))
+             if (!isEmail(userName))
             {
                 Console.WriteLine("email ko hợp lệ (email@gmail.com)");
             }
@@ -28,10 +28,9 @@ namespace BL
                 Console.WriteLine("passworld không hợp lệ");
             }
             
-           
             return managersDAL.Login(userName, pass);
         }
-        public bool ispass(string inputpass){
+         public bool ispass(string inputpass){
           inputpass = inputpass ?? string.Empty;
           string strRegex = @"[a-zA-Z0-9_]";  
           Regex re = new Regex(strRegex);
@@ -54,7 +53,7 @@ namespace BL
             else
                 return (false);
         }
+
+
     }
 }
-
-

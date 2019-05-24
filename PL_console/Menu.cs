@@ -12,7 +12,7 @@ namespace PL_console
             int choice;
             do
             {
-                Console.Clear();
+                 Console.Clear();
             if (err != null)
             {
                 Console.WriteLine(err);
@@ -25,7 +25,7 @@ namespace PL_console
             Console.WriteLine("║ 0.thoát                                  ║");
             Console.WriteLine("╚══════════════════════════════════════════╝");
             Console.Write("Chọn: ");
-            while (true)
+             while (true)
             {
                 bool check =Int32.TryParse(Console.ReadLine(), out choice);
                 if (!check)
@@ -36,7 +36,6 @@ namespace PL_console
                     break;
                 }
             }
-            
 
             switch (choice)
             {
@@ -52,10 +51,8 @@ namespace PL_console
                     }
             }
             } while (choice !=0);
-            
+           
         }
-        
-        
         public void MenuLogin()
         {
             Console.Clear();
@@ -152,7 +149,7 @@ namespace PL_console
             int magChoice;
             do
             {
-                  Console.Clear();
+                      Console.Clear();
 
             Console.WriteLine("========== MENU QUẢN LÝ ==========");
             Console.WriteLine("1.Quản lý khách hàng");
@@ -161,8 +158,6 @@ namespace PL_console
             Console.WriteLine("==================================");
             Console.Write("Chọn:");
             
-            
-               
             while (true)
             {
                 bool check =Int32.TryParse(Console.ReadLine(), out magChoice);
@@ -174,13 +169,12 @@ namespace PL_console
                     break;
                 }
             }
-            
 
             switch (magChoice)
             {
                 case 0:
                     {
-                        MenuChoice();
+                        MenuChoice(null);
                         break;
                     }
                 case 1:
@@ -199,25 +193,23 @@ namespace PL_console
 
             }
             } while (magChoice !=0);
-          
+      
 
         }
         public void CustomerMenu()
         {
-
-            CustomerConsole cusCS = new CustomerConsole();
             int choice;
             do
             {
+                CustomerConsole cusCS = new CustomerConsole();
             Console.Clear();
             Console.WriteLine("====== QUẢN LÝ KHÁCH HÀNG ======");
             Console.WriteLine("1.Tạo mới khách hàng");
             Console.WriteLine("2.Xem danh sách khách hàng");
             Console.WriteLine("3.Cập nhật thông tin khách hàng");
             Console.WriteLine("0.trở về menu chính");
-            Console.Write("chọn:");
             
-            while (true)
+             while (true)
             {
                 bool check = Int32.TryParse(Console.ReadLine(),out choice);
                 if (!check)
@@ -295,7 +287,7 @@ namespace PL_console
                     }
             }
             } while (choice !=0);
-           
+            
         }
         public void InvoiceManager()
         {
@@ -331,5 +323,4 @@ namespace PL_console
             return sb.ToString();
         }
     }
-    
 }
