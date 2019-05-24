@@ -9,25 +9,55 @@ namespace DAL
 
         public static MySqlConnection GetConnection()
         {
-            if(connection == null)
+            try
             {
-                connection = new MySqlConnection
+                 connection = new MySqlConnection
                 {
                     ConnectionString = @"server = localhost;
                                         user id = root; password = 01652530159;
                                         port= 3306; database = projectData"
 
                 };
+                return connection;
             }
-            return connection;
+            catch 
+            {
+                
+                return null;
+            }
+            // if(connection == null)
+            // {
+            //     connection = new MySqlConnection
+            //     {
+            //         ConnectionString = @"server = localhost;
+            //                             user id = root; password = 01652530159;
+            //                             port= 3306; database = projectData"
+
+            //     };
+            // }
+            // return connection;
         }
         public static MySqlConnection OpenConnection(){
-            if(connection == null)
+            // if(connection == null)
+            // {
+            //     GetConnection();
+            // }
+            // connection.Open();
+            // return connection;
+            try
             {
-                GetConnection();
+                if (connection == null)
+                {
+                    GetConnection();
+                }
+                connection.Open();
+                return connection;
             }
-            connection.Open();
-            return connection;
+            catch 
+            {
+                
+                return null;
+            }
         }
         public static void CloseConnection()
         {
@@ -38,8 +68,17 @@ namespace DAL
         }
         public static MySqlDataReader ExcQuery(string query)
         {
-            MySqlCommand command = new MySqlCommand(query, connection);
+            try
+            {
+                MySqlCommand command = new MySqlCommand(query, connection);
             return command.ExecuteReader();
+            }
+            catch 
+            {
+                
+                return null;
+            }
+            
         }
     }
 }

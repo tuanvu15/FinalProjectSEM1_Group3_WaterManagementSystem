@@ -8,17 +8,22 @@ namespace BL.test
     {
         
         [Fact]
-        public void Test1()
+        public void LoginTest1()
         {
-            
          ManagersBL magBl= new ManagersBL();
          Assert.NotNull(magBl.Login("manager01@gmail.com","12345678"));
         } 
         [Fact]
-        public void test2()
+        public void LoginTest2()
         {
         ManagersBL magBl = new ManagersBL();
-        Assert.Null(magBl.Login("customet@gmail.com","1234"));
+        Assert.Null(magBl.Login("customet","1234"));
+        }
+        [Fact]
+        public void LoginTest3()
+        {
+         ManagersBL magBl = new ManagersBL();
+         Assert.Null(magBl.Login("!@#","###"));
         }
         
     }
