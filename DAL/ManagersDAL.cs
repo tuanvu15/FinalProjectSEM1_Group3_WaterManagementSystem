@@ -19,7 +19,22 @@ namespace DAL
                 return null;
             }
             
-            if (connection == null)
+            // if (connection == null)
+            // {
+            //     connection = DBHelper.OpenConnection();
+            // }
+           
+            // if (connection.State == System.Data.ConnectionState.Closed)
+            // {
+            //     connection.Open();
+            // }
+            query = @"select * from Managers where email = '" + userName +"'and pass ='"+ pass + "';";
+            DBHelper.OpenConnection();
+            reader = DBHelper.ExcQuery(query);
+            Managers managers = null;
+            try
+            {
+                if (connection == null)
             {
                 connection = DBHelper.OpenConnection();
             }
@@ -27,27 +42,30 @@ namespace DAL
             {
                 connection.Open();
             }
-            query = @"select * from Managers where email = '" + userName +"'and pass ='"+ pass + "';";
-            DBHelper.OpenConnection();
-            reader = DBHelper.ExcQuery(query);
-
-           
+            MySqlCommand command = new MySqlCommand("", connection);
 
 
-            Managers managers = null;
+            
             if(reader.Read())
             {
                 managers = GetManagers(reader);
             }
            
             DBHelper.CloseConnection();
-            return managers;
+            
+            }
+            catch 
+            {
+                return null;
+                
+            }
+           return managers;
 
         }
         private Managers GetManagers(MySqlDataReader reader)
         {
             Managers mag = new Managers();
-            mag.ManagersID = reader.GetInt16("managers_id");
+            mag.ManagersID = reader.GetInt32("managers_id");
             mag.Pass = reader.GetString("pass");
             mag.FullName =reader.GetString("full_name");
             mag.UserName = reader.GetString("email");

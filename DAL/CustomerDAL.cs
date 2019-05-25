@@ -17,18 +17,28 @@ namespace DAL
             DBHelper.OpenConnection();
             reader = DBHelper.ExcQuery(query);
 
-            Customer customer = null;
-            if(reader.Read())
+            
+            try
+            {
+                Customer customer = null;
+                 if(reader.Read())
             {
                 customer = GetCustomerInfo(reader);
             }
             DBHelper.CloseConnection();
-            return customer;
+            return customer; 
+            }
+            catch 
+            {
+                
+            return null;
+            }
+          
         }
         public Customer GetCustomerInfo(MySqlDataReader reader)
         {
             Customer cus = new Customer();
-            cus.CustomerId = reader.GetInt16("customer_id");
+            cus.CustomerId = reader.GetInt32("customer_id");
             cus.CustomerName = reader.GetString("customer_name");
             cus.CustomerAddress = reader.GetString("customer_address");
             cus.PhoneNumber = reader.GetString("phone_number");
@@ -51,21 +61,31 @@ namespace DAL
             return customer;
             
         }
-        public void InsertCustomer(int cusID, string cusName, string cusAddress, string Phone)
+        public Customer InsertCustomer( string cusName, string cusAddress, string Phone)
         {
             
-            query =@"insert into Customer value('"+cusID+"','" +cusName+"','"+cusAddress+"','"+Phone+"');";
+            query =@"insert into Customer(customer_name,customer_address,phone_number) value('" +cusName+"','"+cusAddress+"','"+Phone+"');";
             DBHelper.OpenConnection();
             reader = DBHelper.ExcQuery(query);
-
-            Customer customer = null;
-            if(reader.Read())
+            try
             {
-                customer = GetCustomerInfo(reader);
+                 Customer customer = null;
+            
+               if(reader.Read())
+            {
+             customer = GetCustomerInfo(reader);    
             }
-            DBHelper.CloseConnection(); 
+            DBHelper.CloseConnection();  
+             return customer; 
+            }
+            catch 
+            {
+                return null;
+            }
+           
+             
         }
-        public void UpdateCustomer (int id, string name, string address, string sdt)
+        public Customer UpdateCustomer (int id, string name, string address, string sdt)
         {
             query = @"update customer set customer_name ='"+name+"', customer_address ='"+address+"',phone_number ='"+sdt+
             "'where customer_id = '"+id+"';";
@@ -78,7 +98,7 @@ namespace DAL
                 customer = GetCustomerInfo(reader);
             }
             DBHelper.CloseConnection();
-            
+            return customer;
         }
         
 

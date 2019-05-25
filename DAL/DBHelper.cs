@@ -61,21 +61,24 @@ namespace DAL
         }
         public static void CloseConnection()
         {
-            if(connection != null)
+           
+               if(connection != null)
             {
                 connection.Close();
-            }
+            } 
+            
+            
+            
         }
         public static MySqlDataReader ExcQuery(string query)
         {
             try
             {
                 MySqlCommand command = new MySqlCommand(query, connection);
-            return command.ExecuteReader();
+                return command.ExecuteReader();
             }
             catch 
             {
-                
                 return null;
             }
             

@@ -21,13 +21,14 @@ namespace BL
         {
             return customerDAL.GetCustomer();
         }
-        public void InsertCustomer(int cusID, string cusName, string cusAddress, string Phone)
+        public Customer InsertCustomer( string cusName, string cusAddress, string Phone)
         {
-             customerDAL.InsertCustomer(cusID,cusName,cusAddress,Phone);
+            return customerDAL.InsertCustomer(cusName,cusAddress,Phone);
+            
         }
-        public void UpdateCustomer(int id, string name, string address, string sdt)
+        public Customer UpdateCustomer(int id, string name, string address, string sdt)
         {
-            customerDAL.UpdateCustomer(id, name, address, sdt);
+            return customerDAL.UpdateCustomer(id, name, address, sdt);
         }
         public string input(string str)
         {

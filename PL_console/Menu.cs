@@ -208,7 +208,7 @@ namespace PL_console
             Console.WriteLine("2.Xem danh sách khách hàng");
             Console.WriteLine("3.Cập nhật thông tin khách hàng");
             Console.WriteLine("0.trở về menu chính");
-            
+            Console.Write("chọn:");
              while (true)
             {
                 bool check = Int32.TryParse(Console.ReadLine(),out choice);

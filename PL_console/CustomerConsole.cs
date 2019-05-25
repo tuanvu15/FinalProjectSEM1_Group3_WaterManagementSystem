@@ -10,7 +10,7 @@ namespace PL_console
     public class CustomerConsole
     {
         Menu cusMenu = new Menu();
-        public void CreateCustomer()
+        public Customer CreateCustomer()
         {
             Customer cus = new Customer();
             CustomerBL csBL = new CustomerBL();
@@ -60,7 +60,7 @@ namespace PL_console
                 choice = Console.ReadLine();
                 if (choice == "y" || choice == "Y")
                 {
-                    csBL.InsertCustomer(cus.CustomerId, cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
+                    csBL.InsertCustomer( cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
                 }
 
                 Console.Write("Bạn có muốn tiếp tục? (Y/N)");
@@ -96,6 +96,7 @@ namespace PL_console
                 break;
 
             }
+            return cus;
 
         }
         public void DisplayCustomer()
