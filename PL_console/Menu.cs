@@ -7,7 +7,7 @@ namespace PL_console
 {
     public class Menu
     {
-        public void MenuChoice(string err)
+        public void  MenuChoice(string err)
         {
             int choice;
             do
@@ -19,7 +19,7 @@ namespace PL_console
             }
             
             Console.WriteLine("╔══════════════════════════════════════════╗");
-            Console.WriteLine("║┉┉┉ HỆ THỐNG QUẢN LÝ HÓA ĐƠN TIỀN NƯỚC ┉┉┉║");
+            Console.WriteLine("║    HỆ THỐNG QUẢN LÝ HÓA ĐƠN TIỀN NƯỚC    ║");
             Console.WriteLine("╠══════════════════════════════════════════╣");
             Console.WriteLine("║ 1.Đăng nhập                              ║");
             Console.WriteLine("║ 0.thoát                                  ║");

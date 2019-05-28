@@ -9,6 +9,7 @@ namespace BL
     public class CustomerBL
     {
         private CustomerDAL customerDAL;
+        
         public CustomerBL()
         {
             customerDAL = new CustomerDAL();

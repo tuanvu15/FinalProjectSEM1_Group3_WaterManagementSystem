@@ -8,15 +8,17 @@ namespace DAL
     public class CustomerDAL
     {
         private string query;
-        
+        //  DBHelper db = DBHelper.GetInstance();
         private MySqlDataReader reader;
         public Customer GetCustomerbyID(int cusID)
         {
             query = @"select customer_id, customer_name, customer_address, phone_number from
             customer where customer_id = '"+ cusID+ "';";
-            DBHelper.OpenConnection();
-            reader = DBHelper.ExcQuery(query);
-
+            // DBHelper.OpenConnection();
+            DBHelper.Instance.OpenConnection();
+            // reader = DBHelper.ExcQuery(query);
+            reader = DBHelper.Instance.ExcQuery(query);
+            
             
             try
             {
@@ -25,7 +27,8 @@ namespace DAL
             {
                 customer = GetCustomerInfo(reader);
             }
-            DBHelper.CloseConnection();
+            // DBHelper.CloseConnection();
+            DBHelper.Instance.CloseConnection();
             return customer; 
             }
             catch 
@@ -47,17 +50,18 @@ namespace DAL
         public List<Customer> GetCustomer()
         {
             query = @"select * from customer;";
-            DBHelper.OpenConnection();
-            reader = DBHelper.ExcQuery(query);
-           
+            // DBHelper.OpenConnection();
+            DBHelper.Instance.OpenConnection();
+            // reader = DBHelper.ExcQuery(query);
+           reader = DBHelper.Instance.ExcQuery(query);
             List<Customer> customer = new List<Customer>();
             
                 while(reader.Read())
                 {
                     customer .Add( GetCustomerInfo(reader));
                 }
-            DBHelper.CloseConnection();
-
+            // DBHelper.CloseConnection();
+             DBHelper.Instance.CloseConnection();
             return customer;
             
         }
@@ -65,8 +69,10 @@ namespace DAL
         {
             
             query =@"insert into Customer(customer_name,customer_address,phone_number) value('" +cusName+"','"+cusAddress+"','"+Phone+"');";
-            DBHelper.OpenConnection();
-            reader = DBHelper.ExcQuery(query);
+            // DBHelper.OpenConnection();
+            DBHelper.Instance.OpenConnection();
+            // reader = DBHelper.ExcQuery(query);
+            reader= DBHelper.Instance.ExcQuery(query);
             try
             {
                  Customer customer = null;
@@ -75,7 +81,8 @@ namespace DAL
             {
              customer = GetCustomerInfo(reader);    
             }
-            DBHelper.CloseConnection();  
+            // DBHelper.CloseConnection();  
+            DBHelper.Instance.CloseConnection();
              return customer; 
             }
             catch 
@@ -89,15 +96,17 @@ namespace DAL
         {
             query = @"update customer set customer_name ='"+name+"', customer_address ='"+address+"',phone_number ='"+sdt+
             "'where customer_id = '"+id+"';";
-            DBHelper.OpenConnection();
-            reader = DBHelper.ExcQuery(query);
-
+            // DBHelper.OpenConnection();
+            DBHelper.Instance.OpenConnection();
+            // reader = DBHelper.ExcQuery(query);
+            reader = DBHelper.Instance.ExcQuery(query);
             Customer customer = null;
             if(reader.Read())
             {
                 customer = GetCustomerInfo(reader);
             }
-            DBHelper.CloseConnection();
+            // DBHelper.CloseConnection();
+            DBHelper.Instance.CloseConnection();
             return customer;
         }
         

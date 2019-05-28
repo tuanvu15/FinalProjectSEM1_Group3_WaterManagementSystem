@@ -9,38 +9,37 @@ namespace DAL
         private MySqlConnection connection;
         private string query;
         private MySqlDataReader reader;
+        // DBHelper db = DBHelper.GetInstance();
         public ManagersDAL(){
-            connection = DBHelper.OpenConnection();
+            // connection = DBHelper.OpenConnection();
+            
+            connection =DBHelper.Instance.OpenConnection();
         }
-        public Managers Login(string userName, string pass)
+         public Managers Login(string userName, string pass)
         {
             if(userName == null || pass == null)
             {
                 return null;
             }
             
-            // if (connection == null)
-            // {
-            //     connection = DBHelper.OpenConnection();
-            // }
-           
-            // if (connection.State == System.Data.ConnectionState.Closed)
-            // {
-            //     connection.Open();
-            // }
+       
             query = @"select * from Managers where email = '" + userName +"'and pass ='"+ pass + "';";
-            DBHelper.OpenConnection();
-            reader = DBHelper.ExcQuery(query);
+            // DBHelper.OpenConnection();
+            DBHelper.Instance.OpenConnection();
+            // reader = DBHelper.ExcQuery(query);
+              reader = DBHelper.Instance.ExcQuery(query);
             Managers managers = null;
             try
             {
                 if (connection == null)
             {
-                connection = DBHelper.OpenConnection();
+                // connection = DBHelper.OpenConnection();
+                connection = DBHelper.Instance.OpenConnection();
             }
             if (connection.State == System.Data.ConnectionState.Closed)
             {
                 connection.Open();
+                
             }
             MySqlCommand command = new MySqlCommand("", connection);
 
@@ -51,7 +50,8 @@ namespace DAL
                 managers = GetManagers(reader);
             }
            
-            DBHelper.CloseConnection();
+            // DBHelper.CloseConnection();
+            DBHelper.Instance.CloseConnection();
             
             }
             catch 
