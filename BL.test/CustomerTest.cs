@@ -9,50 +9,50 @@ namespace BL.test
         [Fact]
         public void GetCustomerbyIDTest1()
         {
-        CustomerBL cusbl = new CustomerBL();
-        Assert.NotNull(cusbl.GetCustomerbyID(1));
+            CustomerBL cusbl = new CustomerBL();
+            Assert.NotNull(cusbl.GetCustomerbyID(1));
         }
-         [Fact]
+        [Fact]
         public void GetCustomerbyIDTest2()
         {
-        CustomerBL cusbl = new CustomerBL();
-        Assert.Null(cusbl.GetCustomerbyID(0));
+            CustomerBL cusbl = new CustomerBL();
+            Assert.Null(cusbl.GetCustomerbyID(0));
         }
         [Fact]
         public void GetCustomerTest1()
         {
-        CustomerBL cusbl = new CustomerBL();
-        Assert.NotNull(cusbl.GetCustomer());
+            CustomerBL cusbl = new CustomerBL();
+            Assert.NotNull(cusbl.GetCustomer());
+        }
+        [Fact]
+        public void InsertCustomerTest1()
+        {
+            CustomerBL cusbl = new CustomerBL();
+            Assert.NotNull(cusbl.InsertCustomer("nguyen", "ha", "09432025"));
         }
         [Fact]
         public void InsertCustomerTest2()
         {
-        CustomerBL cusbl = new CustomerBL();
-        Assert.NotNull(cusbl.InsertCustomer("nguyen","ha","09432025"));
-        }
-        [Fact]
-        public void InsertCustomerTest3()
-        {
-        CustomerBL cusbl = new CustomerBL();
-        Assert.Null(cusbl.InsertCustomer("12344","5674567","auqw"));
+            CustomerBL cusbl = new CustomerBL();
+            Assert.Null(cusbl.InsertCustomer("12344", "5674567", "auqw"));
         }
         [Fact]
         public void UpdateCustomerTest1()
         {
-        CustomerBL cusbl = new CustomerBL();
-        Assert.NotNull(cusbl.UpdateCustomer(1,"men","hai","0000000"));
+            CustomerBL cusbl = new CustomerBL();
+            Assert.NotNull(cusbl.UpdateCustomer(3, "men", "hai", "0000000"));
         }
-          [Fact]
+        [Fact]
         public void UpdateCustomerTest2()
         {
-        CustomerBL cusbl = new CustomerBL();
-        Assert.Null(cusbl.UpdateCustomer(23,"men","hai","0000000"));
+            CustomerBL cusbl = new CustomerBL();
+            Assert.Null(cusbl.UpdateCustomer(0, "men", "hai", "0000000"));
         }
-          [Fact]
+        [Fact]
         public void UpdateCustomerTest3()
         {
-        CustomerBL cusbl = new CustomerBL();
-        Assert.Null(cusbl.UpdateCustomer(1,"00000","000000","0000000"));
+            CustomerBL cusbl = new CustomerBL();
+            Assert.Null(cusbl.UpdateCustomer(1, "00000", "000000", "addgh"));
         }
     }
 }
