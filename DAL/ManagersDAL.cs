@@ -13,7 +13,17 @@ namespace DAL
         public ManagersDAL(){
             // connection = DBHelper.OpenConnection();
             
-            connection =DBHelper.Instance.OpenConnection();
+            // connection =DBHelper.Instance.OpenConnection();
+                if (connection == null)
+            {
+                // connection = DBHelper.OpenConnection();
+                connection = DBHelper.Instance.OpenConnection();
+            }
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection= DBHelper.Instance.OpenConnection();
+                
+            }
         }
          public Managers Login(string userName, string pass)
         {
@@ -31,16 +41,16 @@ namespace DAL
             Managers managers = null;
             try
             {
-                if (connection == null)
-            {
-                // connection = DBHelper.OpenConnection();
-                connection = DBHelper.Instance.OpenConnection();
-            }
-            if (connection.State == System.Data.ConnectionState.Closed)
-            {
-                connection.Open();
+            //     if (connection == null)
+            // {
+            //     // connection = DBHelper.OpenConnection();
+            //     connection = DBHelper.Instance.OpenConnection();
+            // }
+            // if (connection.State == System.Data.ConnectionState.Closed)
+            // {
+            //     connection.Open();
                 
-            }
+            // }
             MySqlCommand command = new MySqlCommand("", connection);
 
 
@@ -56,7 +66,8 @@ namespace DAL
             }
             catch 
             {
-                return null;
+                Console.WriteLine("lỗi kết nối!");
+                
                 
             }
            return managers;

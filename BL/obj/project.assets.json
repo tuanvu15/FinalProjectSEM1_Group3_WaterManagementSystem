@@ -1221,11 +1221,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\BL\\BL.csproj",
+      "projectUniqueName": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\BL\\BL.csproj",
+      "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj",
       "packagesPath": "C:\\Users\\tuanv\\.nuget\\packages\\",
-      "outputPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\BL\\obj\\",
+      "outputPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1244,11 +1244,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\DAL.csproj": {
-              "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\DAL.csproj"
+            "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj": {
+              "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj"
             },
-            "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj": {
-              "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj"
+            "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
+              "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
             }
           }
         }

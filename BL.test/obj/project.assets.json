@@ -6328,11 +6328,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\BL.test\\BL.test.csproj",
+      "projectUniqueName": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL.test\\BL.test.csproj",
       "projectName": "BL.test",
-      "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\BL.test\\BL.test.csproj",
+      "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL.test\\BL.test.csproj",
       "packagesPath": "C:\\Users\\tuanv\\.nuget\\packages\\",
-      "outputPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\BL.test\\obj\\",
+      "outputPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL.test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6351,8 +6351,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\BL\\BL.csproj": {
-              "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\BL\\BL.csproj"
+            "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj": {
+              "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj"
             }
           }
         }

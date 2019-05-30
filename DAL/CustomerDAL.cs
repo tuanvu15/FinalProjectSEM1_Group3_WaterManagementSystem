@@ -9,13 +9,26 @@ namespace DAL
     {
         private string query;
         //  DBHelper db = DBHelper.GetInstance();
+        private MySqlConnection connection;
+        public CustomerDAL(){
+              if (connection == null)
+            {
+                // connection = DBHelper.OpenConnection();
+                connection = DBHelper.Instance.OpenConnection();
+            }
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+                
+            }
+        }
         private MySqlDataReader reader;
         public Customer GetCustomerbyID(int cusID)
         {
             query = @"select customer_id, customer_name, customer_address, phone_number from
             customer where customer_id = '"+ cusID+ "';";
             // DBHelper.OpenConnection();
-            DBHelper.Instance.OpenConnection();
+            // DBHelper.Instance.OpenConnection();
             // reader = DBHelper.ExcQuery(query);
             reader = DBHelper.Instance.ExcQuery(query);
             
@@ -51,7 +64,7 @@ namespace DAL
         {
             query = @"select * from customer;";
             // DBHelper.OpenConnection();
-            DBHelper.Instance.OpenConnection();
+            // DBHelper.Instance.OpenConnection();
             // reader = DBHelper.ExcQuery(query);
            reader = DBHelper.Instance.ExcQuery(query);
             List<Customer> customer = new List<Customer>();
@@ -70,12 +83,13 @@ namespace DAL
             
             query =@"insert into Customer(customer_name,customer_address,phone_number) value('" +cusName+"','"+cusAddress+"','"+Phone+"');";
             // DBHelper.OpenConnection();
-            DBHelper.Instance.OpenConnection();
+            // DBHelper.Instance.OpenConnection();
             // reader = DBHelper.ExcQuery(query);
             reader= DBHelper.Instance.ExcQuery(query);
+            Customer customer = null;
             try
             {
-                 Customer customer = null;
+                 
             
                if(reader.Read())
             {
@@ -97,7 +111,7 @@ namespace DAL
             query = @"update customer set customer_name ='"+name+"', customer_address ='"+address+"',phone_number ='"+sdt+
             "'where customer_id = '"+id+"';";
             // DBHelper.OpenConnection();
-            DBHelper.Instance.OpenConnection();
+            // DBHelper.Instance.OpenConnection();
             // reader = DBHelper.ExcQuery(query);
             reader = DBHelper.Instance.ExcQuery(query);
             Customer customer = null;

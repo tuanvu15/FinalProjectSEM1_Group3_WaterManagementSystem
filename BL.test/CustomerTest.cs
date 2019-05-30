@@ -28,31 +28,32 @@ namespace BL.test
         public void InsertCustomerTest1()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.NotNull(cusbl.InsertCustomer("nguyen", "ha", "09432025"));
+            Assert.NotNull(cusbl.InsertCustomer("nguyen", "ha", "09432025"));//
         }
         [Fact]
         public void InsertCustomerTest2()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.Null(cusbl.InsertCustomer("12344", "5674567", "auqw"));
+            Assert.Null(cusbl.InsertCustomer("12344", "5674567", "auqw"));//
         }
+
         [Fact]
         public void UpdateCustomerTest1()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.NotNull(cusbl.UpdateCustomer(3, "men", "hai", "0000000"));
+            Assert.NotNull(cusbl.UpdateCustomer(3, "men", "hai", "0000000"));//
         }
         [Fact]
         public void UpdateCustomerTest2()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.Null(cusbl.UpdateCustomer(0, "men", "hai", "0000000"));
+            Assert.Null(cusbl.UpdateCustomer(0, "men", "ha", "11111"));
         }
         [Fact]
         public void UpdateCustomerTest3()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.Null(cusbl.UpdateCustomer(1, "00000", "000000", "addgh"));
+            Assert.NotNull(cusbl.UpdateCustomer(1, "00000", "000000", "addgh"));//
         }
     }
 }

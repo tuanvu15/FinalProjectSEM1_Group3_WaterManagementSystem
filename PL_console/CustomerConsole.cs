@@ -62,6 +62,10 @@ namespace PL_console
                 {
                     csBL.InsertCustomer( cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
                 }
+                else if(choice == "n" || choice == "N")
+                {
+                    cus=null;
+                }
 
                 Console.Write("Bạn có muốn tiếp tục? (Y/N)");
                 string choice1;
