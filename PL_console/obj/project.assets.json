@@ -1738,11 +1738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\PL_console\\PL_console.csproj",
+      "projectUniqueName": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\PL_console.csproj",
       "projectName": "PL_console",
-      "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\PL_console\\PL_console.csproj",
+      "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\PL_console.csproj",
       "packagesPath": "C:\\Users\\tuanv\\.nuget\\packages\\",
-      "outputPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\PL_console\\obj\\",
+      "outputPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1761,11 +1761,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\BL\\BL.csproj": {
-              "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\BL\\BL.csproj"
+            "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj": {
+              "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj"
             },
-            "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj": {
-              "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj"
+            "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
+              "projectPath": "G:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
             }
           }
         }

@@ -143,15 +143,24 @@ namespace PL_console
             {
                 CustomerBL csBL = new CustomerBL();
                 Customer cus = new Customer();
+                int flag ;
                 Console.WriteLine("===== CẬP NHẬT THÔNG TIN KHÁCH HÀNG =====");
-                Console.Write("- Nhập ID: ");
-                cus.CustomerId = Convert.ToInt16(Console.ReadLine());
-                Console.Clear();
-                while (csBL.GetCustomerbyID(cus.CustomerId) == null)
+                do
                 {
+                    flag=1;
+                  Console.Write("- Nhập ID: ");
+                  cus.CustomerId = Convert.ToInt32(Console.ReadLine());
+                if(csBL.GetCustomerbyID(cus.CustomerId) == null)
+                {
+                    flag =-1;
                     Console.Write("Mã không tồn tại, mời bạn nhập lại:");
-                    cus.CustomerId = Convert.ToInt16(Console.ReadLine());
-                }
+                    continue;
+                }  
+                } while (flag ==-1);
+                
+                
+                Console.Clear();
+               
                 Console.WriteLine("====== Thông tin khách hàng cần cập nhật======");
                 Console.WriteLine("Họ và tên : " + csBL.GetCustomerbyID(cus.CustomerId).CustomerName);
                 Console.WriteLine("Địa chỉ : " + csBL.GetCustomerbyID(cus.CustomerId).CustomerAddress);
