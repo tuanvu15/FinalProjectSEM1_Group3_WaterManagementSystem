@@ -1,11 +1,13 @@
 using System;
 using Xunit;
 using BL;
-
+using Persistence;
 namespace BL.test
 {
+
     public class CustomerTest
     {
+        
         [Fact]
         public void GetCustomerbyIDTest1()
         {
@@ -18,6 +20,7 @@ namespace BL.test
             CustomerBL cusbl = new CustomerBL();
             Assert.Null(cusbl.GetCustomerbyID(0));
         }
+        
         [Fact]
         public void GetCustomerTest1()
         {
@@ -36,7 +39,12 @@ namespace BL.test
             CustomerBL cusbl = new CustomerBL();
             Assert.Null(cusbl.InsertCustomer("12344", "5674567", "auqw"));
         }
-
+           [Fact]
+        public void InsertCustomerTest3()
+        {
+            CustomerBL cusbl = new CustomerBL();
+            Assert.Null(cusbl.InsertCustomer(null, null, null));//
+        }
         [Fact]
         public void UpdateCustomerTest1()
         {
@@ -54,6 +62,12 @@ namespace BL.test
         {
             CustomerBL cusbl = new CustomerBL();
             Assert.Null(cusbl.UpdateCustomer(1, "00000", "000000", "addgh"));//
+        }
+        [Fact]
+        public void UpdateCustomerTest4()
+        {
+            CustomerBL cusbl = new CustomerBL();
+            Assert.Null(cusbl.UpdateCustomer(1, null, null, null));//
         }
     }
 }

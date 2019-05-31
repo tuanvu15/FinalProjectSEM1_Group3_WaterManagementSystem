@@ -1,0 +1,4 @@
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.csprojAssemblyReference.cache
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.csproj.CoreCompileInputs.cache
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.AssemblyInfoInputs.cache
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.AssemblyInfo.cs

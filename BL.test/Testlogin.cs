@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using BL;
+using Persistence;
 namespace BL.test
 {
 
@@ -25,6 +26,6 @@ namespace BL.test
             ManagersBL magBl = new ManagersBL();
             Assert.Null(magBl.Login("!@#", "###"));
         }
-
+       
     }
 }

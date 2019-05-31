@@ -1220,11 +1220,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj",
+      "projectUniqueName": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj",
+      "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj",
       "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
-      "outputPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\obj\\",
+      "outputPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1241,11 +1241,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj": {
-              "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj"
+            "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj": {
+              "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj"
             },
-            "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
-              "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
+            "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
+              "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
             }
           }
         }

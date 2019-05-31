@@ -1,37 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL.test\\DAL.test.csproj": {}
+    "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL.test\\DAL.test.csproj": {}
   },
   "projects": {
-    "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL.test\\DAL.test.csproj": {
+    "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL.test\\DAL.test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL.test\\DAL.test.csproj",
+        "projectUniqueName": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL.test\\DAL.test.csproj",
         "projectName": "DAL.test",
-        "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL.test\\DAL.test.csproj",
-        "packagesPath": "C:\\Users\\tuanv\\.nuget\\packages\\",
-        "outputPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL.test\\obj\\",
+        "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL.test\\DAL.test.csproj",
+        "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
+        "outputPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL.test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tuanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\tuan vu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj": {
-                "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj"
+              "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj": {
+                "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj"
+              },
+              "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
+                "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -72,34 +73,32 @@
         }
       }
     },
-    "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj": {
+    "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj",
+        "projectUniqueName": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\tuanv\\.nuget\\packages\\",
-        "outputPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\obj\\",
+        "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
+        "outputPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tuanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\tuan vu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
-                "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
+              "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
+                "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -132,27 +131,25 @@
         }
       }
     },
-    "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
+    "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\tuanv\\.nuget\\packages\\",
-        "outputPath": "g:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\obj\\",
+        "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
+        "outputPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tuanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\tuan vu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

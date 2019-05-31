@@ -46,3 +46,15 @@ F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Gr
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.dll
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.pdb
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.dll
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\DAL.pdb
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.dll
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\bin\Debug\netstandard2.0\Persistence.pdb
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.dll
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\DAL\obj\Debug\netstandard2.0\DAL.pdb

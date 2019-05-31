@@ -10,6 +10,7 @@
         "dependencies": {
           "BL": "1.0.0",
           "Microsoft.NET.Test.Sdk": "15.9.0",
+          "Persistence": "1.0.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
         },
