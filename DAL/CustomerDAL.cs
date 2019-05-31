@@ -18,7 +18,7 @@ namespace DAL
             }
             if (connection.State == System.Data.ConnectionState.Closed)
             {
-                connection.Open();
+                connection = DBHelper.Instance.OpenConnection();
                 
             }
         }
@@ -31,25 +31,25 @@ namespace DAL
             // DBHelper.Instance.OpenConnection();
             // reader = DBHelper.ExcQuery(query);
             reader = DBHelper.Instance.ExcQuery(query);
-            
+            Customer customer = null;
             
             try
             {
-                Customer customer = null;
+                
                  if(reader.Read())
             {
                 customer = GetCustomerInfo(reader);
             }
             // DBHelper.CloseConnection();
             DBHelper.Instance.CloseConnection();
-            return customer; 
+            
             }
             catch 
             {
                 
-            return null;
+              customer = null;
             }
-          
+          return customer; 
         }
         public Customer GetCustomerInfo(MySqlDataReader reader)
         {

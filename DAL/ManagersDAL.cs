@@ -35,7 +35,7 @@ namespace DAL
        
             query = @"select * from Managers where email = '" + userName +"'and pass ='"+ pass + "';";
             // DBHelper.OpenConnection();
-            DBHelper.Instance.OpenConnection();
+            
             // reader = DBHelper.ExcQuery(query);
               reader = DBHelper.Instance.ExcQuery(query);
             Managers managers = null;
@@ -51,7 +51,7 @@ namespace DAL
             //     connection.Open();
                 
             // }
-            MySqlCommand command = new MySqlCommand("", connection);
+            MySqlCommand command = new MySqlCommand(query, connection);
 
 
             
