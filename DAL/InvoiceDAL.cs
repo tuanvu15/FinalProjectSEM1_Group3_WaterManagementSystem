@@ -16,6 +16,11 @@ namespace DAL
             {
                 connection = DBHelper.Instance.OpenConnection();
             }
+            //  if (connection.State == System.Data.ConnectionState.Closed)
+            // {
+            //     connection = DBHelper.Instance.OpenConnection();
+                
+            // }
         }
         private MySqlDataReader reader;
         public bool InsertInvoice(string dateCreate, int value)

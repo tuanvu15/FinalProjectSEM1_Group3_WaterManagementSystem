@@ -11,19 +11,17 @@ namespace DAL
         private MySqlDataReader reader;
         // DBHelper db = DBHelper.GetInstance();
         public ManagersDAL(){
-            // connection = DBHelper.OpenConnection();
             
-            // connection =DBHelper.Instance.OpenConnection();
                 if (connection == null)
             {
                 // connection = DBHelper.OpenConnection();
                 connection = DBHelper.Instance.OpenConnection();
             }
-            if (connection.State == System.Data.ConnectionState.Closed)
-            {
-                connection= DBHelper.Instance.OpenConnection();
+            // if (connection.State == System.Data.ConnectionState.Closed)
+            // {
+            //     connection= DBHelper.Instance.OpenConnection();
                 
-            }
+            // }
         }
          public Managers Login(string userName, string pass)
         {

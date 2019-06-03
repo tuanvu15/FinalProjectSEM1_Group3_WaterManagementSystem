@@ -22,9 +22,9 @@ namespace BL
         {
             return invoiceDetail.GetInvoiceByCustomerId(Id);
         }
-        public void InsertInvoiceDetail(int customerID,int month_, int new_number, int old_number )
+        public bool InsertInvoiceDetail(int customerID,int month_, int new_number, int old_number )
         {
-            invoiceDetail.InsertInvoiceDetail(customerID,month_, new_number, old_number);
+            return invoiceDetail.InsertInvoiceDetail(customerID,month_, new_number, old_number);
         }
         
     }

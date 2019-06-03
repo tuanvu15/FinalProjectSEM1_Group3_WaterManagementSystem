@@ -292,10 +292,10 @@ namespace PL_console
             } while (choice !=0);
             
         }
-        public void InvoiceManager()
-        {
+        // public void InvoiceManager()
+        // {
 
-        }
+        // }
         public string Password()
         {
             //hiển thị pass thành dấu "*"

@@ -34,7 +34,7 @@ namespace DAL
                  connection = new MySqlConnection
                 {
                     ConnectionString = @"server = localhost;
-                                        user id = root; password = hoang1701 ;
+                                        user id = root; password = 01652530159;
                                         port= 3306; database = projectData"
 
                 };

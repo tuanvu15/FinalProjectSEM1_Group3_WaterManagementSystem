@@ -8,13 +8,14 @@ namespace PL_console
 {
     public class InvoiceConsole
     {
-        public void CreateInvoice()
+        public bool CreateInvoice()
         {
             InvoiceDetailBL inv = new InvoiceDetailBL();
             CustomerBL csBL = new CustomerBL();
             InvoiceBL inBL = new InvoiceBL();
             MonthBL monthBL = new MonthBL();
             Menu cus = new Menu();
+            bool result =true;
             while (true)
             {
                 int cusID;
@@ -71,16 +72,7 @@ namespace PL_console
                     Console.Write("- Nhập tháng: ");
                     month = Convert.ToInt32(Console.ReadLine());
                 }
-                // while (inv.GetInvoiceByMonth(cusID, month) != null)
-                // {
-                //     Console.Write("Hóa Đơn tháng " + month + " này đã được tạo, mời nhập lại");
-                //     Console.Write("- Nhập tháng");
-                //     month = Convert.ToInt32(Console.ReadLine());
-                // }
-                // if(inv.GetInvoiceByMonth(cusID, month) == null)
-                // {
-                //     Console.WriteLine("Hóa đơn tháng trước bạn chưa tạo ");
-                // }
+                
 
 
                 Console.WriteLine("- nhập thông tin hóa đơn tháng: {0}", month);
@@ -201,6 +193,7 @@ namespace PL_console
                 break;
 
             }
+            return result;
 
         }
     }

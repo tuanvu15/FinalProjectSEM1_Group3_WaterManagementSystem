@@ -59,7 +59,7 @@ namespace DAL
             return inv;
 
         }
-        public void InsertInvoiceDetail(int cusID, int month, int newNB, int oldNB)
+        public bool InsertInvoiceDetail(int cusID, int month, int newNB, int oldNB)
         {
             bool result = false;
             query = @"insert into InvoiceDetail(customer_id,month_id,new_number,old_number)value('" + cusID + "','" + month + "','" + newNB + "','" + oldNB + "');";
@@ -81,7 +81,7 @@ namespace DAL
 
                 result = false;
             }
-            DBHelper.Instance.CloseConnection();
+            return result;
         }
 
 

@@ -10,6 +10,7 @@ namespace DAL
         private string query;
         //  DBHelper db = DBHelper.GetInstance();
         private MySqlConnection connection;
+         
         public CustomerDAL(){
               if (connection == null)
             {
@@ -33,6 +34,7 @@ namespace DAL
             
             try
             {
+                 MySqlCommand command = new MySqlCommand(query, connection);
                 
                  if(reader.Read())
             {
@@ -79,14 +81,14 @@ namespace DAL
         }
         public bool InsertCustomer( string cusName, string cusAddress, string Phone)
         {
-            bool result = false;
+            bool result = true;
             if (cusName == null || cusAddress == null)
             {
-                return result;
+                return false;
             }
             if (Phone == null)
             {
-                return result;
+                return false;
             }
             query =@"insert into Customer(customer_name,customer_address,phone_number) value('" +cusName+"','"+cusAddress+"','"+Phone+"');";
            
@@ -94,7 +96,7 @@ namespace DAL
             Customer customer =null;
             try
             {
-
+               MySqlCommand command = new MySqlCommand(query, connection);
                if(reader.Read())
             {
              customer = GetCustomerInfo(reader);    
@@ -102,7 +104,7 @@ namespace DAL
             }
             // DBHelper.CloseConnection();  
             DBHelper.Instance.CloseConnection();
-             result = true;
+             return true;
             }
             catch (System.Exception )
             {
@@ -115,15 +117,15 @@ namespace DAL
         }
         public bool UpdateCustomer (int id, string name, string address, string sdt)
         {
-           bool result = false;
+           bool result = true;
           
             if (name == null || address == null)
             {
-                return result;
+                return false;
             }
             if (sdt == null)
             {
-                return result;
+                return false;
             }
             query = @"update customer set customer_name ='"+name+"', customer_address ='"+address+"',phone_number ='"+sdt+
             "'where customer_id = '"+id+"';";
@@ -142,8 +144,9 @@ namespace DAL
             }
             // DBHelper.CloseConnection();
             
-             result = true;
+             
              DBHelper.Instance.CloseConnection(); 
+             return true;
             }
             catch (System.NullReferenceException )
             {

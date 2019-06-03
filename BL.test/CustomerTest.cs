@@ -61,7 +61,7 @@ namespace BL.test
         public void UpdateCustomerTest3()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.False(cusbl.UpdateCustomer(1, "00000", "000000", "addgh"));//
+            Assert.False(cusbl.UpdateCustomer(1, "00000", "000000", "addgh"));
         }
         [Fact]
         public void UpdateCustomerTest4()

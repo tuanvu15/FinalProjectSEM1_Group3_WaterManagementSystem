@@ -26,61 +26,67 @@ namespace BL
         public bool InsertCustomer(string cusName, string cusAddress, string Phone)
 
         {
-            //    if (IsNumber(cusName))
-            //    {
-            //        return false;
-            //    }
-            //    if (IsNumber(cusAddress))
-            //    {
-            //        return false;
-            //    }
-            //    if (IsNumber(Phone))
-            //    {
-            //        return false;
-            //    }
+            if (!isnum(Phone))
+            {
+                return false;
+            }
+            if (!isch(cusName))
+            {
+                return false;
+            }
+            if (!isch(cusAddress))
+            {
+                return false;
+            }
 
             return customerDAL.InsertCustomer(cusName, cusAddress, Phone);
 
         }
         public bool UpdateCustomer(int id, string name, string address, string sdt)
         {
-            // if (!IsNumber(name) || name == null)
-            //    {
-            //        return false;
-            //    }
-            //    if (!IsNumber(address) || address == null)
-            //    {
-            //        return false;
-            //    }
-            //    if (!Is(sdt) || sdt == null)
-            //    {
-            //        return false;
-            //    }
-
+              if (!isnum(sdt))
+            {
+                return false;
+            }
+            if (!isch(name))
+            {
+                return false;
+            }
+            if (!isch(address))
+            {
+                return false;
+            }
+           
             return customerDAL.UpdateCustomer(id, name, address, sdt);
         }
 
-     public bool IsNumber(string pText)
-{
-         string pattern = @"^[a-zA-Z0-9]{1,25}$";
-         return Regex.IsMatch(pText, pattern);
+        public bool isch(string str)
+        {
+            str = str ?? string.Empty;
+            string strRegex = @"[a-zA-Z]";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(str))
+            {
+                return (true);
+            }
+            else
+                return (false);
+        }
 
-            
-}
-  
-        //  public bool Is(string pValue)
-        // {
-        //     Regex isValidInput = new Regex(@"^\d{10,11}$");
-            
-        //         if (!isValidInput.IsMatch(pValue)){
-        //             return false;
-        //         }
-                    
-            
-        //     return true;
-        // }
- 
-         public string input(string str)
+
+        public bool isnum(string str)
+        {
+            str = str ?? string.Empty;
+            string strRegex = @"[0-9]";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(str))
+            {
+                return (true);
+            }
+            else
+                return (false);
+        }
+        public string input(string str)
         {
             Regex regex = new Regex("[A-Za-z]");
             MatchCollection matchCollection = regex.Matches(str);
@@ -95,14 +101,14 @@ namespace BL
         }
         public string Validate(string str)
         {
-           
+
             Regex isValidInput = new Regex(@"^\d{10,11}$");
             // string strPhone = Console.ReadLine();
             while (!isValidInput.IsMatch(str))
             {
-                 Console.WriteLine("sai định dạng(0123456789)");
-                 Console.Write("nhập lại:");
-                 str=Console.ReadLine();
+                Console.WriteLine("sai định dạng(0123456789)");
+                Console.Write("nhập lại:");
+                str = Console.ReadLine();
             }
             return str;
         }
