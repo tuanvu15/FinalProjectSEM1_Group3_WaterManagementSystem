@@ -16,20 +16,18 @@ namespace DAL
                 // connection = DBHelper.OpenConnection();
                 connection = DBHelper.Instance.OpenConnection();
             }
-            if (connection.State == System.Data.ConnectionState.Closed)
-            {
-                connection = DBHelper.Instance.OpenConnection();
+            // if (connection.State == System.Data.ConnectionState.Closed)
+            // {
+            //     connection = DBHelper.Instance.OpenConnection();
                 
-            }
+            // }
         }
         private MySqlDataReader reader;
         public Customer GetCustomerbyID(int cusID)
         {
             query = @"select customer_id, customer_name, customer_address, phone_number from
             customer where customer_id = '"+ cusID+ "';";
-            // DBHelper.OpenConnection();
-            // DBHelper.Instance.OpenConnection();
-            // reader = DBHelper.ExcQuery(query);
+           
             reader = DBHelper.Instance.ExcQuery(query);
             Customer customer = null;
             
@@ -47,8 +45,9 @@ namespace DAL
             catch 
             {
                 
-              customer = null;
+              return null;
             }
+           
           return customer; 
         }
         public Customer GetCustomerInfo(MySqlDataReader reader)
@@ -78,50 +77,82 @@ namespace DAL
             return customer;
             
         }
-        public Customer InsertCustomer( string cusName, string cusAddress, string Phone)
+        public bool InsertCustomer( string cusName, string cusAddress, string Phone)
         {
-            
+            bool result = false;
+            if (cusName == null || cusAddress == null)
+            {
+                return result;
+            }
+            if (Phone == null)
+            {
+                return result;
+            }
             query =@"insert into Customer(customer_name,customer_address,phone_number) value('" +cusName+"','"+cusAddress+"','"+Phone+"');";
-            // DBHelper.OpenConnection();
-            // DBHelper.Instance.OpenConnection();
-            // reader = DBHelper.ExcQuery(query);
+           
             reader= DBHelper.Instance.ExcQuery(query);
-            Customer customer = null;
+            Customer customer =null;
             try
             {
-                 
-            
+
                if(reader.Read())
             {
              customer = GetCustomerInfo(reader);    
+             
             }
             // DBHelper.CloseConnection();  
             DBHelper.Instance.CloseConnection();
-             return customer; 
+             result = true;
             }
-            catch 
+            catch (System.Exception )
             {
-                return null;
+                result = false;
+
             }
-           
+            
+           return result;
              
         }
-        public Customer UpdateCustomer (int id, string name, string address, string sdt)
+        public bool UpdateCustomer (int id, string name, string address, string sdt)
         {
+           bool result = false;
+          
+            if (name == null || address == null)
+            {
+                return result;
+            }
+            if (sdt == null)
+            {
+                return result;
+            }
             query = @"update customer set customer_name ='"+name+"', customer_address ='"+address+"',phone_number ='"+sdt+
             "'where customer_id = '"+id+"';";
             // DBHelper.OpenConnection();
             // DBHelper.Instance.OpenConnection();
             // reader = DBHelper.ExcQuery(query);
             reader = DBHelper.Instance.ExcQuery(query);
+            MySqlCommand command = new MySqlCommand(query, connection);
             Customer customer = null;
-            if(reader.Read())
+            try
+            {
+                
+                if(reader.Read())
             {
                 customer = GetCustomerInfo(reader);
             }
             // DBHelper.CloseConnection();
-            DBHelper.Instance.CloseConnection();
-            return customer;
+            
+             result = true;
+             DBHelper.Instance.CloseConnection(); 
+            }
+            catch (System.NullReferenceException )
+            {
+                result =false;
+                
+            }
+           
+            return result;
+            
         }
         
 

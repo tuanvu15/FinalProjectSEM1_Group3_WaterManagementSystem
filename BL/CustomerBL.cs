@@ -16,24 +16,73 @@ namespace BL
         }
         public Customer GetCustomerbyID(int a)
         {
+
             return customerDAL.GetCustomerbyID(a);
         }
         public List<Customer> GetCustomer()
         {
             return customerDAL.GetCustomer();
         }
-        public Customer InsertCustomer(string cusName, string cusAddress, string Phone)
+        public bool InsertCustomer(string cusName, string cusAddress, string Phone)
+
         {
+            //    if (IsNumber(cusName))
+            //    {
+            //        return false;
+            //    }
+            //    if (IsNumber(cusAddress))
+            //    {
+            //        return false;
+            //    }
+            //    if (IsNumber(Phone))
+            //    {
+            //        return false;
+            //    }
+
             return customerDAL.InsertCustomer(cusName, cusAddress, Phone);
 
         }
-        public Customer UpdateCustomer(int id, string name, string address, string sdt)
+        public bool UpdateCustomer(int id, string name, string address, string sdt)
         {
+            // if (!IsNumber(name) || name == null)
+            //    {
+            //        return false;
+            //    }
+            //    if (!IsNumber(address) || address == null)
+            //    {
+            //        return false;
+            //    }
+            //    if (!Is(sdt) || sdt == null)
+            //    {
+            //        return false;
+            //    }
+
             return customerDAL.UpdateCustomer(id, name, address, sdt);
         }
-        public string input(string str)
+
+     public bool IsNumber(string pText)
+{
+         string pattern = @"^[a-zA-Z0-9]{1,25}$";
+         return Regex.IsMatch(pText, pattern);
+
+            
+}
+  
+        //  public bool Is(string pValue)
+        // {
+        //     Regex isValidInput = new Regex(@"^\d{10,11}$");
+            
+        //         if (!isValidInput.IsMatch(pValue)){
+        //             return false;
+        //         }
+                    
+            
+        //     return true;
+        // }
+ 
+         public string input(string str)
         {
-            Regex regex = new Regex("[A-Za-z\\sỖÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸàáâãèéêìíòóôõùúăđĩũơưăạảấầẩẫậắằẳẵặẹẻẽềềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ]");
+            Regex regex = new Regex("[A-Za-z]");
             MatchCollection matchCollection = regex.Matches(str);
             while ((matchCollection.Count < str.Length) || (str == ""))
             {
@@ -46,14 +95,7 @@ namespace BL
         }
         public string Validate(string str)
         {
-            // Regex regex = new Regex(@"[0-9]{9}$");
-            // MatchCollection matchCollection = regex.Matches(str);
-            // while ((matchCollection.Count < str.Length) || (str == ""))
-            // {
-            //     Console.WriteLine("Số điện thoại không đúng định dạng,\n mời nhập lại: ");
-            //     str = Console.ReadLine();
-            //     matchCollection = regex.Matches(str);
-            // }
+           
             Regex isValidInput = new Regex(@"^\d{10,11}$");
             // string strPhone = Console.ReadLine();
             while (!isValidInput.IsMatch(str))

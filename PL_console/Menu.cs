@@ -272,11 +272,11 @@ namespace PL_console
                         }
                         catch (System.NullReferenceException)
                         {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !");
                         }
                         catch (MySql.Data.MySqlClient.MySqlException)
                         {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!");
                         }
                         break;
 

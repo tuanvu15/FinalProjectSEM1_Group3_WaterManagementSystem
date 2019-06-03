@@ -31,43 +31,43 @@ namespace BL.test
         public void InsertCustomerTest1()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.NotNull(cusbl.InsertCustomer("nguyen", "ha", "0904108354"));//
+            Assert.True(cusbl.InsertCustomer("nam", "ha noi", "0904108354"));
         }
         [Fact]
         public void InsertCustomerTest2()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.Null(cusbl.InsertCustomer("12344", "5674567", "auqw"));
+            Assert.False(cusbl.InsertCustomer("12344", "5674567", "auqw"));//
         }
            [Fact]
         public void InsertCustomerTest3()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.Null(cusbl.InsertCustomer(null, null, null));//
+            Assert.False(cusbl.InsertCustomer(null, null, null));
         }
         [Fact]
         public void UpdateCustomerTest1()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.NotNull(cusbl.UpdateCustomer(3, "men", "hai", "0904109652"));//
+            Assert.True(cusbl.UpdateCustomer(4,"men", "hai", "0904109652"));
         }
         [Fact]
         public void UpdateCustomerTest2()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.Null(cusbl.UpdateCustomer(0, "men", "ha", "11111"));
+            Assert.False(cusbl.UpdateCustomer(0,"men", "ha", "11111"));//
         }
         [Fact]
         public void UpdateCustomerTest3()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.Null(cusbl.UpdateCustomer(1, "00000", "000000", "addgh"));//
+            Assert.False(cusbl.UpdateCustomer(1, "00000", "000000", "addgh"));//
         }
         [Fact]
         public void UpdateCustomerTest4()
         {
             CustomerBL cusbl = new CustomerBL();
-            Assert.Null(cusbl.UpdateCustomer(1, null, null, null));//
+            Assert.False(cusbl.UpdateCustomer(1, null, null, null));
         }
     }
 }
