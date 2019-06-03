@@ -7,51 +7,52 @@ namespace PL_console
 {
     public class Menu
     {
-        public void  MenuChoice(string err)
+        public void MenuChoice(string err)
         {
             int choice;
             do
             {
-                 Console.Clear();
-            if (err != null)
-            {
-                Console.WriteLine(err);
-            }
-            
-            Console.WriteLine("╔══════════════════════════════════════════╗");
-            Console.WriteLine("║    HỆ THỐNG QUẢN LÝ HÓA ĐƠN TIỀN NƯỚC    ║");
-            Console.WriteLine("╠══════════════════════════════════════════╣");
-            Console.WriteLine("║ 1.Đăng nhập                              ║");
-            Console.WriteLine("║ 0.thoát                                  ║");
-            Console.WriteLine("╚══════════════════════════════════════════╝");
-            Console.Write("Chọn: ");
-             while (true)
-            {
-                bool check =Int32.TryParse(Console.ReadLine(), out choice);
-                if (!check)
+                Console.Clear();
+                if (err != null)
                 {
-                    Console.Write("nhập lại:");
+                    Console.WriteLine(err);
                 }
-                else{
-                    break;
-                }
-            }
 
-            switch (choice)
-            {
-                case 1:
+                Console.WriteLine("╔══════════════════════════════════════════╗");
+                Console.WriteLine("║    HỆ THỐNG QUẢN LÝ HÓA ĐƠN TIỀN NƯỚC    ║");
+                Console.WriteLine("╠══════════════════════════════════════════╣");
+                Console.WriteLine("║ 1.Đăng nhập                              ║");
+                Console.WriteLine("║ 0.thoát                                  ║");
+                Console.WriteLine("╚══════════════════════════════════════════╝");
+                Console.Write("Chọn: ");
+                while (true)
+                {
+                    bool check = Int32.TryParse(Console.ReadLine(), out choice);
+                    if (!check)
                     {
-                        MenuLogin();
+                        Console.Write("nhập lại:");
+                    }
+                    else
+                    {
                         break;
                     }
-                case 0:
-                    {
-                        Environment.Exit(0);
-                        break;
-                    }
-            }
-            } while (choice !=0);
-           
+                }
+
+                switch (choice)
+                {
+                    case 1:
+                        {
+                            MenuLogin();
+                            break;
+                        }
+                    case 0:
+                        {
+                            Environment.Exit(0);
+                            break;
+                        }
+                }
+            } while (choice != 0);
+
         }
         public void MenuLogin()
         {
@@ -150,53 +151,54 @@ namespace PL_console
             InvoiceConsole inv = new InvoiceConsole();
             do
             {
-                      Console.Clear();
+                Console.Clear();
 
-            Console.WriteLine("========== MENU QUẢN LÝ ==========");
-            Console.WriteLine("1.Quản lý khách hàng");
-            Console.WriteLine("2.Tạo hóa đơn");
-            Console.WriteLine("0.Đăng xuất");
-            Console.WriteLine("==================================");
-            Console.Write("Chọn:");
-            
-            while (true)
-            {
-                bool check =Int32.TryParse(Console.ReadLine(), out magChoice);
-                if (!check)
+                Console.WriteLine("========== MENU QUẢN LÝ ==========");
+                Console.WriteLine("1.Quản lý khách hàng");
+                Console.WriteLine("2.Tạo hóa đơn");
+                Console.WriteLine("0.Đăng xuất");
+                Console.WriteLine("==================================");
+                Console.Write("Chọn:");
+
+                while (true)
                 {
-                    Console.Write("nhập lại:");
+                    bool check = Int32.TryParse(Console.ReadLine(), out magChoice);
+                    if (!check)
+                    {
+                        Console.Write("nhập lại:");
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
-                else{
-                    break;
+
+                switch (magChoice)
+                {
+                    case 0:
+                        {
+                            MenuChoice(null);
+                            break;
+                        }
+                    case 1:
+                        {
+                            CustomerMenu();
+                            break;
+                        }
+                    case 2:
+                        {
+                            inv.CreateInvoice();
+                            break;
+                        }
+                    default:
+                        {
+                            MainMenu();
+                            break;
+                        }
+
                 }
-            }
+            } while (magChoice != 0);
 
-            switch (magChoice)
-            {
-                case 0:
-                    {
-                        MenuChoice(null);
-                        break;
-                    }
-                case 1:
-                    {
-                        CustomerMenu();
-                        break;
-                    }
-                case 2:
-                    {
-                        inv.CreateInvoice();
-                        break;
-                    }
-                default:
-                    {
-                        MainMenu();
-                        break;
-                    }
-
-            }
-            } while (magChoice !=0);
-      
 
         }
         public void CustomerMenu()
@@ -205,92 +207,92 @@ namespace PL_console
             do
             {
                 CustomerConsole cusCS = new CustomerConsole();
-            Console.Clear();
-            Console.WriteLine("====== QUẢN LÝ KHÁCH HÀNG ======");
-            Console.WriteLine("1.Tạo mới khách hàng");
-            Console.WriteLine("2.Xem danh sách khách hàng");
-            Console.WriteLine("3.Cập nhật thông tin khách hàng");
-            Console.WriteLine("0.trở về menu chính");
-            Console.Write("chọn:");
-             while (true)
-            {
-                bool check = Int32.TryParse(Console.ReadLine(),out choice);
-                if (!check)
+                Console.Clear();
+                Console.WriteLine("====== QUẢN LÝ KHÁCH HÀNG ======");
+                Console.WriteLine("1.Tạo mới khách hàng");
+                Console.WriteLine("2.Xem danh sách khách hàng");
+                Console.WriteLine("3.Cập nhật thông tin khách hàng");
+                Console.WriteLine("0.trở về menu chính");
+                Console.Write("chọn:");
+                while (true)
                 {
-                    Console.Write("nhập lại:");
+                    bool check = Int32.TryParse(Console.ReadLine(), out choice);
+                    if (!check)
+                    {
+                        Console.Write("nhập lại:");
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
-                else
+
+                switch (choice)
                 {
-                    break;
+                    case 0:
+                        {
+                            MainMenu();
+                            break;
+                        }
+                    case 1:
+                        {
+                            try
+                            {
+                                cusCS.CreateCustomer();
+                            }
+                            catch (System.NullReferenceException)
+                            {
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                            }
+                            catch (MySql.Data.MySqlClient.MySqlException)
+                            {
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                            }
+                            break;
+
+
+                        }
+                    case 2:
+                        {
+                            try
+                            {
+                                cusCS.DisplayCustomer();
+                            }
+                            catch (System.NullReferenceException)
+                            {
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                            }
+                            catch (MySql.Data.MySqlClient.MySqlException)
+                            {
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
+                            }
+                            break;
+
+                        }
+                    case 3:
+                        {
+                            try
+                            {
+                                cusCS.UpdateCustomer();
+                            }
+                            catch (System.NullReferenceException)
+                            {
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !");
+                            }
+                            catch (MySql.Data.MySqlClient.MySqlException)
+                            {
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!");
+                            }
+                            break;
+
+                        }
+                    default:
+                        {
+                            break;
+                        }
                 }
-            }
+            } while (choice != 0);
 
-            switch (choice)
-            {
-                case 0:
-                    {
-                        MainMenu();
-                        break;
-                    }
-                case 1:
-                    {
-                        try
-                        {
-                            cusCS.CreateCustomer();
-                        }
-                        catch (System.NullReferenceException)
-                        {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
-                        }
-                        catch (MySql.Data.MySqlClient.MySqlException)
-                        {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
-                        }
-                        break;
-
-
-                    }
-                case 2:
-                    {
-                        try
-                        {
-                            cusCS.DisplayCustomer();
-                        }
-                        catch (System.NullReferenceException)
-                        {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
-                        }
-                        catch (MySql.Data.MySqlClient.MySqlException)
-                        {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!!");
-                        }
-                        break;
-
-                    }
-                case 3:
-                    {
-                        try
-                        {
-                            cusCS.UpdateCustomer();
-                        }
-                        catch (System.NullReferenceException)
-                        {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !");
-                        }
-                        catch (MySql.Data.MySqlClient.MySqlException)
-                        {
-                            MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI !!");
-                        }
-                        break;
-
-                    }
-                default:
-                    {
-                        break;
-                    }
-            }
-            } while (choice !=0);
-            
         }
         // public void InvoiceManager()
         // {
