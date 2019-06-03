@@ -70,3 +70,21 @@ F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debu
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfoInputs.cache
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.AssemblyInfo.cs
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.deps.json
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.json
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.runtimeconfig.dev.json
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.dll
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\PL_console.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.dll
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.dll
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.dll
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\Persistence.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\BL.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\bin\Debug\netcoreapp2.2\DAL.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete

@@ -68,3 +68,17 @@ F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netsta
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.dll
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.dll
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\BL.deps.json
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\BL.dll
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\BL.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\Persistence.dll
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\Persistence.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.AssemblyInfoInputs.cache
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.AssemblyInfo.cs
+C:\Users\Admin\Downloads\Project\c\FinalProjectSEM1_Group3_WaterManagementSystem\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete

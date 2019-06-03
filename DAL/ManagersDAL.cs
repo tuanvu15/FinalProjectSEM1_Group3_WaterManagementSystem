@@ -64,7 +64,7 @@ namespace DAL
             DBHelper.Instance.CloseConnection();
             
             }
-            catch 
+            catch (System.NullReferenceException)
             {
                 Console.WriteLine("lỗi kết nối!");
                 

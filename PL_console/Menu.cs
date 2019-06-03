@@ -147,6 +147,7 @@ namespace PL_console
         public void MainMenu()
         {
             int magChoice;
+            InvoiceConsole inv = new InvoiceConsole();
             do
             {
                       Console.Clear();
@@ -184,10 +185,12 @@ namespace PL_console
                     }
                 case 2:
                     {
+                        inv.CreateInvoice();
                         break;
                     }
                 default:
                     {
+                        MainMenu();
                         break;
                     }
 

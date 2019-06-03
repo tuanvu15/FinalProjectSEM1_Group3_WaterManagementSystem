@@ -1,6 +1,6 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
-
+// 01652530159
 namespace DAL
 {
     public class DBHelper 
@@ -34,7 +34,7 @@ namespace DAL
                  connection = new MySqlConnection
                 {
                     ConnectionString = @"server = localhost;
-                                        user id = root; password = 01652530159;
+                                        user id = root; password = hoang1701 ;
                                         port= 3306; database = projectData"
 
                 };
