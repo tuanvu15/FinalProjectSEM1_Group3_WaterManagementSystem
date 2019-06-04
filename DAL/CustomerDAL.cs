@@ -133,11 +133,11 @@ namespace DAL
             // DBHelper.Instance.OpenConnection();
             // reader = DBHelper.ExcQuery(query);
             reader = DBHelper.Instance.ExcQuery(query);
-            MySqlCommand command = new MySqlCommand(query, connection);
+            
             Customer customer = null;
             try
             {
-                
+                MySqlCommand command = new MySqlCommand(query, connection);
                 if(reader.Read())
             {
                 customer = GetCustomerInfo(reader);
@@ -148,9 +148,9 @@ namespace DAL
              DBHelper.Instance.CloseConnection(); 
              return true;
             }
-            catch (System.NullReferenceException )
+            catch (System.Exception )
             {
-                result =false;
+                result = false;
                 
             }
            

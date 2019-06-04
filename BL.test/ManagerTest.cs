@@ -5,7 +5,7 @@ using Persistence;
 namespace BL.test
 {
 
-    public class Testlogin
+    public class ManagerTest
     {
 
         [Fact]

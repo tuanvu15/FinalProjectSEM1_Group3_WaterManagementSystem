@@ -56,13 +56,15 @@ namespace PL_console
         }
         public void MenuLogin()
         {
-            Console.Clear();
+            
+             ManagersBL magBL = new ManagersBL();
+                Managers manager = null;
+               
             while (true)
             {
-                ManagersBL magBL = new ManagersBL();
-                Managers manager = null;
-                string email = null;
+                 string email = null;
                 string pass = null;
+               Console.Clear();
                 Console.WriteLine("============ ĐĂNG NHẬP ===========");
                 Console.Write("USERNAME:");
                 email = Console.ReadLine();
@@ -71,13 +73,23 @@ namespace PL_console
                 Console.WriteLine("==================================");
                 string choice;
                 manager = magBL.Login(email, pass);
-
+                    
+                   
                 //kiểm tra tài khoản nhập vào có đúng hay không
                 if (manager == null)
                 {
                     Console.Write("Email hoặc mật khẩu không đúng, bạn có muốn tiếp tục(Y/N):");
-                    choice = Console.ReadLine();
-
+                    choice = Console.ReadLine().ToUpper();
+                     while (true)
+                    {
+                        if (choice != "Y" && choice != "N")
+                        {
+                            Console.Write("Bạn chỉ được nhập (Y/N): ");
+                            choice = Console.ReadLine().ToUpper();
+                            continue;
+                        }
+                        break;
+                    }
                     switch (choice)
                     {
                         case "Y":
@@ -103,9 +115,16 @@ namespace PL_console
                                 continue;
                             }
                     }
-                    try
+                    break;
+                }
+                else
+                {
+                    MainMenu();
+                }
+                        try
                     {
                         manager = magBL.Login(email, pass);
+
                     }
                     catch (System.NullReferenceException)
                     {
@@ -139,11 +158,15 @@ namespace PL_console
                                 continue;
                         }
                     }
+                
+                 
 
-                }
-                break;
+                
+
+                
+                // break;
             }
-            MainMenu();
+
         }
         public void MainMenu()
         {
@@ -152,12 +175,14 @@ namespace PL_console
             do
             {
                 Console.Clear();
+                Console.WriteLine("╔══════════════════════════════════════════╗");
+                Console.WriteLine("║               MENU QUẢN LÝ               ║");
+                Console.WriteLine("╠══════════════════════════════════════════╣");
+                Console.WriteLine("║ 1.Quản lí khách hàng                     ║");
+                Console.WriteLine("║ 2.Tạo hóa đơn                            ║");
+                Console.WriteLine("║ 0.đăng xuất                              ║");
+                Console.WriteLine("╚══════════════════════════════════════════╝");
 
-                Console.WriteLine("========== MENU QUẢN LÝ ==========");
-                Console.WriteLine("1.Quản lý khách hàng");
-                Console.WriteLine("2.Tạo hóa đơn");
-                Console.WriteLine("0.Đăng xuất");
-                Console.WriteLine("==================================");
                 Console.Write("Chọn:");
 
                 while (true)
@@ -208,11 +233,15 @@ namespace PL_console
             {
                 CustomerConsole cusCS = new CustomerConsole();
                 Console.Clear();
-                Console.WriteLine("====== QUẢN LÝ KHÁCH HÀNG ======");
-                Console.WriteLine("1.Tạo mới khách hàng");
-                Console.WriteLine("2.Xem danh sách khách hàng");
-                Console.WriteLine("3.Cập nhật thông tin khách hàng");
-                Console.WriteLine("0.trở về menu chính");
+                Console.WriteLine("╔══════════════════════════════════════════╗");
+                Console.WriteLine("║             QUẢN LÝ KHÁCH HÀNG           ║");
+                Console.WriteLine("╠══════════════════════════════════════════╣");
+                Console.WriteLine("║ 1.Tạo mới khách hàng                     ║");
+                Console.WriteLine("║ 2.Xem danh sách khách hàng               ║");
+                Console.WriteLine("║ 3.Cập nhật thông tin khách hàng          ║");
+                Console.WriteLine("║ 0.Trở về menu chính                      ║");
+                Console.WriteLine("╚══════════════════════════════════════════╝");
+
                 Console.Write("chọn:");
                 while (true)
                 {

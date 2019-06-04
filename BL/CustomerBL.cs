@@ -9,11 +9,10 @@ namespace BL
     public class CustomerBL
     {
         private CustomerDAL customerDAL;
-
-        public CustomerBL()
-        {
+        public CustomerBL(){
             customerDAL = new CustomerDAL();
         }
+       
         public Customer GetCustomerbyID(int a)
         {
 
@@ -88,17 +87,31 @@ namespace BL
         }
         public string input(string str)
         {
-            Regex regex = new Regex("[A-Za-z]");
+             string strRegex =@"[a-zA-Z]";
+            Regex regex = new Regex(strRegex);
+            
             MatchCollection matchCollection = regex.Matches(str);
-            while ((matchCollection.Count < str.Length) || (str == ""))
+            while ((!regex.IsMatch(str)) || (str == ""))
             {
                 Console.WriteLine(" Không được để trống, chứa số hoặc ký tự đặc biệt, Mời nhập lại: ");
                 str = Console.ReadLine();
                 matchCollection = regex.Matches(str);
+                
             }
             return str;
-
         }
+        // public string isadd(string str){
+        //     string strRegex = "^[a-zA-Z0-9]*$";
+        //     Regex regex = new Regex(strRegex);
+        //     MatchCollection matchCollection = regex.Matches(str);
+        //     while ((!regex.IsMatch(str)) || (str == ""))
+        //     {
+        //         Console.WriteLine(" Không được để trống, chứa số hoặc ký tự đặc biệt, Mời nhập lại: ");
+        //         str = Console.ReadLine();
+        //         matchCollection = regex.Matches(str);
+        //     }
+        //     return str;
+        // }
         public string Validate(string str)
         {
 
