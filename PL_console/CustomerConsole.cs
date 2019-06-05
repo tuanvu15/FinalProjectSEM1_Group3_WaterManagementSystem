@@ -20,6 +20,7 @@ namespace PL_console
 
             while (true)
             {
+
                 Console.WriteLine("===== TẠO MỚI KHÁCH HÀNG =====");
 
                 Console.Write("- Nhập họ và tên: ");
@@ -124,22 +125,24 @@ namespace PL_console
             Console.Clear();
             Customer cus = new Customer();
             CustomerBL csBL = new CustomerBL();
+            // CustomerBL cusbl = null;
+            
             while (true)
             {
+                Customer cs = null;
                 Console.WriteLine("===== CẬP NHẬT THÔNG TIN KHÁCH HÀNG =====");
                 Console.Write("- Nhập ID: ");
-                Customer cs = null;
-                do
+                cus.CustomerId = csBL.checkid();
+               
+                while (csBL.GetCustomerbyID(cus.CustomerId) == null)
                 {
+                    Console.Write("Mã không tồn tại, mời bạn nhập lại:");
                     cus.CustomerId = csBL.checkid();
-                    cs = csBL.GetCustomerbyID(cus.CustomerId);
-                    Console.WriteLine(cs);
-                    if (cs == null)
-                    {
-                        Console.Write("Mã không tồn tại, mời bạn nhập lại:");
-                    }
-                } while (cs == null);
-                //Console.Clear();
+                } ;
+               
+                cs = csBL.GetCustomerbyID(cus.CustomerId);
+
+                Console.Clear();
                 Console.WriteLine("====== Thông tin khách hàng cần cập nhật======");
                 Console.WriteLine("Họ và tên : " + cs.CustomerName);
                 Console.WriteLine("Địa chỉ : " + cs.CustomerAddress);
@@ -158,8 +161,9 @@ namespace PL_console
                 choice = Console.ReadLine();
                 if (choice == "y" || choice == "Y")
                 {
+
+                    Console.WriteLine("thông tin đã được cập nhật");
                     result = true;
-                    Console.Write("thông tin đã được cập nhật");
                     csBL.UpdateCustomer(cus.CustomerId, cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
                 }
                 else
@@ -167,7 +171,7 @@ namespace PL_console
                     result = false;
                     Console.WriteLine("thông tin chưa được cập nhật!");
                 }
-                
+
                 Console.Write("Bạn có muốn tiếp tục? (Y/N)");
                 string choice1;
                 choice1 = Console.ReadLine();
