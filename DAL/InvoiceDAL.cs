@@ -54,7 +54,8 @@ namespace DAL
         private Invoice GetInvoiceInfo(MySqlDataReader reader)
         {
             Invoice inv = new Invoice();
-            inv.DateCreate = reader.GetString("date_create");
+            inv.InvoiceId = reader.GetInt32("invoice_id");
+            inv.DateCreate = reader.GetDateTime("date_create");
             inv.UnitPrice = reader.GetInt32("unit_price");
             
             return inv;
