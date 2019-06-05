@@ -1739,11 +1739,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\PL_console.csproj",
+      "projectUniqueName": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\PL_console.csproj",
       "projectName": "PL_console",
-      "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\PL_console.csproj",
+      "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\PL_console.csproj",
       "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
-      "outputPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\obj\\",
+      "outputPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\PL_console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1760,11 +1760,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj": {
-              "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj"
+            "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj": {
+              "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\BL\\BL.csproj"
             },
-            "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
-              "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
+            "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
+              "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
             }
           }
         }

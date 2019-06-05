@@ -114,7 +114,7 @@ namespace PL_console
                     }
                     else
                     {
-                        KetQua += " lăm";
+                        KetQua += " năm ";
                     }
                     break;
                 default:

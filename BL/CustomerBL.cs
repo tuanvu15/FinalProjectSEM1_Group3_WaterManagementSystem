@@ -40,7 +40,10 @@ namespace BL
             {
                 return false;
             }
- 
+              if (id <= 0)
+              {
+                  return false;
+              }
             return customerDAL.UpdateCustomer(id, name, address, sdt);
         }
 

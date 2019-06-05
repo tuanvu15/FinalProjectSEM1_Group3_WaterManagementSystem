@@ -24,6 +24,15 @@ namespace DAL
         }
         public InvoiceDetail GetInvoiceByMonthAndCusID(int cusID, int month)
         {
+             if (connection == null)
+            {
+                connection = DBHelper.OpenConnection();
+                // connection = DBHelper.Instance.OpenConnection();
+            }
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+            }
             query = @"select Invoice_id, month_id, new_number, old_number from InvoiceDetail where customer_id = '" + cusID + "'and month_id = '" + month + "';";
 
             reader = DBHelper.ExecQuery(query,connection);
@@ -74,6 +83,15 @@ namespace DAL
         public bool InsertInvoiceDetail(int cusID, int month, int newNB, int oldNB)
         {
             bool result = false;
+                  if (connection == null)
+            {
+                connection = DBHelper.OpenConnection();
+                // connection = DBHelper.Instance.OpenConnection();
+            }
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+            }
             query = @"insert into InvoiceDetail(customer_id,month_id,new_number,old_number)value('" + cusID + "','" + month + "','" + newNB + "','" + oldNB + "');";
 
             reader = DBHelper.ExecQuery(query,connection);

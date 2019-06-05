@@ -25,19 +25,19 @@ namespace PL_console
             while (true)
             {
 
-               
+               Customer cs = new Customer();
                 int count = 0;
                 DateTime date;
-
+                Month month= null;
                 Console.WriteLine("======= Tạo Mới Hóa Đơn =======");
                 Console.Write("- Nhập id khách hàng:");
                 cusID = Convert.ToInt32(Console.ReadLine());
 
-                csBL.GetCustomerbyID(cusID);
+                cs = csBL.GetCustomerbyID(cusID);
                 Console.WriteLine("====Thông tin khách hàng bạn muốn tạo hóa đơn====");
-                Console.WriteLine("Tên: " + csBL.GetCustomerbyID(cusID).CustomerName);
-                Console.WriteLine("Địa Chỉ: " + csBL.GetCustomerbyID(cusID).CustomerAddress);
-                Console.WriteLine("Số điện thoại: " + csBL.GetCustomerbyID(cusID).PhoneNumber);
+                Console.WriteLine("Tên: " + cs.CustomerName);
+                Console.WriteLine("Địa Chỉ: " + cs.CustomerAddress);
+                Console.WriteLine("Số điện thoại: " + cs.PhoneNumber);
                 Console.WriteLine();
                 Console.WriteLine();
                 
@@ -49,15 +49,18 @@ namespace PL_console
                     Console.WriteLine("Hóa đơn tháng {0} của khách hàng này đã được tạo", DateTime.Now.Month);
                     Console.WriteLine("Thời gian đã tạo hóa đơn: "+inBL.GetInvoiceByID(inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month).InvoiceId).DateCreate);
                     count = (newNB - oldNB)*unit_price;
+                    
+                    month = monthBL.GetDateByMonthId(DateTime.Now.Month);
+                    
                     Console.WriteLine("╔════════════════════════════════════════════════════════════════════════════════════════════════╗");
                     Console.WriteLine("     CÔNG TY CỔ PHẦN CẤP THOÁT NƯỚC VTCA                     HÓA ĐƠN GIÁ TRỊ GIÁ GIA TĂNG");
                     Console.WriteLine("     ĐC:                                                             (THU TIỀN NƯỚC)");
                     Console.WriteLine("     Điện thoại: 0987654317");
-                    Console.WriteLine();
-                    Console.WriteLine("                           Kì từ ngày: " + monthBL.GetDateByMonthId(DateTime.Now.Month).FromDate + "  đến ngày: " + monthBL.GetDateByMonthId(DateTime.Now.Month).ToDate);
-                    Console.WriteLine("     Khách hàng: " + csBL.GetCustomerbyID(cusID).CustomerName);
-                    Console.WriteLine("     Địa chỉ: " + csBL.GetCustomerbyID(cusID).CustomerAddress);
-                    Console.WriteLine("     Số điện thoại: " + csBL.GetCustomerbyID(cusID).PhoneNumber);
+                    
+                    Console.WriteLine("                           Kì từ ngày: " + month.FromDate + "  đến ngày: " + month.ToDate);
+                    Console.WriteLine("     Khách hàng: " + cs.CustomerName);
+                    Console.WriteLine("     Địa chỉ: " + cs.CustomerAddress);
+                    Console.WriteLine("     Số điện thoại: " +cs.PhoneNumber);
                     var table1 = new ConsoleTable("Chỉ số cũ", "Chỉ số mới", "Số tiêu thụ", "Đơn giá", "Thành tiền");
                     table1.AddRow(oldNB, newNB, newNB - oldNB, unit_price, count);
                     Console.WriteLine(table1);
@@ -138,6 +141,9 @@ namespace PL_console
 
         public void MenuInvoice()
         {
+            Customer cs =new Customer();
+            Month month = new Month();
+           
             Console.WriteLine(" -------Tạo hóa đơn tháng " + DateTime.Now.Month + "-------");
 
             int new_number;
@@ -168,7 +174,9 @@ namespace PL_console
             double count1 = ((new_number - old_Number) * unit_price);
             double tax = ((new_number - old_Number) * unit_price) * 0.05;
 
-
+            // cs =csBL.GetCustomerbyID(cusID);
+            // month=monthBL.GetDateByMonthId(cusID);
+            
             // Console.WriteLine(count);
             // Console.WriteLine(inv.GetInvoiceByMonth(cusID, 2).NewNUmber);
             Console.WriteLine("╔════════════════════════════════════════════════════════════════════════════════════════════════╗");
@@ -176,10 +184,10 @@ namespace PL_console
             Console.WriteLine("     ĐC:                                                             (THU TIỀN NƯỚC)");
             Console.WriteLine("     Điện thoại: 0987654317");
             Console.WriteLine();
-            Console.WriteLine("                           Kì từ ngày: " + monthBL.GetDateByMonthId(DateTime.Now.Month).FromDate + "  đến ngày: " + monthBL.GetDateByMonthId(DateTime.Now.Month).ToDate);
-            Console.WriteLine("     Khách hàng: " + csBL.GetCustomerbyID(cusID).CustomerName);
-            Console.WriteLine("     Địa chỉ: " + csBL.GetCustomerbyID(cusID).CustomerAddress);
-            Console.WriteLine("     Số điện thoại: " + csBL.GetCustomerbyID(cusID).PhoneNumber);
+            Console.WriteLine("                           Kì từ ngày: " + month.FromDate + "  đến ngày: " + month.ToDate);
+            Console.WriteLine("     Khách hàng: " + cs.CustomerName);
+            Console.WriteLine("     Địa chỉ: " + cs.CustomerAddress);
+            Console.WriteLine("     Số điện thoại: " + cs.PhoneNumber);
             var table1 = new ConsoleTable("Chỉ số cũ", "Chỉ số mới", "Số tiêu thụ", "Đơn giá", "Thành tiền");
             table1.AddRow(old_Number, new_number, new_number - old_Number, unit_price, count1);
             Console.WriteLine(table1);

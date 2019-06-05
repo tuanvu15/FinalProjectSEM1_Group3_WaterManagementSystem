@@ -25,7 +25,14 @@ namespace DAL
         }
         public Customer GetCustomerbyID(int cusID)
         {
-
+              if (connection == null)
+            {
+                connection = DBHelper.OpenConnection();
+            }
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+            }
             query = @"select customer_id, customer_name, customer_address, phone_number from
             customer where customer_id = " + cusID + ";";
             Customer customer = null;
@@ -48,18 +55,14 @@ namespace DAL
         }
         public List<Customer> GetCustomer()
         {
+            
             query = @"select * from customer;";
-            // DBHelper.OpenConnection();
-            // DBHelper.Instance.OpenConnection();
-            // reader = DBHelper.ExcQuery(query);
             reader = DBHelper.ExecQuery(query, connection);
             List<Customer> customer = new List<Customer>();
-
             while (reader.Read())
             {
                 customer.Add(GetCustomerInfo(reader));
             }
-            // DBHelper.CloseConnection();
             connection.Close();
             return customer;
 
@@ -71,10 +74,7 @@ namespace DAL
             {
                 return false;
             }
-            // if ()
-            // {
-            //     return false;
-            // }
+           
             query = @"insert into Customer(customer_name,customer_address,phone_number) value('" + cusName + "','" + cusAddress + "','" + Phone + "');";
 
             reader = DBHelper.ExecQuery(query, connection);
@@ -87,7 +87,6 @@ namespace DAL
                     customer = GetCustomerInfo(reader);
 
                 }
-                // DBHelper.CloseConnection();  
                 connection.Close();
                 return true;
             }
@@ -96,9 +95,7 @@ namespace DAL
                 result = false;
 
             }
-
             return result;
-
         }
         public bool UpdateCustomer(int id, string name, string address, string sdt)
         {
