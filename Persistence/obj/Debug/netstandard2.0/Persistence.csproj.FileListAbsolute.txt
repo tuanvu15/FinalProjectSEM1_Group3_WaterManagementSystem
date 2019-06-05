@@ -61,3 +61,12 @@ F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\Persistence\obj\D
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfo.cs
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\Persistence\obj\Debug\netstandard2.0\Persistence.dll
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\Persistence\obj\Debug\netstandard2.0\Persistence.pdb
+C:\Users\Admin\Downloads\Project\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\bin\Debug\netstandard2.0\Persistence.deps.json
+C:\Users\Admin\Downloads\Project\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\bin\Debug\netstandard2.0\Persistence.dll
+C:\Users\Admin\Downloads\Project\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\bin\Debug\netstandard2.0\Persistence.pdb
+C:\Users\Admin\Downloads\Project\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Project\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Project\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\Admin\Downloads\Project\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.AssemblyInfo.cs
+C:\Users\Admin\Downloads\Project\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.dll
+C:\Users\Admin\Downloads\Project\FinalProjectSEM1_Group3_WaterManagementSystem\Persistence\obj\Debug\netstandard2.0\Persistence.pdb

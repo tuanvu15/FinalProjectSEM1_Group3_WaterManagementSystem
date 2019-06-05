@@ -18,5 +18,9 @@ namespace BL
         {
              invDAL.InsertInvoice(date_create, unit_price);
         }
+        public Invoice GetInvoiceByID(int ID)
+        {
+            return invDAL.GetInvoiceByID(ID);
+        }
     }
 }

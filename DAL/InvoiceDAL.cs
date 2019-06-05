@@ -50,6 +50,19 @@ namespace DAL
             }
             return result;
         }
+        public Invoice GetInvoiceByID(int ID)
+        {
+
+            query = @"select Invoice_id, date_create, unit_price from Invoice where invoice_id = '"+ID+"';";
+            Invoice invoice = null;
+            reader = DBHelper.ExecQuery(query, connection);
+            if (reader.Read())
+            {
+                invoice = GetInvoiceInfo(reader);
+            }
+            connection.Close();
+            return invoice;
+        }
 
         private Invoice GetInvoiceInfo(MySqlDataReader reader)
         {

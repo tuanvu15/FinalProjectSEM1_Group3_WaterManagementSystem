@@ -22,7 +22,7 @@ namespace DAL
                 connection.Open();
             }
         }
-        public InvoiceDetail GetInvoiceByMonth(int cusID, int month)
+        public InvoiceDetail GetInvoiceByMonthAndCusID(int cusID, int month)
         {
             query = @"select Invoice_id, month_id, new_number, old_number from InvoiceDetail where customer_id = '" + cusID + "'and month_id = '" + month + "';";
 

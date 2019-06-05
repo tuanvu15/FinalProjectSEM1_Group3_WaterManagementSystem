@@ -14,9 +14,9 @@ namespace BL
         {
             invoiceDetail = new InvoiceDetailDAL();
         }
-        public InvoiceDetail GetInvoiceByMonth(int cusID, int month)
+        public InvoiceDetail GetInvoiceByMonthAndCusID(int cusID, int month)
         {
-            return invoiceDetail.GetInvoiceByMonth(cusID, month);
+            return invoiceDetail.GetInvoiceByMonthAndCusID(cusID, month);
         }
         public List<InvoiceDetail> GetInvoiceByCustomerID(int Id)
         {
