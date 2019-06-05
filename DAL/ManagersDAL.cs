@@ -4,79 +4,41 @@ using Persistence;
 
 namespace DAL
 {
-    public class  ManagersDAL
+    public class ManagersDAL
     {
         private MySqlConnection connection;
         private string query;
         private MySqlDataReader reader;
         // DBHelper db = DBHelper.GetInstance();
-        public ManagersDAL(){
-            
-                if (connection == null)
-            {
-                // connection = DBHelper.OpenConnection();
-                connection = DBHelper.Instance.OpenConnection();
-            }
-            // if (connection.State == System.Data.ConnectionState.Closed)
-            // {
-            //     connection= DBHelper.Instance.OpenConnection();
-                
-            // }
-        }
-         public Managers Login(string userName, string pass)
+        public ManagersDAL()
         {
-            if(userName == null || pass == null)
+            if (connection == null)
             {
-                return null;
+                connection = DBHelper.OpenConnection();
             }
-            
-       
-            query = @"select * from Managers where email = '" + userName +"'and pass ='"+ pass + "';";
-            // DBHelper.OpenConnection();
-            
-            // reader = DBHelper.ExcQuery(query);
-              reader = DBHelper.Instance.ExcQuery(query);
-            Managers managers = null;
-            try
+            if (connection.State == System.Data.ConnectionState.Closed)
             {
-            //     if (connection == null)
-            // {
-            //     // connection = DBHelper.OpenConnection();
-            //     connection = DBHelper.Instance.OpenConnection();
-            // }
-            // if (connection.State == System.Data.ConnectionState.Closed)
-            // {
-            //     connection.Open();
-                
-            // }
-            MySqlCommand command = new MySqlCommand(query, connection);
-
-
-            
-            if(reader.Read())
+                connection.Open();
+            }
+        }
+        public Managers Login(string userName, string pass)
+        {
+            query = @"select * from Managers where email = '" + userName + "'and pass ='" + pass + "';";
+            reader = DBHelper.ExecQuery(query, connection);
+            Managers managers = null;
+            if (reader.Read())
             {
                 managers = GetManagers(reader);
             }
-           
-            // DBHelper.CloseConnection();
-            DBHelper.Instance.CloseConnection();
-            
-            }
-            catch (System.NullReferenceException)
-            {
-                Console.WriteLine("lỗi kết nối!");
-                
-                
-            }
-           return managers;
-
+            connection.Close();
+            return managers;
         }
         private Managers GetManagers(MySqlDataReader reader)
         {
             Managers mag = new Managers();
             mag.ManagersID = reader.GetInt32("managers_id");
             mag.Pass = reader.GetString("pass");
-            mag.FullName =reader.GetString("full_name");
+            mag.FullName = reader.GetString("full_name");
             mag.UserName = reader.GetString("email");
             return mag;
         }

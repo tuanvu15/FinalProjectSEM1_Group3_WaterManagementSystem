@@ -14,13 +14,13 @@ namespace DAL
         {
             if(connection == null)
             {
-                connection = DBHelper.Instance.OpenConnection();
+                connection = DBHelper.OpenConnection();
             }
-            //  if (connection.State == System.Data.ConnectionState.Closed)
-            // {
-            //     connection = DBHelper.Instance.OpenConnection();
+             if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
                 
-            // }
+            }
         }
         private MySqlDataReader reader;
         public bool InsertInvoice(string dateCreate, int value)
@@ -28,7 +28,7 @@ namespace DAL
             bool result = false;
             query = @"insert into Invoice(date_create, unit_price)value('"+dateCreate+"','"+value+"');";
             
-            reader = DBHelper.Instance.ExcQuery(query);
+            reader = DBHelper.ExecQuery(query,connection);
 
             Invoice invoice = new Invoice();
             if(reader.Read())
@@ -41,7 +41,7 @@ namespace DAL
                 {
                     invoice = GetInvoiceInfo(reader);
                 }
-                DBHelper.Instance.CloseConnection();
+                connection.Close();
             }
             catch (System.Exception)
             {

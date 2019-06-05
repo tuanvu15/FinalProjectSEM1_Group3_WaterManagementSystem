@@ -106,3 +106,4 @@ F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\De
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.csproj.CopyComplete
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.dll
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\obj\Debug\netcoreapp2.2\PL_console.pdb
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\PL_console\bin\Debug\netcoreapp2.2\ConnectionString.txt

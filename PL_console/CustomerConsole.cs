@@ -3,7 +3,7 @@ using Persistence;
 using BL;
 using System.Collections.Generic;
 using ConsoleTables;
-using System.Linq;
+
 
 namespace PL_console
 {
@@ -21,31 +21,7 @@ namespace PL_console
             while (true)
             {
                 Console.WriteLine("===== TẠO MỚI KHÁCH HÀNG =====");
-                // Console.Write("- Nhập ID: ");
-                // while (true)
-                // {
-                //     //id chỉ đc nhập số 
-                //     try
-                //     {
-                //         cus.CustomerId = Convert.ToInt16(Console.ReadLine());
-                //     }
-                //     catch (System.Exception)
-                //     {
-                //         Console.WriteLine("ID chỉ được nhập số, mời bạn nhập lại:");
 
-                //         continue;
-                //     }
-                //     break;
-                // }
-
-
-                //kiểm tra xem id nhập vào có bị trùng hay không
-                // while (csBL.GetCustomerbyID(cus.CustomerId) != null)
-                // {
-
-                //     Console.Write("Mã đã tồn tại, mời bạn nhập lại:");
-                //     cus.CustomerId = Convert.ToInt16(Console.ReadLine());
-                // }
                 Console.Write("- Nhập họ và tên: ");
                 cus.CustomerName = csBL.input(Console.ReadLine());
 
@@ -142,112 +118,98 @@ namespace PL_console
 
 
         }
-
         public bool UpdateCustomer()
         {
             bool result = false;
             Console.Clear();
             Customer cus = new Customer();
             CustomerBL csBL = new CustomerBL();
-            
-            
+
+
             // List<Customer> cust =null;
-            int idcus;
+
             while (true)
             {
+
                 Console.WriteLine("===== CẬP NHẬT THÔNG TIN KHÁCH HÀNG =====");
                 Console.Write("- Nhập ID: ");
+                Customer cs = null;
                 do
                 {
-                     cus = null;
-                    idcus = Convert.ToInt32(Console.ReadLine());
-                    cus=csBL.GetCustomerbyID(idcus);
-
-                   if(cus == null)
-                   {
-                       Console.Write(" Nhập lại ID: ");
-                       continue;
-                       
-                   }
-                } while (cus == null);
-                    
-
-                    if(cus != null)
+                    cus.CustomerId = Convert.ToInt32(Console.ReadLine());
+                    cs = csBL.GetCustomerbyID(cus.CustomerId);
+                    Console.WriteLine(cs);
+                    if (cs == null)
                     {
-
-                        Console.Clear();
-
-                        Console.WriteLine("====== Thông tin khách hàng cần cập nhật======");
-                        Console.WriteLine("Họ và tên : " + csBL.GetCustomerbyID(cus.CustomerId).CustomerName);
-                        Console.WriteLine("Địa chỉ : " + csBL.GetCustomerbyID(cus.CustomerId).CustomerAddress);
-                        Console.WriteLine("Số điện thoại : " + csBL.GetCustomerbyID(cus.CustomerId).PhoneNumber);
-                        Console.WriteLine("==============================================");
-
-                        Console.WriteLine("==========Mời bạn cập nhật thông tin=============");
-                        Console.Write("- Cập nhât họ và tên: ");
-                        cus.CustomerName = csBL.input(Console.ReadLine());
-
-
-
-                        Console.Write("- Cập Nhập địa chỉ: ");
-                        cus.CustomerAddress = csBL.input(Console.ReadLine());
-
-                        Console.Write("- Cập nhật số điện thoại: ");
-                        cus.PhoneNumber = csBL.Validate(Console.ReadLine());
-
-                        Console.WriteLine("=================================================");
-
-                        Console.Write("Bạn có muốn cập nhật thông tin của khách hàng này? (Y/N)");
-                        string choice;
-                        choice = Console.ReadLine();
-                        if (choice == "y" || choice == "Y")
-                        {
-                            result = true;
-                            Console.Write("thông tin đã được cập nhật");
-                        }
-                        else
-                        {
-                            result = false;
-                            Console.WriteLine("thông tin chưa được cập nhật!");
-                        }
-                        if (result == true)
-                        {
-                            csBL.UpdateCustomer(cus.CustomerId, cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
-                        }
-                        Console.Write("Bạn có muốn tiếp tục? (Y/N)");
-                        string choice1;
-                        choice1 = Console.ReadLine();
-                        switch (choice1)
-                        {
-                            case "Y":
-                                {
-                                    Console.Clear();
-                                    continue;
-                                }
-                            case "y":
-                                {
-                                    Console.Clear();
-                                    continue;
-                                }
-                            case "N":
-                                {
-                                    cusMenu.CustomerMenu();
-                                    break;
-                                }
-                            case "n":
-                                {
-                                    cusMenu.CustomerMenu();
-                                    break;
-                                }
-                            default:
-                                {
-                                    continue;
-                                }
-                        }
-                        break;
+                        Console.Write("Mã không tồn tại, mời bạn nhập lại:");
                     }
-           
-            }return result;
+                } while (cs == null);
+                //Console.Clear();
+                Console.WriteLine("====== Thông tin khách hàng cần cập nhật======");
+                Console.WriteLine("Họ và tên : " + cs.CustomerName);
+                Console.WriteLine("Địa chỉ : " + cs.CustomerAddress);
+                Console.WriteLine("Số điện thoại : " + cs.PhoneNumber);
+                Console.WriteLine("==============================================");
+                Console.WriteLine("==========Mời bạn cập nhật thông tin=============");
+                Console.Write("- Cập nhât họ và tên: ");
+                cus.CustomerName = csBL.input(Console.ReadLine());
+                Console.Write("- Cập Nhập địa chỉ: ");
+                cus.CustomerAddress = csBL.input(Console.ReadLine());
+                Console.Write("- Cập nhật số điện thoại: ");
+                cus.PhoneNumber = csBL.Validate(Console.ReadLine());
+                Console.WriteLine("=================================================");
+                Console.Write("Bạn có muốn cập nhật thông tin của khách hàng này? (Y/N)");
+                string choice;
+                choice = Console.ReadLine();
+                if (choice == "y" || choice == "Y")
+                {
+                    result = true;
+                    Console.Write("thông tin đã được cập nhật");
+                }
+                else
+                {
+                    result = false;
+                    Console.WriteLine("thông tin chưa được cập nhật!");
+                }
+                if (result == true)
+                {
+                    csBL.UpdateCustomer(cus.CustomerId, cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
+                }
+                Console.Write("Bạn có muốn tiếp tục? (Y/N)");
+                string choice1;
+                choice1 = Console.ReadLine();
+                switch (choice1)
+                {
+                    case "Y":
+                        {
+                            // Console.Clear();
+                            continue;
+                        }
+                    case "y":
+                        {
+                            // Console.Clear();
+                            continue;
+                        }
+                    case "N":
+                        {
+                            cusMenu.CustomerMenu();
+                            break;
+                        }
+                    case "n":
+                        {
+                            cusMenu.CustomerMenu();
+                            break;
+                        }
+                    default:
+                        {
+                            continue;
+                        }
+                }
+                break;
+
+
+            }
+            return result;
         }
     }
 }

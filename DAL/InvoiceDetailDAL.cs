@@ -9,12 +9,24 @@ namespace DAL
     {
         private MySqlDataReader reader;
         private string query;
-
+        private MySqlConnection connection;
+          public InvoiceDetailDAL()
+        {
+            if (connection == null)
+            {
+                connection = DBHelper.OpenConnection();
+                // connection = DBHelper.Instance.OpenConnection();
+            }
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+        }
         public InvoiceDetail GetInvoiceByMonth(int cusID, int month)
         {
             query = @"select Invoice_id, month_id, new_number, old_number from InvoiceDetail where customer_id = '" + cusID + "'and month_id = '" + month + "';";
 
-            reader = DBHelper.Instance.ExcQuery(query);
+            reader = DBHelper.ExecQuery(query,connection);
 
             InvoiceDetail invoice_detail = null;
 
@@ -24,7 +36,7 @@ namespace DAL
                 {
                     invoice_detail = GetInvoiceInfo(reader);
                 }
-                DBHelper.Instance.CloseConnection();
+                connection.Close();
             }
             catch (System.Exception)
             {
@@ -38,14 +50,14 @@ namespace DAL
         {
             query = @"select  Invoice_id, month_id, new_number, old_number from InvoiceDetail where customer_id = '" + Id + "';";
 
-            reader = DBHelper.Instance.ExcQuery(query);
+            reader = DBHelper.ExecQuery(query,connection);
 
             List<InvoiceDetail> inv = new List<InvoiceDetail>();
             while (reader.Read())
             {
                 inv.Add(GetInvoiceInfo(reader));
             }
-            DBHelper.Instance.CloseConnection();
+            connection.Close();
 
             return inv;
         }
@@ -64,7 +76,7 @@ namespace DAL
             bool result = false;
             query = @"insert into InvoiceDetail(customer_id,month_id,new_number,old_number)value('" + cusID + "','" + month + "','" + newNB + "','" + oldNB + "');";
 
-            reader = DBHelper.Instance.ExcQuery(query);
+            reader = DBHelper.ExecQuery(query,connection);
 
             InvoiceDetail invoiceDetail = null;
             try
@@ -73,7 +85,7 @@ namespace DAL
                 {
                     invoiceDetail = GetInvoiceInfo(reader);
                 }
-                DBHelper.Instance.CloseConnection();
+                connection.Close();
                 result = true;
             }
             catch (System.Exception)

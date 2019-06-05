@@ -103,3 +103,4 @@ f:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\BL.test\obj\Debug
 f:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\BL.test\obj\Debug\netcoreapp2.2\BL.test.csproj.CopyComplete
 f:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\BL.test\obj\Debug\netcoreapp2.2\BL.test.dll
 f:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\BL.test\obj\Debug\netcoreapp2.2\BL.test.pdb
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\BL.test\bin\Debug\netcoreapp2.2\ConnectionString.txt

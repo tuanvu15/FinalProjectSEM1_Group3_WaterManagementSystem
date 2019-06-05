@@ -36,3 +36,4 @@ F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL.test\obj\Debu
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.csproj.CopyComplete
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.dll
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.pdb
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL.test\bin\Debug\netcoreapp2.2\ConnectionString.txt

@@ -25,36 +25,29 @@ namespace BL
         public bool InsertCustomer(string cusName, string cusAddress, string Phone)
 
         {
-            if (!isnum(Phone))
+            if (!isnum(Phone)||!isch(cusName)||!isch(cusAddress))
             {
                 return false;
             }
-            if (!isch(cusName))
-            {
-                return false;
-            }
-            if (!isch(cusAddress))
-            {
-                return false;
-            }
+           
 
             return customerDAL.InsertCustomer(cusName, cusAddress, Phone);
 
         }
         public bool UpdateCustomer(int id, string name, string address, string sdt)
         {
-              if (!isnum(sdt))
+              if (!isnum(sdt)||!isch(name)||!isch(address))
             {
                 return false;
             }
-            if (!isch(name))
-            {
-                return false;
-            }
-            if (!isch(address))
-            {
-                return false;
-            }
+            // if ()
+            // {
+            //     return false;
+            // }
+            // if ()
+            // {
+            //     return false;
+            // }
            
             return customerDAL.UpdateCustomer(id, name, address, sdt);
         }
@@ -100,18 +93,7 @@ namespace BL
             }
             return str;
         }
-        // public string isadd(string str){
-        //     string strRegex = "^[a-zA-Z0-9]*$";
-        //     Regex regex = new Regex(strRegex);
-        //     MatchCollection matchCollection = regex.Matches(str);
-        //     while ((!regex.IsMatch(str)) || (str == ""))
-        //     {
-        //         Console.WriteLine(" Không được để trống, chứa số hoặc ký tự đặc biệt, Mời nhập lại: ");
-        //         str = Console.ReadLine();
-        //         matchCollection = regex.Matches(str);
-        //     }
-        //     return str;
-        // }
+     
         public string Validate(string str)
         {
 

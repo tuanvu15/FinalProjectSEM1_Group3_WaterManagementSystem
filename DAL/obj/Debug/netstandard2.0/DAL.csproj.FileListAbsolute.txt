@@ -82,3 +82,4 @@ F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\net
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.dll
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\obj\Debug\netstandard2.0\DAL.pdb
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL\bin\Debug\netstandard2.0\ConnectionString.txt

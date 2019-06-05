@@ -1,6 +1,6 @@
 ﻿using System;
-using BL;
-using Persistence;
+// using BL;
+// using Persistence;
 
 namespace PL_console
 {

@@ -96,3 +96,4 @@ F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\BL\obj\Debug\nets
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\BL\obj\Debug\netstandard2.0\BL.csproj.CopyComplete
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\BL\obj\Debug\netstandard2.0\BL.dll
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\BL\obj\Debug\netstandard2.0\BL.pdb
+F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\BL\bin\Debug\netstandard2.0\ConnectionString.txt

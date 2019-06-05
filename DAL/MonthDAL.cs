@@ -7,28 +7,36 @@ namespace DAL
     public class MonthDAL
     {
         private string query;
-
+        private MySqlConnection connection;
         private MySqlDataReader reader;
+         public MonthDAL(){
+            
+                if (connection == null)
+            {
+                // connection = DBHelper.OpenConnection();
+                connection = DBHelper.OpenConnection();
+            }
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Close();
+                
+            }
+        }
         public Month GetDateByMonthID(int monthID)
         {
             query = @"select month_id, from_date, to_date from Month_ where month_id = '" + monthID + "';";
 
-            reader = DBHelper.Instance.ExcQuery(query);
+            reader = DBHelper.ExecQuery(query,connection);
 
             Month month = null;
-            try
-            {
+            
                 if (reader.Read())
                 {
                     month = GetMonthInfo(reader);
                 }
-                DBHelper.Instance.CloseConnection();
-            }
-            catch (System.Exception)
-            {
-
-                return null;
-            }
+                connection.Close();
+            
+          
             
             return month;
         }

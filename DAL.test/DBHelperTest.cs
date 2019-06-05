@@ -10,7 +10,7 @@ namespace CTS_DAL_XUnit
         [Fact]
         public void OpenConnectionTest()
         {   
-            Assert.NotNull(DBHelper.Instance.OpenConnection());
+            Assert.NotNull(DBHelper.OpenConnection());
         }
         
      

@@ -1,93 +1,52 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using MySql.Data.MySqlClient;
-// 01652530159
+
 namespace DAL
 {
-    public class DBHelper 
+    public class DBHelper
     {
-        private static volatile DBHelper instance;
-        static object key = new object();
-        public static DBHelper Instance{
-            get{
-                if (instance == null)
-                {
-                    lock (key)
-                    {
-                        instance = new DBHelper();
-                    }
-                }
-                return instance;
-            }
-        }
-        //  private static volatile DBHelper instance = new DBHelper();
-        private DBHelper(){}
-        // public static DBHelper GetInstance()
-        // {
-        //     return instance;
-        // }
-        private  MySqlConnection connection;
-
-         public  MySqlConnection GetConnection()
+        public static MySqlConnection OpenConnection()
         {
             try
             {
-                 connection = new MySqlConnection
+                string conString;
+                using (FileStream fileStream = File.OpenRead("ConnectionString.txt"))
                 {
-                    ConnectionString = @"server = localhost;
-                                        user id = root; password = 01652530159;
-                                        port= 3306; database = projectData"
-
-                };
-                return connection;
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        conString = reader.ReadLine();
+                    }
+                }
+                return OpenConnection(conString);
             }
-            catch 
+            catch (Exception ex)
             {
-                
+                Console.WriteLine(ex.ToString());
                 return null;
             }
-          
         }
-         public  MySqlConnection OpenConnection(){
-          
+        public static MySqlConnection OpenConnection(string connectionString)
+        {
             try
             {
-                if (connection == null)
+                MySqlConnection connection = new MySqlConnection
                 {
-                    GetConnection();
-                }
+                    ConnectionString = connectionString
+                };
                 connection.Open();
                 return connection;
             }
-            catch 
-            {
-                
-                return null;
-            }
-        }
-        public  void CloseConnection()
-        {
-           
-               if(connection != null)
-            {
-                connection.Close();
-            } 
-            
-            
-            
-        }
-         public  MySqlDataReader ExcQuery(string query)
-        {
-            try
-            {
-                MySqlCommand command = new MySqlCommand(query, connection);
-                return command.ExecuteReader();
-            }
-            catch 
+            catch (Exception)
             {
                 return null;
             }
-            
+        }
+        public static MySqlDataReader ExecQuery(string query, MySqlConnection connection)
+        {
+            MySqlCommand command = new MySqlCommand(query, connection);
+            return command.ExecuteReader();
         }
     }
 }
-
