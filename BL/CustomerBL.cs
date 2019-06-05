@@ -13,10 +13,10 @@ namespace BL
             customerDAL = new CustomerDAL();
         }
        
-        public Customer GetCustomerbyID(int a)
+        public Customer GetCustomerbyID(int id)
         {
 
-            return customerDAL.GetCustomerbyID(a);
+            return customerDAL.GetCustomerbyID(id);
         }
         public List<Customer> GetCustomer()
         {
@@ -25,7 +25,7 @@ namespace BL
         public bool InsertCustomer(string cusName, string cusAddress, string Phone)
 
         {
-            if (!isnum(Phone)||!isch(cusName)||!isch(cusAddress))
+            if (!isnumber(Phone)||!checkstring(cusName)||!checkstring(cusAddress))
             {
                 return false;
             }
@@ -36,23 +36,16 @@ namespace BL
         }
         public bool UpdateCustomer(int id, string name, string address, string sdt)
         {
-              if (!isnum(sdt)||!isch(name)||!isch(address))
+              if (!isnumber(sdt)||!checkstring(name)||!checkstring(address))
             {
                 return false;
             }
-            // if ()
-            // {
-            //     return false;
-            // }
-            // if ()
-            // {
-            //     return false;
-            // }
-           
+ 
             return customerDAL.UpdateCustomer(id, name, address, sdt);
         }
 
-        public bool isch(string str)
+       
+        public bool checkstring(string str)
         {
             str = str ?? string.Empty;
             string strRegex = @"[a-zA-Z]";
@@ -66,7 +59,7 @@ namespace BL
         }
 
 
-        public bool isnum(string str)
+        public bool isnumber(string str)
         {
             str = str ?? string.Empty;
             string strRegex = @"[0-9]";
@@ -107,6 +100,25 @@ namespace BL
             }
             return str;
         }
+         public int checkid(){
+            int chon;
+             while (true)
+            {
+                try
+                {
+                    chon = Int32.Parse(Console.ReadLine());
+                }
+                catch (System.Exception)
+                {
+                    Console.Write("Nhập không hợp lệ!!!Nhập lại:");
+                    continue;
+                }
+               
+
+            return chon;
+        }
 
     }
+    
+}
 }

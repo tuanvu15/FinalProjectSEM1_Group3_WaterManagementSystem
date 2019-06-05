@@ -108,6 +108,14 @@ namespace DAL
             {
                 return false;
             }
+              if (connection == null)
+            {
+                connection = DBHelper.OpenConnection();
+            }
+            if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+            }
             query = @"update customer set customer_name ='" + name + "', customer_address ='" + address + "',phone_number ='" + sdt +
             "'where customer_id = " + id + ";";
 
@@ -117,6 +125,7 @@ namespace DAL
             try
             {
                 MySqlCommand command = new MySqlCommand(query, connection);
+                
                 if (reader.Read())
                 {
                     customer = GetCustomerInfo(reader);

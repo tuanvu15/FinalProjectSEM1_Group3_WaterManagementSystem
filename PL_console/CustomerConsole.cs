@@ -124,19 +124,14 @@ namespace PL_console
             Console.Clear();
             Customer cus = new Customer();
             CustomerBL csBL = new CustomerBL();
-
-
-            // List<Customer> cust =null;
-
             while (true)
             {
-
                 Console.WriteLine("===== CẬP NHẬT THÔNG TIN KHÁCH HÀNG =====");
                 Console.Write("- Nhập ID: ");
                 Customer cs = null;
                 do
                 {
-                    cus.CustomerId = Convert.ToInt32(Console.ReadLine());
+                    cus.CustomerId = csBL.checkid();
                     cs = csBL.GetCustomerbyID(cus.CustomerId);
                     Console.WriteLine(cs);
                     if (cs == null)
@@ -165,16 +160,14 @@ namespace PL_console
                 {
                     result = true;
                     Console.Write("thông tin đã được cập nhật");
+                    csBL.UpdateCustomer(cus.CustomerId, cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
                 }
                 else
                 {
                     result = false;
                     Console.WriteLine("thông tin chưa được cập nhật!");
                 }
-                if (result == true)
-                {
-                    csBL.UpdateCustomer(cus.CustomerId, cus.CustomerName, cus.CustomerAddress, cus.PhoneNumber);
-                }
+                
                 Console.Write("Bạn có muốn tiếp tục? (Y/N)");
                 string choice1;
                 choice1 = Console.ReadLine();
@@ -182,12 +175,12 @@ namespace PL_console
                 {
                     case "Y":
                         {
-                            // Console.Clear();
+                            Console.Clear();
                             continue;
                         }
                     case "y":
                         {
-                            // Console.Clear();
+                            Console.Clear();
                             continue;
                         }
                     case "N":
