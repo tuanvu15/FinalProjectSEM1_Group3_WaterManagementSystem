@@ -18,67 +18,84 @@ namespace PL_console
         ReadMoney monney = new ReadMoney();
         int cusID;
         int unit_price = 5300;
-        
+        Month month = null;
         public void CreateInvoice()
         {
-            // Console.WriteLine(inBL.GetInvoiceByID(1).DateCreate);
+
+            Customer cs = new Customer();
+            // DateTime time;
+
+            month = monthBL.GetDateByMonthId(DateTime.Now.Month);
+
             while (true)
             {
 
-               Customer cs = new Customer();
-                int count = 0;
+
+
                 DateTime date;
-                Month month= null;
+
                 Console.WriteLine("======= Tạo Mới Hóa Đơn =======");
                 Console.Write("- Nhập id khách hàng:");
                 cusID = Convert.ToInt32(Console.ReadLine());
 
                 cs = csBL.GetCustomerbyID(cusID);
+
                 Console.WriteLine("====Thông tin khách hàng bạn muốn tạo hóa đơn====");
                 Console.WriteLine("Tên: " + cs.CustomerName);
                 Console.WriteLine("Địa Chỉ: " + cs.CustomerAddress);
                 Console.WriteLine("Số điện thoại: " + cs.PhoneNumber);
                 Console.WriteLine();
                 Console.WriteLine();
-                
+
                 if (inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month) != null)
                 {
+
+                    int count = 0;
+
                     int newNB = inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month).NewNUmber;
-                    int oldNB = inv.GetInvoiceByMonthAndCusID(cusID,  DateTime.Now.Month).OldNumber;
-                    double tax1 = ((newNB - oldNB)*unit_price) * 0.05;
+                    int oldNB = inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month).OldNumber;
+
+                    double tax1 = ((newNB - oldNB) * unit_price) * 0.05;
                     Console.WriteLine("Hóa đơn tháng {0} của khách hàng này đã được tạo", DateTime.Now.Month);
-                    Console.WriteLine("Thời gian đã tạo hóa đơn: "+inBL.GetInvoiceByID(inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month).InvoiceId).DateCreate);
-                    count = (newNB - oldNB)*unit_price;
-                    
-                    month = monthBL.GetDateByMonthId(DateTime.Now.Month);
-                    
-                    Console.WriteLine("╔════════════════════════════════════════════════════════════════════════════════════════════════╗");
-                    Console.WriteLine("     CÔNG TY CỔ PHẦN CẤP THOÁT NƯỚC VTCA                     HÓA ĐƠN GIÁ TRỊ GIÁ GIA TĂNG");
-                    Console.WriteLine("     ĐC:                                                             (THU TIỀN NƯỚC)");
-                    Console.WriteLine("     Điện thoại: 0987654317");
-                    
-                    Console.WriteLine("                           Kì từ ngày: " + month.FromDate + "  đến ngày: " + month.ToDate);
-                    Console.WriteLine("     Khách hàng: " + cs.CustomerName);
-                    Console.WriteLine("     Địa chỉ: " + cs.CustomerAddress);
-                    Console.WriteLine("     Số điện thoại: " +cs.PhoneNumber);
-                    var table1 = new ConsoleTable("Chỉ số cũ", "Chỉ số mới", "Số tiêu thụ", "Đơn giá", "Thành tiền");
-                    table1.AddRow(oldNB, newNB, newNB - oldNB, unit_price, count);
-                    Console.WriteLine(table1);
+
+                    count = (newNB - oldNB) * unit_price;
+                    Console.Write("Bạn có muốn xem hóa đơn? (Y/N)");
+                    string choice2 = Console.ReadLine();
+                    if (choice2 == "y" || choice2 == "Y")
+                    {
+                        // int inID = inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month).InvoiceId;
+                        // time = inBL.GetInvoiceByID(inID).DateCreate;
+                        // Console.WriteLine("Thời gian đã tạo hóa đơn: " + time);
+                        Console.WriteLine("╔════════════════════════════════════════════════════════════════════════════════════════════════╗");
+                        Console.WriteLine("     CÔNG TY CỔ PHẦN CẤP THOÁT NƯỚC VTCA                     HÓA ĐƠN GIÁ TRỊ GIÁ GIA TĂNG");
+                        Console.WriteLine("     ĐC:                                                             (THU TIỀN NƯỚC)");
+                        Console.WriteLine("     Điện thoại: 0987654317");
+
+                        Console.Write("                           Kì từ ngày: " + month.FromDate);
+                        Console.WriteLine("    đến ngày: " + month.ToDate);
+                        Console.WriteLine("     Khách hàng: " + cs.CustomerName);
+                        Console.WriteLine("     Địa chỉ: " + cs.CustomerAddress);
+                        Console.WriteLine("     Số điện thoại: " + cs.PhoneNumber);
+                        var table1 = new ConsoleTable("Chỉ số cũ", "Chỉ số mới", "Số tiêu thụ", "Đơn giá", "Thành tiền");
+                        table1.AddRow(oldNB, newNB, newNB - oldNB, unit_price, count);
+                        Console.WriteLine(table1);
 
 
-                    Console.WriteLine("     Thuế GTGT: 5%");
+                        Console.WriteLine("     Thuế GTGT: 5%");
 
-                    Console.WriteLine("     Tổng tiền phải thanh toán: {0}                         ", count + tax1);
-                    Console.WriteLine("      (Viết bằng chữ): "+monney.DocTienBangChu(count+tax1, " đồng") );
+                        Console.WriteLine("     Tổng tiền phải thanh toán: {0}                         ", count + tax1);
+                        Console.WriteLine("      (Viết bằng chữ): " + monney.DocTienBangChu(count + tax1, " đồng"));
 
-                    Console.WriteLine(); Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
-                    Console.WriteLine("                                                            CÔNG TY CỔ PHẦN CẤP THOÁT NƯỚC VTCA");
-                    Console.WriteLine("                                                                          GIÁM ĐỐC");
-                    Console.WriteLine();
-                    Console.WriteLine();
-                    Console.WriteLine();
-                    Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════════════════════════╝");
-                    continue;
+                        Console.WriteLine(); Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
+                        Console.WriteLine("                                                            CÔNG TY CỔ PHẦN CẤP THOÁT NƯỚC VTCA");
+                        Console.WriteLine("                                                                          GIÁM ĐỐC");
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════════════════════════╝");
+
+                    }
+
                 }
                 else
                 {
@@ -98,8 +115,8 @@ namespace PL_console
                     {
                         MenuInvoice();
                     }
-                }
 
+                }
 
                 string choice1;
                 Console.Write("Bạn có muốn tiếp tục? (Y/N)");
@@ -141,9 +158,8 @@ namespace PL_console
 
         public void MenuInvoice()
         {
-            Customer cs =new Customer();
-            Month month = new Month();
-           
+            Customer cs = new Customer();
+
             Console.WriteLine(" -------Tạo hóa đơn tháng " + DateTime.Now.Month + "-------");
 
             int new_number;
@@ -176,7 +192,7 @@ namespace PL_console
 
             // cs =csBL.GetCustomerbyID(cusID);
             // month=monthBL.GetDateByMonthId(cusID);
-            
+
             // Console.WriteLine(count);
             // Console.WriteLine(inv.GetInvoiceByMonth(cusID, 2).NewNUmber);
             Console.WriteLine("╔════════════════════════════════════════════════════════════════════════════════════════════════╗");
@@ -184,7 +200,8 @@ namespace PL_console
             Console.WriteLine("     ĐC:                                                             (THU TIỀN NƯỚC)");
             Console.WriteLine("     Điện thoại: 0987654317");
             Console.WriteLine();
-            Console.WriteLine("                           Kì từ ngày: " + month.FromDate + "  đến ngày: " + month.ToDate);
+            Console.Write("                           Kì từ ngày: " + month.FromDate);
+            Console.WriteLine("    đến ngày: " + month.ToDate);
             Console.WriteLine("     Khách hàng: " + cs.CustomerName);
             Console.WriteLine("     Địa chỉ: " + cs.CustomerAddress);
             Console.WriteLine("     Số điện thoại: " + cs.PhoneNumber);
@@ -196,7 +213,7 @@ namespace PL_console
             Console.WriteLine("     Thuế GTGT: 5%");
 
             Console.WriteLine("     Tổng tiền phải thanh toán: {0}                         ", count1 + tax);
-            Console.WriteLine("      (Viết bằng chữ): "+monney.DocTienBangChu(count1+tax, "đồng") );
+            Console.WriteLine("      (Viết bằng chữ): " + monney.DocTienBangChu(count1 + tax, "đồng"));
             Console.WriteLine(); Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
             Console.WriteLine("                                                            CÔNG TY CỔ PHẦN CẤP THOÁT NƯỚC VTCA");
             Console.WriteLine("                                                                          GIÁM ĐỐC");
@@ -204,7 +221,15 @@ namespace PL_console
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════════════════════════╝");
-
+            int invoiceID;
+            if (inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month - 1) == null)
+            {
+                invoiceID = 1;
+            }
+            else
+            {
+                invoiceID = inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month - 1).InvoiceId + 1;
+            }
             string datetime = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
             Console.WriteLine("Bạn có muốn lưu hóa đơn ?(Y/N)");
             string choice;
