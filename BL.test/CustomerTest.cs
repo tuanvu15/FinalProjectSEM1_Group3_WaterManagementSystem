@@ -51,20 +51,14 @@ namespace BL.test
             CustomerBL cusbl = new CustomerBL();
             Assert.True(cusbl.UpdateCustomer(4,"men", "hai", "0904109652"));
         }
-        [Fact]
+     
         public void UpdateCustomerTest2()
-        {
-            CustomerBL cusbl = new CustomerBL();
-            Assert.False(cusbl.UpdateCustomer(0,"men", "ha", "11111"));//
-        }
-        [Fact]
-        public void UpdateCustomerTest3()
         {
             CustomerBL cusbl = new CustomerBL();
             Assert.False(cusbl.UpdateCustomer(1, "0123", "0123", "xxxxxx"));
         }
         [Fact]
-        public void UpdateCustomerTest4()
+        public void UpdateCustomerTest3()
         {
             CustomerBL cusbl = new CustomerBL();
             Assert.False(cusbl.UpdateCustomer(1, null, null, null));

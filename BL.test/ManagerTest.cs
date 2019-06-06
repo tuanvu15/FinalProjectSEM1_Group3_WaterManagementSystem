@@ -18,7 +18,7 @@ namespace BL.test
         public void LoginTest2()
         {
             ManagersBL magBl = new ManagersBL();
-            Assert.Null(magBl.Login("customet", "1234"));
+            Assert.Null(magBl.Login("customer", "1234"));
         }
         [Fact]
         public void LoginTest3()

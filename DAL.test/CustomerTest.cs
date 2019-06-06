@@ -70,16 +70,16 @@ namespace DAL.test
             bool cus =cusdl.UpdateCustomer(id,name,address,phones);
             Assert.False(cus);
         }
-         [Fact]
-        public void UpdateCustomerTest3()
-        {
-           int id = 0;
-             string name =null;
-            string address = null;
-            string phones = null;
-            bool cus =cusdl.UpdateCustomer(id,name,address,phones);
-            Assert.False(cus);
-        }
+        //  [Fact]
+        // public void UpdateCustomerTest3()
+        // {
+        //    int id = 0;
+        //      string name =null;
+        //     string address = null;
+        //     string phones = null;
+        //     bool cus =cusdl.UpdateCustomer(id,name,address,phones);
+        //     Assert.False(cus);
+        // }
         
     }
 }

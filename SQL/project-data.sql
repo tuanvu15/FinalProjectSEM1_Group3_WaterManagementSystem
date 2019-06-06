@@ -47,12 +47,18 @@ constraint fk_InvoiceDetail_Invoice foreign key (invoice_id) references Invoice(
 
 insert into Managers(pass,full_name,email) value ('12345678','Đỗ Văn Hoàng','manager01@gmail.com');
 insert into Customer(customer_name,customer_address,phone_number) 
-values('Nguyễn văn A','Hà Nội','0123846579'),
-('Nguyễn văn B','Hà Nội','0123745245'),
-('Nguyễn văn C','Hà Nội','0123147852'),
-('Nguyễn văn D','Hà Nội','0123953682'),
-('Nguyễn văn E','Hà Nội','0123175248'),
-('Nguyễn văn F','Hà Nội','0123723210');
+values('Nguyen Van An','191-hai ba trung-Ha Nội','0123874965'),
+	  ('Nguyen Van Binh','232-hai ba trung-Ha Nội','0987548623'),
+	  ('pham Van Chung','112-hai ba trung-Ha Nội','0123753684'),
+      ('Bui Thi kim','172-hai ba trung-Ha Nội','0900689745'),
+      ('Nguyen Văn Hoang','162-hai ba trung-Ha Nội','0123497682'),
+      ('Vu Van Thinh','292-hai ba trung-Ha Nội','0123741258'),
+      ('Pham Thanh An','92-hai ba trung-Ha Nội','0977121387'),
+	  ('Dao Phuong Duy ','108-hai ba trung-Ha Nội','0945551356'),
+	  ('Tran Van Quang','211-hai ba trung-Ha Nội','0972671335'),
+      ('Le Văn Dat','365-hai ba trung-Ha Nội','0998865365'),
+      ('Nguyen Van Linh','212-hai ba trung-Ha Nội','0123456521'),
+      ('Mai Phuong Anh','127-hai ba trung-Ha Nội','0165875963');
 
  
 
