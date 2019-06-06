@@ -24,7 +24,7 @@ namespace PL_console
 
             Customer cs = new Customer();
             // DateTime time;
-
+            Invoice invoice = null;
             month = monthBL.GetDateByMonthId(DateTime.Now.Month);
 
             while (true)
@@ -101,8 +101,9 @@ namespace PL_console
                 {
                     if (inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month - 1) != null)
                     {
-                        date = inBL.GetInvoiceByID(inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month - 1).InvoiceId).DateCreate;
-                        if (dateCr.DateDifference(date, DateTime.Now) >= 1)
+                        int inID = inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month - 1).InvoiceId;
+                        // invoice = inBL.GetInvoiceByID(inv.GetInvoiceByMonthAndCusID(cusID, DateTime.Now.Month - 1).InvoiceId);
+                        if (dateCr.DateDifference(inBL.GetInvoiceByID(inID).DateCreate, DateTime.Now) >= 1)
                         {
                             MenuInvoice();
                         }

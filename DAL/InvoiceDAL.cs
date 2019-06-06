@@ -52,7 +52,15 @@ namespace DAL
         }
         public Invoice GetInvoiceByID(int ID)
         {
-
+            if(connection == null)
+            {
+                connection = DBHelper.OpenConnection();
+            }
+             if (connection.State == System.Data.ConnectionState.Closed)
+            {
+                connection.Open();
+                
+            }
             query = @"select Invoice_id, date_create, unit_price from Invoice where invoice_id = '"+ID+"';";
             Invoice invoice = null;
             reader = DBHelper.ExecQuery(query, connection);
