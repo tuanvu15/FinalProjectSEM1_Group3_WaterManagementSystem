@@ -1,67 +1,32 @@
 using System;
 using Xunit;
-using BL;
 using Persistence;
+using BL; 
 namespace BL.test
 {
-
-    public class CustomerTest
-    {
-        
+    public class CustomerTest{
+        CustomerBL cus= new CustomerBL();
         [Fact]
         public void GetCustomerbyIDTest1()
         {
-            CustomerBL cusbl = new CustomerBL();
-            Assert.NotNull(cusbl.GetCustomerbyID(1));
-        }
-        [Fact]
-        public void GetCustomerbyIDTest2()
-        {
-            CustomerBL cusbl = new CustomerBL();
-            Assert.Null(cusbl.GetCustomerbyID(0));
-        }
-        
-        [Fact]
-        public void GetCustomerTest1()
-        {
-            CustomerBL cusbl = new CustomerBL();
-            Assert.NotNull(cusbl.GetCustomer());
-        }
-        [Fact]
-        public void InsertCustomerTest1()
-        {
-            CustomerBL cusbl = new CustomerBL();
-            Assert.True(cusbl.InsertCustomer("nam", "ha noi", "0904108354"));
-        }
-        [Fact]
-        public void InsertCustomerTest2()
-        {
-            CustomerBL cusbl = new CustomerBL();
-            Assert.False(cusbl.InsertCustomer("12344", "5674567", "auqw"));//
+           Assert.Null(cus.GetCustomerbyID(0));
         }
            [Fact]
-        public void InsertCustomerTest3()
+        public void GetCustomerbyIDTest2()
         {
-            CustomerBL cusbl = new CustomerBL();
-            Assert.False(cusbl.InsertCustomer(null, null, null));
+           Assert.NotNull(cus.GetCustomerbyID(1));
         }
-        [Fact]
-        public void UpdateCustomerTest1()
+           [Fact]
+        public void InsertAndUpdateCustomerTest1()
         {
-            CustomerBL cusbl = new CustomerBL();
-            Assert.True(cusbl.UpdateCustomer(4,"men", "hai", "0904109652"));
+           Assert.True(cus.InsertCustomer("nguyen van a","ha noi","0123456789","0123456789"));
+           Assert.True(cus.UpdateCustomer(1,"nguyen van nam","ha noi","0903198376","1234567890"));
         }
-     
-        public void UpdateCustomerTest2()
+           [Fact]
+        public void InsertAndUpdateCustomerTest2()
         {
-            CustomerBL cusbl = new CustomerBL();
-            Assert.False(cusbl.UpdateCustomer(1, "0123", "0123", "xxxxxx"));
-        }
-        [Fact]
-        public void UpdateCustomerTest3()
-        {
-            CustomerBL cusbl = new CustomerBL();
-            Assert.False(cusbl.UpdateCustomer(1, null, null, null));
+           Assert.False(cus.InsertCustomer("nguyen van a","ha noi",null,null ));
+           Assert.False(cus.UpdateCustomer(0,"nguyen van nam","ha noi",null,null));
         }
     }
 }

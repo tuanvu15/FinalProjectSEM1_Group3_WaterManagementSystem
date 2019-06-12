@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj": {}
+    "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj": {
+    "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj",
+        "projectUniqueName": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\DAL.csproj",
+        "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
-        "outputPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\DAL\\obj\\",
+        "outputPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -28,8 +28,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
-                "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj"
+              "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj": {
+                "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj": {
+    "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\Persistence.csproj",
+        "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
-        "outputPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem\\Persistence\\obj\\",
+        "outputPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

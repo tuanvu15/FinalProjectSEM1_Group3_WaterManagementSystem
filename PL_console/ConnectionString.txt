@@ -1,1 +1,1 @@
-server=localhost;user id=root;password=hoang1701;port=3306;database=projectData;SslMode=None
+server=localhost;user id=root;password=01652530159;port=3306;database=WatermanagermentSystem;SslMode=None

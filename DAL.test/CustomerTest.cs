@@ -37,7 +37,8 @@ namespace DAL.test
             string name ="pham van A";
             string address = "ha noi";
             string phones = "0123456789";
-            bool cus =cusdl.InsertCustomer(name,address,phones);
+            string cmnd = "01234567890";
+            bool cus =cusdl.InsertCustomer(name,address,phones,cmnd);
             Assert.True(cus);
         }
            [Fact]
@@ -46,7 +47,8 @@ namespace DAL.test
           string name =null;
             string address = null;
             string phones = null;
-            bool cus =cusdl.InsertCustomer(name,address,phones);
+            string cmnd = null;
+            bool cus =cusdl.InsertCustomer(name,address,phones,cmnd);
             Assert.False(cus);
         }
         
@@ -57,7 +59,8 @@ namespace DAL.test
              string name ="pham van a";
             string address = "ha noi";
             string phones = "0123456789";
-            bool cus =cusdl.UpdateCustomer(id,name,address,phones);
+            string cmnd= "12345678990";
+            bool cus =cusdl.UpdateCustomer(id,name,address,phones,cmnd);
             Assert.True(cus);
         }
          [Fact]
@@ -67,7 +70,8 @@ namespace DAL.test
              string name =null;
             string address = null;
             string phones = null;
-            bool cus =cusdl.UpdateCustomer(id,name,address,phones);
+            string cmnd = null;
+            bool cus =cusdl.UpdateCustomer(id,name,address,phones,cmnd);
             Assert.False(cus);
         }
         //  [Fact]

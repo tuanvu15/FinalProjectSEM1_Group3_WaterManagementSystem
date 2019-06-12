@@ -9,10 +9,12 @@ namespace PL_console
     {
         public void MenuChoice(string err)
         {
+            Console.Clear();
             int choice;
-            do
+            
+            while(true)
             {
-                Console.Clear();
+                 Console.Clear();
                 if (err != null)
                 {
                     Console.WriteLine(err);
@@ -22,7 +24,7 @@ namespace PL_console
                 Console.WriteLine("║    HỆ THỐNG QUẢN LÝ HÓA ĐƠN TIỀN NƯỚC    ║");
                 Console.WriteLine("╠══════════════════════════════════════════╣");
                 Console.WriteLine("║ 1.Đăng nhập                              ║");
-                Console.WriteLine("║ 0.thoát                                  ║");
+                Console.WriteLine("║ 0.Thoát                                  ║");
                 Console.WriteLine("╚══════════════════════════════════════════╝");
                 Console.Write("Chọn: ");
                 while (true)
@@ -51,7 +53,10 @@ namespace PL_console
                             break;
                         }
                 }
-            } while (choice != 0);
+                break;
+            }
+               
+            
 
         }
         public void MenuLogin()
@@ -62,12 +67,12 @@ namespace PL_console
                 string email = null;
                 string pass = null;
                    Console.Clear();
-                Console.WriteLine("============ ĐĂNG NHẬP ===========");
+                Console.WriteLine("============ ĐĂNG NHẬP ============");
                 Console.Write("USERNAME:");
                 email = Console.ReadLine();
                 Console.Write("PASSWORD:");
                 pass = Password();
-                Console.WriteLine("==================================");
+                Console.WriteLine("===================================");
                 string choice;
                 try
                 {
@@ -81,7 +86,7 @@ namespace PL_console
 
                     while (true)
                     {
-                        if (choice != "C" && choice != "K")
+                        if (choice != "Y" && choice != "y")
                         {
                             Console.Write("Bạn chỉ được nhập (Y/N): ");
                             choice = Console.ReadLine().ToUpper();
@@ -92,14 +97,14 @@ namespace PL_console
 
                     switch (choice)
                     {
-                        case "C":
+                        case "Y":
                             continue;
-                        case "c":
+                        case "y":
                             continue;
-                        case "K":
+                        case "N":
                             MenuChoice(null);
                             break;
-                        case "k":
+                        case "n":
                             MenuChoice(null);
                             break;
                         default:
@@ -159,17 +164,18 @@ namespace PL_console
         }
         public void MainMenu()
         {
+            Console.Clear();
             int magChoice;
             InvoiceConsole inv = new InvoiceConsole();
-            do
-            {
-                Console.Clear();
+            // do
+            // {
+                // Console.Clear();
                 Console.WriteLine("╔══════════════════════════════════════════╗");
                 Console.WriteLine("║               MENU QUẢN LÝ               ║");
                 Console.WriteLine("╠══════════════════════════════════════════╣");
                 Console.WriteLine("║ 1.Quản lí khách hàng                     ║");
-                Console.WriteLine("║ 2.Tạo hóa đơn                            ║");
-                Console.WriteLine("║ 0.đăng xuất                              ║");
+                Console.WriteLine("║ 2.Quản lí hóa đơn                        ║");
+                Console.WriteLine("║ 0.Đăng xuất                              ║");
                 Console.WriteLine("╚══════════════════════════════════════════╝");
 
                 Console.Write("Chọn:");
@@ -201,7 +207,7 @@ namespace PL_console
                         }
                     case 2:
                         {
-                            inv.CreateInvoice();
+                            inv.MenuInvoice();
                             break;
                         }
                     default:
@@ -211,17 +217,18 @@ namespace PL_console
                         }
 
                 }
-            } while (magChoice != 0);
+            // } while (magChoice != 0);
 
 
         }
         public void CustomerMenu()
         {
+            Console.Clear();
             int choice;
-            do
-            {
+            // do
+            // {
                 CustomerConsole cusCS = new CustomerConsole();
-                Console.Clear();
+                // Console.Clear();
                 Console.WriteLine("╔══════════════════════════════════════════╗");
                 Console.WriteLine("║             QUẢN LÝ KHÁCH HÀNG           ║");
                 Console.WriteLine("╠══════════════════════════════════════════╣");
@@ -249,6 +256,7 @@ namespace PL_console
                 {
                     case 0:
                         {
+                           
                             MainMenu();
                             break;
                         }
@@ -256,6 +264,7 @@ namespace PL_console
                         {
                             try
                             {
+                                // Console.Clear();
                                 cusCS.CreateCustomer();
                             }
                             catch (Exception ex)
@@ -271,6 +280,7 @@ namespace PL_console
                         {
                             try
                             {
+                                //  Console.Clear();
                                 cusCS.DisplayCustomer();
                             }
                             catch (Exception ex)
@@ -284,7 +294,7 @@ namespace PL_console
                         }
                     case 3:
                         {
-                           
+                        //    Console.Clear();
                             cusCS.UpdateCustomer();
                          
                             break;
@@ -292,10 +302,10 @@ namespace PL_console
                         }
                     default:
                         {
-                            break;
+                            return;
                         }
                 }
-            } while (choice != 0);
+            // } while (choice != 0);
 
         }
        

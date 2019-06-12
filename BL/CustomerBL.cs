@@ -13,30 +13,30 @@ namespace BL
             customerDAL = new CustomerDAL();
         }
        
-        public Customer GetCustomerbyID(int id)
+        public Customer GetCustomerbyID(int cusid)
         {
 
-            return customerDAL.GetCustomerbyID(id);
+            return customerDAL.GetCustomerbyID(cusid);
         }
         public List<Customer> GetCustomer()
         {
             return customerDAL.GetCustomer();
         }
-        public bool InsertCustomer(string cusName, string cusAddress, string Phone)
+        public bool InsertCustomer(string cusName, string cusAddress, string Phone,string cmnd)
 
         {
-            if (!isnumber(Phone)||!checkstring(cusName)||!checkstring(cusAddress))
+            if (!isnumber(Phone)||!checkstring(cusName)||!checkstring(cusAddress)||!isnumber(cmnd))
             {
                 return false;
             }
            
 
-            return customerDAL.InsertCustomer(cusName, cusAddress, Phone);
+            return customerDAL.InsertCustomer(cusName, cusAddress, Phone,cmnd);
 
         }
-        public bool UpdateCustomer(int id, string name, string address, string sdt)
+        public bool UpdateCustomer(int id, string name, string address, string sdt,string cmnd)
         {
-              if (!isnumber(sdt)||!checkstring(name)||!checkstring(address))
+              if (!isnumber(sdt)||!checkstring(name)||!checkstring(address)||!isnumber(cmnd))
             {
                 return false;
             }
@@ -44,7 +44,7 @@ namespace BL
               {
                   return false;
               }
-            return customerDAL.UpdateCustomer(id, name, address, sdt);
+            return customerDAL.UpdateCustomer(id, name, address, sdt,cmnd);
         }
 
        
@@ -76,13 +76,13 @@ namespace BL
         }
         public string input(string str)
         {
-             string strRegex =@"[a-zA-Z]";
+            string strRegex =@"[a-zA-Z]";
             Regex regex = new Regex(strRegex);
             
             MatchCollection matchCollection = regex.Matches(str);
             while ((!regex.IsMatch(str)) || (str == ""))
             {
-                Console.WriteLine(" Không được để trống, chứa số hoặc ký tự đặc biệt, Mời nhập lại: ");
+                Console.Write(" Không được để trống, chứa số hoặc ký tự đặc biệt, Mời nhập lại: ");
                 str = Console.ReadLine();
                 matchCollection = regex.Matches(str);
                 
@@ -98,7 +98,7 @@ namespace BL
             while (!isValidInput.IsMatch(str))
             {
                 Console.WriteLine("sai định dạng(0123456789)");
-                Console.Write("nhập lại:");
+                Console.Write("\tnhập lại:");
                 str = Console.ReadLine();
             }
             return str;
