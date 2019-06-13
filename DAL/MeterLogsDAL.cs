@@ -36,16 +36,13 @@ namespace DAL
             }
             query = @"update Meter_logs set Pay_status = 'Đã thanh toán' where meter_id = '" + id +"' and ml_month = '"+ month+"';";
 
-            reader = DBHelper.ExecQuery(query, connection);
-
-            MeterLogs meter = null;
             try
             {
                 MySqlCommand command = new MySqlCommand(query, connection);
                 
-                if (reader.Read())
+                if (command.ExecuteNonQuery() > 0)
                 {
-                    meter = GetMeterLogsInfo(reader);
+                    result = true;
                 }
                 // DBHelper.CloseConnection();
                 connection.Close();
@@ -96,16 +93,13 @@ namespace DAL
 
             query = @"insert into Meter_logs(meter_id ,ml_status,ml_month ,ml_oldnumber,ml_newnumber ,ml_time, ml_type, ml_place, pay_status) 
             value ('" + meterID + "','" + ml_status + "','" + ml_month + "'," + old_number + "," + new_number + ",'" + ml_time + "','" + ml_type + "','"+ml_place+"','" + pay_status + "');";
-
-            reader = DBHelper.ExecQuery(query, connection);
-            MeterLogs meter = null;
+           
             try
             {
                 MySqlCommand command = new MySqlCommand(query, connection);
-                if (reader.Read())
+                if (command.ExecuteNonQuery() > 0)
                 {
-                    meter = GetMeterLogsInfo(reader);
-
+                    result = true;
                 }
                 connection.Close();
                 return true;

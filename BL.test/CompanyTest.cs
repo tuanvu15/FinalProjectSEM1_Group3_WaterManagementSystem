@@ -2,19 +2,20 @@ using System;
 using Xunit;
 using Persistence;
 using BL; 
-using System.Collections.Generic;
 namespace BL.test
 {
     public class CompanyTest{
-       
-       [Fact]
-       public void GetinfoBycompanyIdTest()
-       {
-           CompanyBL com = new CompanyBL();
-           Assert.NotNull(com.GetinfoBycompanyId(1));
-           Assert.Null(com.GetinfoBycompanyId(0));
+         CompanyBL comBL= new CompanyBL();
+         [Fact]
+         public void GetinfoBycompanyIdTest1()
+         {
+          Assert.NotNull(comBL.GetinfoBycompanyId(1));
+         }
+         [Fact]
+         public void GetinfoBycompanyIdTest2()
+         {
+          Assert.Null(comBL.GetinfoBycompanyId(0));
+         }
 
-       }
-      
     }
 }

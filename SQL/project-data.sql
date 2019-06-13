@@ -1,7 +1,7 @@
-drop database WatermanagermentSystem;
-create database if not exists WatermanagermentSystem;
+drop database projectdata;
+create database if not exists projectData;
 
-use WatermanagermentSystem;
+use projectData;
 create table Customer(
 customer_id int primary key auto_increment,
 customer_name nvarchar(50) not null,
@@ -77,7 +77,7 @@ values('Nguyen Van An','191-hai ba trung-Ha Nội','0123874965','0103268963'),
       ('Nguyen Van Linh','212-hai ba trung-Ha Nội','0123456521','0103075214'),
       ('Mai Phuong Anh','127-hai ba trung-Ha Nội','0165875963','0103847961');
 insert into Meter value ('1','a1', 'đang hoạt động',0,0,'sinh hoạt','hà nội'),
-			      ('2','a2', 'đang hoạt động',0,0,'sinh hoạt','hà nội'),
+						('2','a2', 'đang hoạt động',0,0,'sinh hoạt','hà nội'),
                         ('3','a3', 'đang hoạt động',0,0,'sinh hoạt','hà nội'),
                         ('4','a4', 'đang hoạt động',0,0,'sinh hoạt','hà nội'),
                         ('5','a5', 'đang hoạt động',0,0,'sinh hoạt','hà nội'),
@@ -88,3 +88,35 @@ insert into Meter value ('1','a1', 'đang hoạt động',0,0,'sinh hoạt','hà
                         ('10','a10', 'đang hoạt động',0,0,'sinh hoạt','hà nội'),
                         ('11','a11', 'đang hoạt động',0,0,'sinh hoạt','hà nội'),
                         ('12','a12', 'đang hoạt động',0,0,'sinh hoạt','hà nội');
+select * from Meter;
+select * from Company;
+select * from Customer;
+select * from Managers;
+select * from Meter_logs;
+select meter_id ,ml_status,ml_month ,ml_oldnumber,ml_newnumber ,ml_time, ml_type, ml_place
+            from Meter_logs where Meter_id = '2' and ml_month = '6/2019';
+update Meter_logs set Pay_status = 'Đã thanh toán' where meter_id = '1' and ml_month = '6/2019';
+select * from Meter_logs where ml_month = '5/2019';
+
+select c.customer_name,  m.meter_id, c.customer_id, m.meter_status from customer c inner join Meter m 
+on c.customer_id = m.customer_id;
+select c.customer_id, c.customer_name, Meter_id from customer c  inner join Meter m on c.customer_id = m.customer_id where Meter_id = 'a2';
+select meter_id,ml_id ,ml_status,ml_month ,ml_oldnumber,ml_newnumber ,ml_time, ml_type, ml_place, pay_status from Meter_Logs where ml_month = '6/2019' ;
+select meter_id,meter_status,old_number,new_number,meter_type,meter_place from Meter where meter_id = 'a1';
+insert into Meter_Logs
+value  (1,'a1','Đang hoạt động','5/2019',10,'25','2019/5/15','sinh hoạt','187 Ha Nội','Đã thanh toán'),
+       (2,'a2','Đang hoạt động','5/2019',5,'20','2019/5/15','sinh hoạt','182 Ha Nội','Đã thanh toán'),
+       (3,'a3','Đang hoạt động','5/2019',7,'15','2019/5/15','sinh hoạt','133 Ha Nội','Đã thanh toán'),
+       (4,'a4','Đang hoạt động','5/2019',9,'30','2019/5/15','sinh hoạt','87 Ha Nội','Đã thanh toán'),
+       (5,'a5','Đang hoạt động','5/2019',12,'150','2019/5/15','kinh doanh','144 Ha Nội','Đã thanh toán'),
+       (6,'a6','Đang hoạt động','5/2019',17,'45','2019/5/15','sinh hoạt','186 Ha Nội','Đã thanh toán'),
+       (7,'a7','Đang hoạt động','5/2019',16,'44','2019/5/15','sinh hoạt','192 Ha Nội','Đã thanh toán'),
+       (8,'a8','Đang hoạt động','5/2019',21,'27','2019/5/15','sinh hoạt','16 Ha Nội','Đã thanh toán'),
+       (9,'a9','Đang hoạt động','5/2019',1,'14','2019/5/15','sinh hoạt','18 Ha Nội','Đã thanh toán'),
+       (10,'a10','Đang hoạt động','5/2019',12,'85','2019/5/15','sinh hoạt','17 Ha Nội','Đã thanh toán'),
+       (11,'a11','Đang hoạt động','5/2019',18,'125','2019/5/15','sản xuất','31 Ha Nội','Đã thanh toán'),
+       (12,'a12','Đang hoạt động','5/2019',19,'25','2019/5/15','sinh hoạt','77 Ha Nội','Đã thanh toán'),
+       (13,'a1','Đang hoạt động','6/2019',25,33,'2019/6/15','sinh hoạt','187 Ha Nội','Đã thanh toán'),
+       (14,'a2','Đang hoạt động','6/2019',20,'25','2019/6/15','sinh hoạt','182 Ha Nội','Đã thanh toán'),
+       (15,'a3','Đang hoạt động','6/2019',15,'25','2019/6/15','sinh hoạt','133 Ha Nội','Đã thanh toán');
+       

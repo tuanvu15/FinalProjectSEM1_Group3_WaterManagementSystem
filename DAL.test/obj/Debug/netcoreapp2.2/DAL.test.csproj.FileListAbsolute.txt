@@ -37,3 +37,23 @@ F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL.test\obj\Debu
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.dll
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.pdb
 F:\project hk1\FinalProjectSEM1_Group3_WaterManagementSystem-1\DAL.test\bin\Debug\netcoreapp2.2\ConnectionString.txt
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\ConnectionString.txt
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\DAL.test.deps.json
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\DAL.test.runtimeconfig.json
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\DAL.test.runtimeconfig.dev.json
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\DAL.test.dll
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\DAL.test.pdb
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\DAL.dll
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\Persistence.dll
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\DAL.pdb
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\bin\Debug\netcoreapp2.2\Persistence.pdb
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.csprojAssemblyReference.cache
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.csproj.CoreCompileInputs.cache
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.AssemblyInfoInputs.cache
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.AssemblyInfo.cs
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.csproj.CopyComplete
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.dll
+E:\Project\FinalProjectSEM1_Group3_WaterManagementSystem-master\DAL.test\obj\Debug\netcoreapp2.2\DAL.test.pdb

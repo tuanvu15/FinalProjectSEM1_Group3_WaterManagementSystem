@@ -10,7 +10,7 @@ namespace PL_console
     public class InvoiceConsole
     {
 
-        Menu cus = new Menu();
+
         CustomerBL csBL = new CustomerBL();
         CompanyBL comBL = new CompanyBL();
         Menu menu = new Menu();
@@ -18,7 +18,7 @@ namespace PL_console
         MeterBL meterBL = new MeterBL();
         MeterLogsBL meterLogsBL = new MeterLogsBL();
         // int cusID;
-        // int unit_price = 5300;
+
 
         public void MenuInvoice()
         {
@@ -27,61 +27,98 @@ namespace PL_console
 
             while (true)
             {
-            // Console.Clear();
-            Console.WriteLine("╔══════════════════════════════════════════╗");
-            Console.WriteLine("║         MENU QUẢN LÝ HÓA ĐƠN             ║");
-            Console.WriteLine("╠══════════════════════════════════════════╣");
-            Console.WriteLine("║ 1.Xuất hóa đơn                           ║");
-            Console.WriteLine("║ 2.Thống kê hóa đơn                       ║");
-            Console.WriteLine("║ 3.Nhập số công tơ theo tháng             ║");
-            Console.WriteLine("║ 0.Trở về menu chính                      ║");
-            Console.WriteLine("╚══════════════════════════════════════════╝");
+                // Console.Clear();
+                Console.WriteLine("╔══════════════════════════════════════════╗");
+                Console.WriteLine("║         MENU QUẢN LÝ HÓA ĐƠN             ║");
+                Console.WriteLine("╠══════════════════════════════════════════╣");
+                Console.WriteLine("║ 1.Xuất hóa đơn                           ║");
+                Console.WriteLine("║ 2.Thống kê hóa đơn                       ║");
+                Console.WriteLine("║ 3.Nhập số công tơ theo tháng             ║");
+                Console.WriteLine("║ 0.Trở về menu chính                      ║");
+                Console.WriteLine("╚══════════════════════════════════════════╝");
 
-            Console.Write("Chọn:");
+                Console.Write("Chọn:");
 
-            while (true)
-            {
-                bool check = Int32.TryParse(Console.ReadLine(), out magChoice);
-                if (!check)
+                while (true)
                 {
-                    Console.Write("nhập lại:");
+                    bool check = Int32.TryParse(Console.ReadLine(), out magChoice);
+                    if (!check)
+                    {
+                        Console.Write("nhập lại:");
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
-                else
+
+                switch (magChoice)
                 {
-                    break;
+                    case 0:
+                        {
+                            menu.MainMenu();
+                            break;
+                        }
+                    case 1:
+                        {
+                            try
+                            {
+                                // Console.Clear();
+                                ShowInvoice();
+                            }
+                            catch (System.NullReferenceException)
+                            {
+                                menu.MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
+                            }
+                            catch (MySql.Data.MySqlClient.MySqlException)
+                            {
+                                Console.WriteLine("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
+                            }
+                            break;
+                        }
+                    case 2:
+                        {
+
+                            try
+                            {
+                                // Console.Clear();
+                                InvoiceStatistics();
+                            }
+                            catch (System.NullReferenceException)
+                            {
+                                menu.MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
+                            }
+                            catch (MySql.Data.MySqlClient.MySqlException)
+                            {
+                                menu.MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
+                            }
+                            break;
+                        }
+                    case 3:
+                        {
+
+                            try
+                            {
+                                // Console.Clear();
+                                NumberOfMeter();
+                            }
+                            catch (System.NullReferenceException)
+                            {
+                                menu.MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
+                            }
+                            catch (MySql.Data.MySqlClient.MySqlException)
+                            {
+                                menu.MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
+                            }
+                            break;
+                        }
+                    default:
+                        {
+                            continue;
+                        }
+
                 }
-            }
-
-            switch (magChoice)
-            {
-                case 0:
-                    {
-                        menu.MainMenu();
-                        break;
-                    }
-                case 1:
-                    {
-                        ShowInvoice();
-                        break;
-                    }
-                case 2:
-                    {
-                        StatisticInvoice();
-                        break;
-                    }
-                case 3:
-                    {
-                        NumberOfMeter();
-                        break;
-                    }
-                default:
-                    {
-
-                        continue;
-                    }
-
-                    }
-                    break;
+                break;
             }
 
 
@@ -93,12 +130,12 @@ namespace PL_console
             Company com = comBL.GetinfoBycompanyId(1);
             while (true)
             {
-                
+
                 int customerId;
                 Customer customer = null;
                 Meter mt = null;
                 Console.WriteLine("-------------------------- Xuất Hóa đơn Tháng {0} của khách hàng----------------------", DateTime.Now.Month);
-                int unit_price = 0;
+                
 
                 Console.Write("- Nhập ID khách hàng cần xuất hóa đơn: ");
                 customerId = csBL.checkid();
@@ -113,9 +150,18 @@ namespace PL_console
                 if (meterLogsBL.GetMeterLogsByMonth(mt.MeterID, DateTime.Now.Month + "/" + DateTime.Now.Year) != null)
                 {
 
-
+                    int unit_price = 0;
+                    int oldNumber = 0;
                     MeterLogs mtLogs = meterLogsBL.GetMeterLogsByMonth(mt.MeterID, DateTime.Now.Month + "/" + DateTime.Now.Year);
-
+                    if(meterLogsBL.GetMeterLogsByMonth(mt.MeterID, (DateTime.Now.Month -1) + "/" + DateTime.Now.Year) != null)
+                    {
+                        oldNumber = meterLogsBL.GetMeterLogsByMonth(mt.MeterID, (DateTime.Now.Month -1) + "/" + DateTime.Now.Year).NewNumber;
+                    }
+                    else
+                    {
+                        oldNumber = 0;
+                    }
+                    
 
                     if (mtLogs.MeterType == "sinh hoạt")
                     {
@@ -137,49 +183,49 @@ namespace PL_console
                     // {
 
                     // }
-                    double count = (mtLogs.NewNumber - mtLogs.OldNumber) * unit_price;
+                    double count = (mtLogs.NewNumber - oldNumber) * unit_price;
                     double tax1 = count * 0.05;
                     double tax2 = count * 0.1;
 
-                    Console.WriteLine("╔══════════════════════════════════════════════════════════════════════════════════════════════════════╗");
-                    Console.WriteLine("                                    HÓA ĐƠN GIÁ TRỊ GIÁ GIA TĂNG");
+                    Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("                                     HÓA ĐƠN GIÁ TRỊ GIÁ GIA TĂNG");
                     Console.WriteLine("                                          (THU TIỀN NƯỚC)");
-                    Console.WriteLine("  {0}", com.CompanyName);
-                    Console.WriteLine("  ĐC:{0}\t    ", com.HeadQuarters);
-                    Console.WriteLine("  Điện thoại:{0}", com.Phone);
-                    Console.WriteLine("  MST: " + com.Tax);
+                    Console.WriteLine("    {0}", com.CompanyName);
+                    Console.WriteLine("    ĐC:{0}\t    ", com.HeadQuarters);
+                    Console.WriteLine("    Điện thoại:{0}", com.Phone);
+                    Console.WriteLine("    MST: " + com.Tax);
                     Console.WriteLine(); Console.WriteLine();
-                    Console.WriteLine("  Hóa đơn nước tháng " + DateTime.Now.Month + "/" + DateTime.Now.Year);
-                    Console.WriteLine("  Khách hàng: " + customer.CustomerName + "                         MHD: ");
-                    Console.WriteLine("  Địa chỉ: " + customer.CustomerAddress);
-                    Console.WriteLine("  CMND: " + customer.CMND);
-                    Console.WriteLine("  SĐT: " + customer.PhoneNumber);
+                    Console.WriteLine("    Hóa đơn nước tháng " + DateTime.Now.Month + "/" + DateTime.Now.Year);
+                    Console.WriteLine("    Khách hàng: " + customer.CustomerName + "                                MHD: {0}", (10000 + mtLogs.MeterLogID));
+                    Console.WriteLine("    Địa chỉ: " + customer.CustomerAddress);
+                    Console.WriteLine("    CMND: " + customer.CMND);
+                    Console.WriteLine("    SĐT: " + customer.PhoneNumber);
                     var table1 = new ConsoleTable("Chỉ số cũ", "Chỉ số mới", "Số tiêu thụ", "Đơn giá", "Thành tiền");
-                    table1.AddRow(mtLogs.OldNumber, mtLogs.NewNumber, mtLogs.NewNumber - mtLogs.OldNumber, unit_price, count);
+                    table1.AddRow(oldNumber, mtLogs.NewNumber, mtLogs.NewNumber - oldNumber, unit_price, count);
                     Console.WriteLine(table1);
                     Console.WriteLine();
                     Console.WriteLine();
                     Console.WriteLine();
                     Console.WriteLine();
 
-                    Console.WriteLine("  Thuế GTGT 5% :                                   {0}", tax1);
-                    Console.WriteLine("  Thuế BVMT 10% :                                  {0}", tax2);
-                    Console.WriteLine("  Tổng tiền phải thanh toán:                       {0}", (count + tax1 + tax2));
-                    Console.WriteLine("  (Viết bằng chữ): " + monney.DocTienBangChu((count + tax1 + tax2), " VNĐ"));
+                    Console.WriteLine("   Thuế GTGT 5% :                                    {0}", tax1);
+                    Console.WriteLine("   Thuế BVMT 10% :                                   {0}", tax2);
+                    Console.WriteLine("   Tổng tiền phải thanh toán:                        {0}", (count + tax1 + tax2));
+                    Console.WriteLine("   (Viết bằng chữ): " + monney.DocTienBangChu((count + tax1 + tax2), " VNĐ"));
                     Console.WriteLine();
                     Console.WriteLine();
-                    Console.WriteLine("                                                             " + com.CompanyName);
-                    Console.WriteLine("                                                                         GIÁM ĐỐC");
+                    Console.WriteLine("                                                              " + com.CompanyName);
+                    Console.WriteLine("                                                                          GIÁM ĐỐC");
                     Console.WriteLine();
                     Console.WriteLine();
                     Console.WriteLine();
-                    Console.WriteLine("╚══════════════════════════════════════════════════════════════════════════════════════════════════════╝");
+                    Console.WriteLine("╚═════════════════════════════════════════════════════════════════════════════════════════════════════╝");
 
                     if (mtLogs.PayStatus == "Chưa thanh toán")
                     {
-                        Console.Write("Khách hàng đã thanh toán hóa đơn này ?(1.Thanh toán , 2.Tạm hoãn thanh toán): ");
+                        Console.Write("Thanh toán hóa đơn này ?(1.Thanh toán , 2.Tạm hoãn thanh toán): ");
                         int choice6;
-                        choice6 = Convert.ToInt32(Console.ReadLine());
+                        choice6 = csBL.checkid();
                         if (choice6 == 1)
                         {
                             meterLogsBL.UpdatePayStatusMeterLogs(mt.MeterID, mtLogs.MeterLogsMonth);
@@ -189,15 +235,17 @@ namespace PL_console
                         {
                             Console.WriteLine("Hóa đơn chưa được thanh toán!");
                         }
-                        else
+                        else if (choice6 != 1 || choice6 != 2)
                         {
+                            Console.Write("Bạn chỉ được phép nhập (1,2): ");
+                            choice6 = csBL.checkid();
                             Console.WriteLine("Hóa đơn chưa được thanh toán!");
                         }
 
                     }
                     else
                     {
-                        Console.WriteLine("Hóa đơn đã được thanh toán ");
+                        Console.WriteLine("Hóa đơn đã được thanh toán !");
                     }
 
 
@@ -207,7 +255,7 @@ namespace PL_console
                     Console.WriteLine("Không có dữ liệu tháng {0} để xuất hóa đơn cho khách hàng này", DateTime.Now.Month);
                 }
                 string choice2;
-                Console.Write("Bạn có muốn tiếp tục? (Y/N)");
+                Console.Write("Bạn có muốn tiếp tục? (Y/N): ");
                 choice2 = Console.ReadLine();
                 while (choice2 != "y" && choice2 != "Y" && choice2 != "n" && choice2 != "N")
                 {
@@ -277,26 +325,36 @@ namespace PL_console
                 {
                     if (DateTime.Now.Day > 10)
                     {
+                        int newNum = 0;
+                        if(meterLogsBL. GetMeterLogsByMonth(meter.MeterID, (DateTime.Now.Month -1) + "/" + DateTime.Now.Year)!=null)
+                        {
+                            newNum = meterLogsBL. GetMeterLogsByMonth(meter.MeterID, (DateTime.Now.Month -1) + "/" + DateTime.Now.Year).NewNumber;
+                        }
                         Console.WriteLine("- Họ và tên khách hàng: " + cs.CustomerName);
                         Console.WriteLine("- Địa chỉ : " + cs.CustomerAddress);
                         Console.WriteLine("- Số điện thoại : " + cs.PhoneNumber);
                         Console.WriteLine("- CMND : " + cs.CMND);
                         Console.WriteLine("- Mã công tơ :" + meter.MeterID);
                         Console.WriteLine("- Công tơ đặt tại: " + meter.MeterPlace);
-                        Console.WriteLine("- Chỉ số cũ (tháng {0}): " + meter.NewNumber, DateTime.Now.Month - 1);
+                        Console.WriteLine("- Chỉ số cũ (tháng {0}): " + newNum , DateTime.Now.Month - 1);
 
                         Console.Write("- Nhập chỉ số mới(tháng {0}): ", DateTime.Now.Month);
-                        new_number = Convert.ToInt32(Console.ReadLine());
-                        while (new_number < meter.NewNumber)
+                        new_number = csBL.checkid();
+                        while (new_number < newNum)
                         {
-                            Console.Write("Chỉ số mới phải lớn hơn chỉ số cũ, mời nhập lại:");
+                            Console.Write("- Chỉ số mới phải lớn hơn chỉ số cũ, mời nhập lại:");
                             new_number = Convert.ToInt32(Console.ReadLine());
                         };
                         Console.WriteLine("---------------------------------------------------------------------");
 
                         string choice;
-                        Console.WriteLine("Bạn có muốn cập nhật !(Y/N)");
+                        Console.Write("Bạn có muốn cập nhật ?(Y/N): ");
                         choice = Console.ReadLine();
+                        while (choice != "y" && choice != "Y" && choice != "n" && choice != "N")
+                        {
+                            Console.Write("Nhập sai!, Bạn chỉ được nhập(Y/N): ");
+                            choice = Console.ReadLine();
+                        }
                         if (choice == "y" || choice == "Y")
                         {
                             string mlStatus = "đang hoạt động";
@@ -309,18 +367,18 @@ namespace PL_console
                     }
                     else
                     {
-                        Console.WriteLine(" Chưa đến ngày cập nhật chỉ số đồng hồ");
+                        Console.WriteLine(" Chưa đến ngày cập nhật chỉ số đồng hồ!");
                     }
 
                 }
                 else
                 {
-                    Console.WriteLine("Chỉ số đồng hồ tháng {0} của khách hàng này đã được cập nhật", DateTime.Now.Month);
+                    Console.WriteLine("Chỉ số đồng hồ tháng {0} của khách hàng này đã được cập nhật, mời bạn quay lại vào tháng sau!", DateTime.Now.Month);
                 }
 
 
                 string choice1;
-                Console.Write("Bạn có muốn tiếp tục? (Y/N)");
+                Console.Write("Bạn có muốn tiếp tục? (Y/N): ");
                 choice1 = Console.ReadLine();
 
                 while (choice1 != "y" && choice1 != "Y" && choice1 != "n" && choice1 != "N")
@@ -361,17 +419,18 @@ namespace PL_console
 
 
         }
-        public void StatisticInvoice()
+        public void InvoiceStatistics()
         {
             Console.Clear();
-            
+
             while (true)
             {
-                // Console.WriteLine("------------------------Thống kê hóa đơn---------------------------");
+                Console.WriteLine("------------------------Thống kê hóa đơn---------------------------");
                 List<Customer> listCs = csBL.GetCustomer();
                 int csCount = listCs.Count;
 
                 Meter mt = null;
+                MeterLogs mtl = null;
                 int month;
                 int year;
                 int count1 = 0;
@@ -388,7 +447,7 @@ namespace PL_console
                 }
                 Console.Write("- Nhập năm: ");
                 year = csBL.checkid();
-                while (month < 0)
+                while (0 > year)
                 {
                     Console.Write("năm nhập không hợp lệ, mời nhập lại: ");
                     year = csBL.checkid();
@@ -402,11 +461,13 @@ namespace PL_console
                 foreach (Customer cs in listCs)
                 {
                     mt = meterBL.GetMeterbyCusID(cs.CustomerId);
+                    
                     foreach (MeterLogs ML in listMeterLogs)
                     {
 
                         if (mt.MeterID == ML.MeterID)
                         {
+                            mtl = meterLogsBL.GetMeterLogsByMonth(mt.MeterID,( DateTime.Now.Month -1)+"/"+DateTime.Now.Year);
                             int price = 0;
                             double count = 0;
                             double tax3 = 0;
@@ -457,7 +518,7 @@ namespace PL_console
 
                 if (index != 0)
                 {
-                    Console.WriteLine("------------------------------------------------------- Thống kê hóa đơn tháng {0} năm {1} -------------------------------------------------------", month, year);
+                    Console.WriteLine("-------------------------------------------------------- Thống kê hóa đơn tháng {0} năm {1} ---------------------------------------------------------", month, year);
                     table1.Write();
                     Console.WriteLine();
                     Console.WriteLine("- Tổng số khách hàng {0}", csCount);

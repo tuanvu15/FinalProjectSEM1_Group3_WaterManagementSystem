@@ -11,10 +11,10 @@ namespace PL_console
         {
             Console.Clear();
             int choice;
-            
-            while(true)
+
+            while (true)
             {
-                 Console.Clear();
+                Console.Clear();
                 if (err != null)
                 {
                     Console.WriteLine(err);
@@ -55,8 +55,8 @@ namespace PL_console
                 }
                 break;
             }
-               
-            
+
+
 
         }
         public void MenuLogin()
@@ -66,7 +66,7 @@ namespace PL_console
             {
                 string email = null;
                 string pass = null;
-                   Console.Clear();
+                Console.Clear();
                 Console.WriteLine("============ ĐĂNG NHẬP ============");
                 Console.Write("USERNAME:");
                 email = Console.ReadLine();
@@ -110,7 +110,42 @@ namespace PL_console
                         default:
                             continue;
                     }
+                    
                 }
+                catch (MySql.Data.MySqlClient.MySqlException)
+                {
+                    Console.Write("Mất kết nối, bạn có muốn đăng nhập lại không? (Y/N)");
+                    choice = Console.ReadLine().ToUpper();
+
+                    while (true)
+                    {
+                        if (choice != "Y" && choice != "y")
+                        {
+                            Console.Write("Bạn chỉ được nhập (Y/N): ");
+                            choice = Console.ReadLine().ToUpper();
+                            continue;
+                        }
+                        break;
+                    }
+
+                    switch (choice)
+                    {
+                        case "Y":
+                            continue;
+                        case "y":
+                            continue;
+                        case "N":
+                            MenuChoice(null);
+                            break;
+                        case "n":
+                            MenuChoice(null);
+                            break;
+                        default:
+                            continue;
+                    }
+                    
+                }
+                
 
                 //kiểm tra tài khoản nhập vào có đúng hay không
                 if (manager == null)
@@ -119,7 +154,7 @@ namespace PL_console
                     choice = Console.ReadLine().ToUpper();
                     while (true)
                     {
-                        if (choice != "Y" && choice != "N")
+                        if (choice != "Y" && choice != "y")
                         {
                             Console.Write("Bạn chỉ được nhập (Y/N): ");
                             choice = Console.ReadLine().ToUpper();
@@ -158,7 +193,7 @@ namespace PL_console
                 {
                     MainMenu();
                 }
-                // break;
+                break;
             }
 
         }
@@ -167,8 +202,8 @@ namespace PL_console
             Console.Clear();
             int magChoice;
             InvoiceConsole inv = new InvoiceConsole();
-            // do
-            // {
+            do
+            {
                 // Console.Clear();
                 Console.WriteLine("╔══════════════════════════════════════════╗");
                 Console.WriteLine("║               MENU QUẢN LÝ               ║");
@@ -212,12 +247,12 @@ namespace PL_console
                         }
                     default:
                         {
-                            MainMenu();
-                            break;
+
+                            continue;
                         }
 
                 }
-            // } while (magChoice != 0);
+            } while (magChoice != 0);
 
 
         }
@@ -225,8 +260,8 @@ namespace PL_console
         {
             Console.Clear();
             int choice;
-            // do
-            // {
+            do
+            {
                 CustomerConsole cusCS = new CustomerConsole();
                 // Console.Clear();
                 Console.WriteLine("╔══════════════════════════════════════════╗");
@@ -256,7 +291,7 @@ namespace PL_console
                 {
                     case 0:
                         {
-                           
+
                             MainMenu();
                             break;
                         }
@@ -267,11 +302,15 @@ namespace PL_console
                                 // Console.Clear();
                                 cusCS.CreateCustomer();
                             }
-                            catch (Exception ex)
+                            catch (System.NullReferenceException)
                             {
-                                Console.WriteLine(ex.Message);
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
                             }
-                            
+                            catch (MySql.Data.MySqlClient.MySqlException)
+                            {
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
+                            }
+
                             break;
 
 
@@ -283,32 +322,47 @@ namespace PL_console
                                 //  Console.Clear();
                                 cusCS.DisplayCustomer();
                             }
-                            catch (Exception ex)
+                            catch (System.NullReferenceException)
                             {
-                                Console.WriteLine(ex.Message);
-                               
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
                             }
-                            
+                            catch (MySql.Data.MySqlClient.MySqlException)
+                            {
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
+                            }
+
                             break;
 
                         }
                     case 3:
                         {
-                        //    Console.Clear();
-                            cusCS.UpdateCustomer();
-                         
+                            
+                            
+                            try
+                            {
+                                //  Console.Clear();
+                                cusCS.UpdateCustomer();
+                            }
+                            catch (System.NullReferenceException)
+                            {
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
+                            }
+                            catch (MySql.Data.MySqlClient.MySqlException)
+                            {
+                                MenuChoice("MẤT KẾT NỐI, MỜI BẠN ĐĂNG NHẬP LẠI!");
+                            }
                             break;
 
                         }
                     default:
                         {
-                            return;
+                            continue;
                         }
                 }
-            // } while (choice != 0);
+            } while (choice != 0);
 
         }
-       
+
         public string Password()
         {
             //hiển thị pass thành dấu "*"

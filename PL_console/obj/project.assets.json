@@ -1733,23 +1733,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tuan vu\\.nuget\\packages\\": {},
+    "C:\\Users\\donga\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\PL_console\\PL_console.csproj",
+      "projectUniqueName": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\PL_console\\PL_console.csproj",
       "projectName": "PL_console",
-      "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\PL_console\\PL_console.csproj",
-      "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
-      "outputPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\PL_console\\obj\\",
+      "projectPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\PL_console\\PL_console.csproj",
+      "packagesPath": "C:\\Users\\donga\\.nuget\\packages\\",
+      "outputPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\PL_console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\tuan vu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\donga\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
@@ -1760,11 +1760,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\BL\\BL.csproj": {
-              "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\BL\\BL.csproj"
+            "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\BL\\BL.csproj": {
+              "projectPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\BL\\BL.csproj"
             },
-            "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj": {
-              "projectPath": "F:\\FinalProjectSEM1_Group3_WaterManagementSystem\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj"
+            "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj": {
+              "projectPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj"
             }
           }
         }

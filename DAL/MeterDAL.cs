@@ -96,18 +96,16 @@ namespace DAL
                 connection.Open();
             }
             bool result = true;
-           
 
-            query = @"insert into Meter(meter_id,customer_id,meter_status,old_number,new_number,meter_type,meter_place) value ('" +meter_id+ "','" + cusID + "','" + meterStatus + "'," + oldNumber + "," + newNumber + ",'" + meterType + "','" + meterPlace + "');";
+            query = @"insert into Meter(meter_id, customer_id ,meter_status,old_number,new_number,meter_type,meter_place) value ('" +meter_id+ "','" + cusID + "','" + meterStatus + "'," + oldNumber + "," + newNumber + ",'" + meterType + "','" + meterPlace + "');";
 
-            reader = DBHelper.ExecQuery(query, connection);
-            Meter meter = null;
+            
             try
             {
                 MySqlCommand command = new MySqlCommand(query, connection);
-                if (reader.Read())
+                if (command.ExecuteNonQuery() > 0)
                 {
-                    meter = GetMeterInfo(reader);
+                    result = true;
 
                 }
                 connection.Close();
@@ -133,17 +131,14 @@ namespace DAL
             }
             query = @"update Meter set meter_id ='"+ id +"',meter_status ='" + meterStatus + "', old_number =" + oldNumber + ",new_number =" + newNumber +
             ",meter_type ='" + meterType + "',meter_place ='" + meterPlace + "' where customer_id = '" + cusID + "';";
-
-            reader = DBHelper.ExecQuery(query, connection);
-
-            Meter met = null;
+            
             try
             {
                 MySqlCommand command = new MySqlCommand(query, connection);
 
-                if (reader.Read())
+                if (command.ExecuteNonQuery() > 0)
                 {
-                    met = GetMeterInfo(reader);
+                    result = true;
                 }
                 // DBHelper.CloseConnection();
                 connection.Close();

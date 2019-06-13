@@ -68,7 +68,7 @@ namespace PL_console
                 meters.OldNumber = csBL.checkid();
                 while(meters.OldNumber < 0)
                 {
-                    Console.Write("\tSố không hợp lệ, mời nhập lại: ");
+                    Console.Write("\t-Số không hợp lệ, mời nhập lại: ");
                      meters.OldNumber = csBL.checkid();
                 }
                 Console.WriteLine("\t-Mục đích sử dụng nước: 1.sinh hoạt");
@@ -80,7 +80,7 @@ namespace PL_console
                 chon = csBL.checkid();
                 while (chon != 1 && chon != 2 && chon != 3 && chon != 4)
                 {
-                    Console.Write("\t Lựa chọn nhập không đúng mời nhập lại: ");
+                    Console.Write("\t-Lựa chọn nhập không đúng mời nhập lại: ");
                     chon = csBL.checkid();
                 }
                 if (chon == 1)
@@ -99,7 +99,7 @@ namespace PL_console
                 {
                     meters.MeterType = "HCSN";
                 }
-                Console.WriteLine("\t Mục đích sử dụng nước: " + meters.MeterType);
+                Console.WriteLine("\t-Mục đích sử dụng nước: " + meters.MeterType);
                 Console.WriteLine("―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――");
 
                 Console.Write("Bạn có muốn thêm khách hàng này vào danh sách? (Y/N): ");
@@ -139,9 +139,14 @@ namespace PL_console
                 }
 
 
-                Console.Write("Bạn có muốn tiếp tục? (Y/N): ");
+                Console.Write("Bạn có muốn tiếp tục ?(Y/N): ");
                 string choice1;
                 choice1 = Console.ReadLine();
+                 while(choice1 != "y" && choice1 != "Y" && choice1 !="n" && choice1 != "N")
+                {
+                    Console.Write("Nhập sai!, Bạn chỉ được nhập(Y/N): ");
+                    choice1 = Console.ReadLine();
+                }
                 switch (choice1)
                 {
                     case "Y":
@@ -186,7 +191,7 @@ namespace PL_console
             MatchCollection matchCollection = regex.Matches(str);
             while ((!regex.IsMatch(str)) || (str == ""))
             {
-                Console.Write(" Không được để trống, hoặc chứa ký tự đặc biệt, Mời nhập lại: ");
+                Console.Write("\t-Không được để trống, hoặc chứa ký tự đặc biệt, Mời nhập lại: ");
                 str = Console.ReadLine();
                 matchCollection = regex.Matches(str);
                 
@@ -200,8 +205,8 @@ namespace PL_console
             // string strPhone = Console.ReadLine();
             while (!isValidInput.IsMatch(str))
             {
-                Console.WriteLine("sai định dạng(0003219876531)");
-                Console.Write("nhập lại:");
+                Console.WriteLine("\t-sai định dạng(0003219876531)");
+                Console.Write("\t-nhập lại:");
                 str = Console.ReadLine();
             }
             return str;
@@ -233,7 +238,7 @@ namespace PL_console
 
             while (true)
             {
-                Console.Write("Nhấn Enter để tiếp tục");
+                Console.Write("Nhấn Enter để tiếp tục...");
                 string choice1;
                 choice1 = Console.ReadLine();
                 switch (choice1)
@@ -294,35 +299,38 @@ namespace PL_console
                 Console.WriteLine("-Mục đích sử dụng nước:" + met.MeterType);
                 Console.WriteLine("==============================================");
                 Console.WriteLine("==========Mời bạn cập nhật thông tin=============");
-                Console.Write("- Cập nhât họ và tên: ");
+                Console.Write("-Cập nhât họ và tên: ");
                 cs.CustomerName = csBL.input(Console.ReadLine());
-                Console.Write("- Cập Nhập địa chỉ: ");
+                Console.Write("-Cập Nhập địa chỉ: ");
                 cs.CustomerAddress =input(Console.ReadLine());
-                Console.Write("- Cập nhật số điện thoại: ");
+                Console.Write("-Cập nhật số điện thoại: ");
                 cs.PhoneNumber = csBL.Validate(Console.ReadLine());
-                Console.Write("- Cập nhập số CMND:");
+                Console.Write("-Cập nhập số CMND:");
                 cs.CMND = Validate(Console.ReadLine());
-                Console.Write("- Cập nhật mã công tơ: ");
-                meter.MeterID =input( Console.ReadLine());
-                while (meterBl.GetMeterbyID(meter.MeterID).MeterID != null)
-                {
-                    Console.Write("Mã công tơ này đã được sử dụng, mời nhập lại: ");
-                    meter.MeterID = Console.ReadLine();
-                }
-                Console.Write("-Cập nhật công tơ đặt tại:");
-                meter.MeterPlace =input(Console.ReadLine());
-                Console.Write("-Cập nhật số công tơ ban đầu:");
-                meter.OldNumber = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("-Mã công tơ: "+met.MeterID);
+                // while (meterBl.GetMeterbyID(meter.MeterID).MeterID != null)
+                // {
+                //     Console.Write("\t-Mã công tơ này đã được sử dụng, mời nhập lại: ");
+                //     meter.MeterID = Console.ReadLine();
+                // }
+                Console.WriteLine("-Cập nhật công tơ đặt tại: "+met.MeterPlace);
+                // Console.Write("-Cập nhật số công tơ ban đầu:");
+                // meter.OldNumber = csBL.checkid();
+                // while(meter.OldNumber < 0)
+                // {
+                //     Console.Write("\t-Số không hợp lệ, mời nhập lại: ");
+                //      meter.OldNumber = csBL.checkid();
+                // }
                 Console.WriteLine("-Cập nhật cục đích sử dụng nước: 1.sinh hoạt");
-                Console.WriteLine("                        2.sản xuất");
-                Console.WriteLine("                        3.kinh doanh");
-                Console.WriteLine("                        4.HCSN");
+                Console.WriteLine("                                 2.sản xuất");
+                Console.WriteLine("                                 3.kinh doanh");
+                Console.WriteLine("                                 4.HCSN");
                 Console.Write("-Lựa chọn mục đích sử dụng nước(1,2,3,4): ");
                 int chon;
                 chon = csBL.checkid();
                 while (chon != 1 && chon != 2 && chon != 3 && chon != 4)
                 {
-                    Console.Write("Lựa chọn nhập không đúng mời nhập lại: ");
+                    Console.Write("\t-Lựa chọn nhập không đúng mời nhập lại: ");
                     chon = csBL.checkid();
                 }
                 if (chon == 1)
@@ -341,19 +349,25 @@ namespace PL_console
                 {
                     meter.MeterType = "HCSN";
                 }
-                Console.WriteLine("- Mục đích sử dụng nước: " + meter.MeterType);
+                Console.WriteLine("-Mục đích sử dụng nước: " + meter.MeterType);
                 Console.WriteLine("=================================================");
-                Console.Write("Bạn có muốn cập nhật thông tin của khách hàng này? (Y/N)");
+                Console.Write("Bạn có muốn cập nhật thông tin của khách hàng này? (Y/N):");
                 string choice;
                 choice = Console.ReadLine();
+                 while(choice != "y" && choice != "Y" && choice !="n" && choice != "N")
+                {
+                    Console.Write("Nhập sai!, Bạn chỉ được nhập(Y/N): ");
+                    choice = Console.ReadLine();
+                }
                 if (choice == "y" || choice == "Y")
                 {
-                    Console.WriteLine("thông tin đã được cập nhật");
+                    
                     result = true;
                     met.NewNumber = 0;
                     meter.MeterStatus = "đang hoạt động";
                     csBL.UpdateCustomer(cusID, cs.CustomerName, cs.CustomerAddress, cs.PhoneNumber, cs.CMND);
                     mBL.UpdateMeter(cusID, meter.MeterID, meter.MeterStatus, meter.OldNumber, meter.NewNumber, meter.MeterType, meter.MeterPlace);
+                    Console.WriteLine("thông tin đã được cập nhật!");
                 }
 
                 else
@@ -362,7 +376,7 @@ namespace PL_console
                     Console.WriteLine("thông tin chưa được cập nhật!");
                 }
 
-                Console.Write("Bạn có muốn tiếp tục? (Y/N)");
+                Console.Write("Bạn có muốn tiếp tục? (Y/N): ");
                 string choice4;
                 choice4 = Console.ReadLine();
                 while(choice4 != "y" && choice4 != "Y" && choice4 !="n" && choice4 != "N")

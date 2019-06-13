@@ -76,13 +76,13 @@ namespace BL
         }
         public string input(string str)
         {
-            string strRegex =@"[a-zA-Z]";
+            string strRegex =@"[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$";
             Regex regex = new Regex(strRegex);
             
             MatchCollection matchCollection = regex.Matches(str);
             while ((!regex.IsMatch(str)) || (str == ""))
             {
-                Console.Write(" Không được để trống, chứa số hoặc ký tự đặc biệt, Mời nhập lại: ");
+                Console.Write("\t-Không được để trống, chứa số hoặc ký tự đặc biệt, Mời nhập lại: ");
                 str = Console.ReadLine();
                 matchCollection = regex.Matches(str);
                 
@@ -97,7 +97,7 @@ namespace BL
             // string strPhone = Console.ReadLine();
             while (!isValidInput.IsMatch(str))
             {
-                Console.WriteLine("sai định dạng(0123456789)");
+                Console.WriteLine("\t-sai định dạng(0123456789)");
                 Console.Write("\tnhập lại:");
                 str = Console.ReadLine();
             }

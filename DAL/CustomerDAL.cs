@@ -25,7 +25,7 @@ namespace DAL
         }
         public Customer GetCustomerbyID(int cusID)
         {
-              if (connection == null)
+            if (connection == null)
             {
                 connection = DBHelper.OpenConnection();
             }
@@ -75,7 +75,7 @@ namespace DAL
             return customer;
 
         }
-        public bool InsertCustomer(string cusName, string cusAddress, string Phone,string cmnd)
+        public bool InsertCustomer(string cusName, string cusAddress, string Phone, string cmnd)
         {
             if (connection == null)
             {
@@ -90,17 +90,17 @@ namespace DAL
             {
                 return false;
             }
-           
-            query = @"insert into Customer(customer_name,customer_address,phone_number,customer_CMND) value('" + cusName + "','" + cusAddress + "','" + Phone + "','"+cmnd+"');";
 
-            reader = DBHelper.ExecQuery(query, connection);
-            Customer customer = null;
+            query = @"insert into Customer(customer_name,customer_address,phone_number,customer_CMND) value('" + cusName + "','" + cusAddress + "','" + Phone + "','" + cmnd + "');";
+
+
+
             try
             {
                 MySqlCommand command = new MySqlCommand(query, connection);
-                if (reader.Read())
+                if (command.ExecuteNonQuery() > 0)
                 {
-                    customer = GetCustomerInfo(reader);
+                    result = true;
 
                 }
                 connection.Close();
@@ -113,15 +113,15 @@ namespace DAL
             }
             return result;
         }
-        public bool UpdateCustomer(int id, string name, string address, string sdt,string cmnd)
+        public bool UpdateCustomer(int id, string name, string address, string sdt, string cmnd)
         {
             bool result = true;
 
-            if (name == null || address == null || sdt == null||cmnd ==null)
+            if (name == null || address == null || sdt == null || cmnd == null)
             {
                 return false;
             }
-              if (connection == null)
+            if (connection == null)
             {
                 connection = DBHelper.OpenConnection();
             }
@@ -132,16 +132,13 @@ namespace DAL
             query = @"update customer set customer_name ='" + name + "', customer_address ='" + address + "',phone_number ='" + sdt +
             "',customer_CMND ='" + cmnd + "'where customer_id = " + id + ";";
 
-            reader = DBHelper.ExecQuery(query, connection);
-
-            Customer customer = null;
             try
             {
                 MySqlCommand command = new MySqlCommand(query, connection);
-                
-                if (reader.Read())
+
+                if (command.ExecuteNonQuery() > 0)
                 {
-                    customer = GetCustomerInfo(reader);
+                    result = true;
                 }
                 // DBHelper.CloseConnection();
                 connection.Close();

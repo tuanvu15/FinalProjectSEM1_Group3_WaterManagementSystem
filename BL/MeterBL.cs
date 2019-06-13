@@ -12,25 +12,27 @@ namespace BL
         {
             meterDAL = new MeterDAL();
         }
+        // public Meter GetMeterbyID(int metID)
+        // {
 
+        //     return meterDAL.GetMeterbyID(metID);
+        // }
         public List<Meter> GetMeter()
         {
             return meterDAL.GetMeter();
         }
+        // public Meter GetMeterbyID(int metID)
+        // {
+
+        //     return meterDAL.GetMeterbyID(metID);
+        // }
         public bool InsertMeter(string meter_id,int cusID, string meterStatus, int oldNumber, int newNumber, string meterType, string meterPlace)
         {
-                 if (meterType == null|| meterPlace==null||meterStatus==null||meter_id==null)
-                 {
-                     return false;
-                 }
+
             return meterDAL.InsertMeter(meter_id,cusID, meterStatus, oldNumber, newNumber, meterType, meterPlace);
         }
         public bool UpdateMeter(int cusID,string id, string meterStatus, int oldNumber, int newNumber, string meterType, string meterPlace)
         {
-                 if (meterType == null|| meterPlace==null||meterStatus==null||id==null)
-                 {
-                     return false;
-                 }
             return meterDAL.UpdateMeter(cusID,id, meterStatus, oldNumber, newNumber, meterType, meterPlace);
         }
         public Meter GetMeterbyCusID(int id)

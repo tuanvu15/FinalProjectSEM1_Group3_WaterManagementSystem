@@ -3,7 +3,7 @@ using Xunit;
 using DAL;
 using MySql.Data.MySqlClient;
 
-namespace CTS_DAL_XUnit
+namespace DAL.test
 {
     public class DBHelperTest
     {

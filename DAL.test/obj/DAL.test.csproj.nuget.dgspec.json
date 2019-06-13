@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL.test\\DAL.test.csproj": {}
+    "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL.test\\DAL.test.csproj": {}
   },
   "projects": {
-    "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL.test\\DAL.test.csproj": {
+    "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL.test\\DAL.test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL.test\\DAL.test.csproj",
+        "projectUniqueName": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL.test\\DAL.test.csproj",
         "projectName": "DAL.test",
-        "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL.test\\DAL.test.csproj",
-        "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
-        "outputPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL.test\\obj\\",
+        "projectPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL.test\\DAL.test.csproj",
+        "packagesPath": "C:\\Users\\donga\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL.test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tuan vu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\donga\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -28,11 +28,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\DAL.csproj": {
-                "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\DAL.csproj"
+              "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\DAL.csproj": {
+                "projectPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\DAL.csproj"
               },
-              "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj": {
-                "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj"
+              "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj": {
+                "projectPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -73,20 +73,20 @@
         }
       }
     },
-    "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\DAL.csproj": {
+    "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\DAL.csproj",
+        "projectUniqueName": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
-        "outputPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\DAL\\obj\\",
+        "projectPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\donga\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tuan vu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\donga\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -97,8 +97,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj": {
-                "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj"
+              "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj": {
+                "projectPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -131,20 +131,20 @@
         }
       }
     },
-    "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj": {
+    "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\tuan vu\\.nuget\\packages\\",
-        "outputPath": "F:\\project hk1\\FinalProjectSEM1_Group3_WaterManagementSystem-1\\Persistence\\obj\\",
+        "projectPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\donga\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\FinalProjectSEM1_Group3_WaterManagementSystem-master\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tuan vu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\donga\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"

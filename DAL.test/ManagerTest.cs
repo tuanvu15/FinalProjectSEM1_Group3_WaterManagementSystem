@@ -20,9 +20,9 @@ namespace DAL.test
 
         [Theory]
         [InlineData("customer_01", "123456789")]
-        [InlineData("'?^%'", "'.:=='")]
-        [InlineData("'?^%'",null)]
-        [InlineData(null, "'.:=='")]
+        [InlineData("?^%", ".:==")]
+        [InlineData("?^%",null)]
+        [InlineData(null, ".:==")]
         public void LoginTest3(string username, string password)
         {
             Assert.Null(manager.Login(username,password));
